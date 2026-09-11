@@ -27,6 +27,9 @@ namespace AutoMouseKeyboard.UI.Controls
                      ControlStyles.OptimizedDoubleBuffer |
                      ControlStyles.ResizeRedraw |
                      ControlStyles.SupportsTransparentBackColor, true);
+            // ButtonBase leaves Opaque set, which would suppress the erase and
+            // keep the transparent BackColor from painting the parent surface.
+            SetStyle(ControlStyles.Opaque, false);
             BackColor = Color.Transparent;
             AutoSize = false;
             Appearance = Appearance.Normal;
@@ -72,7 +75,10 @@ namespace AutoMouseKeyboard.UI.Controls
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnPaint(e);
+            // No base.OnPaint(e): with UserPaint set, ButtonBase.OnPaint routes to
+            // the standard adapter and would paint the native checkbox+text under
+            // this custom render. The client area is already erased to the parent
+            // surface by the transparent background before this runs.
             var g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
             var p = _palette;
@@ -125,6 +131,19 @@ namespace AutoMouseKeyboard.UI.Controls
             TextRenderer.DrawText(g, Text, Font, textRect,
                 Enabled ? p.Text : p.TextMuted,
                 TextFormatFlags.Left | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
+
+            if (Focused)
+            {
+                var focusRect = ClientRectangle;
+                focusRect.Inflate(-2, -2);
+                if (focusRect.Width > 0 && focusRect.Height > 0)
+                {
+                    using (var pen = new Pen(p.Accent) { DashStyle = DashStyle.Dot })
+                    {
+                        g.DrawRectangle(pen, focusRect);
+                    }
+                }
+            }
         }
     }
 }

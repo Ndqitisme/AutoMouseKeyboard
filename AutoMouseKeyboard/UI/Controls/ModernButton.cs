@@ -21,7 +21,13 @@ namespace AutoMouseKeyboard.UI.Controls
         public ModernButton()
         {
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint |
-                     ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw, true);
+                     ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw |
+                     ControlStyles.SupportsTransparentBackColor, true);
+            // ButtonBase sets Opaque, which suppresses the background erase and
+            // leaves garbage in the corners outside the rounded fill. Clear it so
+            // the transparent BackColor erases to the real parent surface instead.
+            SetStyle(ControlStyles.Opaque, false);
+            BackColor = Color.Transparent;
             FlatStyle = FlatStyle.Flat;
             FlatAppearance.BorderSize = 0;
             _anim.Tick += (s, e) => TickAnimation();
@@ -70,7 +76,7 @@ namespace AutoMouseKeyboard.UI.Controls
             if (border != Color.Transparent)
                 using (var pen = new Pen(border)) g.DrawRounded(pen, r, CornerRadius);
             if (Focused)
-                using (var pen = new Pen(p.Accent, 1.5f)) g.DrawRounded(pen, new Rectangle(1, 1, Width - 3, Height - 3), CornerRadius - 1);
+                using (var pen = new Pen(p.Accent, 1.5f)) g.DrawRounded(pen, new Rectangle(1, 1, Width - 3, Height - 3), Math.Max(0, CornerRadius - 1));
 
             TextRenderer.DrawText(g, Text, Font, ClientRectangle, fore,
                 TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);

@@ -33,6 +33,12 @@ public static class ThemeManager
     /// <summary>The token palette for the currently active theme.</summary>
     public static ThemePalette Palette => ThemePalette.Get(_currentTheme);
 
+    /// <summary>
+    /// Tag value that marks a child control whose colors are owned by its themed
+    /// parent (e.g. RoundedTextBox's inner TextBox); the recursion skips it.
+    /// </summary>
+    internal const string SkipThemeTag = "SkipTheme";
+
     public static event EventHandler<ThemeMode>? ThemeChanged;
 
     static ThemeManager()
@@ -150,7 +156,7 @@ public static class ThemeManager
     {
         foreach (Control control in controls)
         {
-            if (control == null)
+            if (control == null || control.Tag is string tag && tag == SkipThemeTag)
             {
                 continue;
             }

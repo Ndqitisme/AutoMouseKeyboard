@@ -20,10 +20,13 @@ namespace AutoMouseKeyboard.UI.Controls
 
         public CardPanel()
         {
-            SetStyle(ControlStyles.AllPaintingInWmPaint |
+            SetStyle(ControlStyles.UserPaint |
+                     ControlStyles.AllPaintingInWmPaint |
                      ControlStyles.OptimizedDoubleBuffer |
-                     ControlStyles.ResizeRedraw, true);
-            BackColor = _palette.WindowBack;
+                     ControlStyles.ResizeRedraw |
+                     ControlStyles.SupportsTransparentBackColor, true);
+            SetStyle(ControlStyles.Opaque, false);
+            BackColor = Color.Transparent; // corners outside the rounded fill show the parent surface
             ForeColor = _palette.Text;
             Padding = new Padding(12);
             _titleFont = CreateTitleFont();
@@ -68,8 +71,8 @@ namespace AutoMouseKeyboard.UI.Controls
         public void ApplyTheme(ThemePalette palette)
         {
             _palette = palette;
-            // Corner pixels outside the rounded card match the window surface.
-            BackColor = palette.WindowBack;
+            // BackColor stays transparent so corners outside the rounded card
+            // erase to the real parent surface (e.g. a nested card), not WindowBack.
             ForeColor = palette.Text;
             Invalidate();
         }
@@ -77,8 +80,9 @@ namespace AutoMouseKeyboard.UI.Controls
         protected override void OnFontChanged(EventArgs e)
         {
             base.OnFontChanged(e);
+            var newFont = CreateTitleFont();
             var oldFont = _titleFont;
-            _titleFont = CreateTitleFont();
+            _titleFont = newFont;
             oldFont.Dispose();
             Invalidate();
         }

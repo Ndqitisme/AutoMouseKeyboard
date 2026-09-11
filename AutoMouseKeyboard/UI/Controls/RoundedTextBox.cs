@@ -19,7 +19,8 @@ namespace AutoMouseKeyboard.UI.Controls
 
         public RoundedTextBox()
         {
-            SetStyle(ControlStyles.AllPaintingInWmPaint |
+            SetStyle(ControlStyles.UserPaint |
+                     ControlStyles.AllPaintingInWmPaint |
                      ControlStyles.OptimizedDoubleBuffer |
                      ControlStyles.ResizeRedraw |
                      ControlStyles.SupportsTransparentBackColor, true);
@@ -32,6 +33,7 @@ namespace AutoMouseKeyboard.UI.Controls
                 Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top,
                 BackColor = _palette.InputBack,
                 ForeColor = _palette.Text,
+                Tag = ThemeManager.SkipThemeTag, // themed by ApplyTheme, not ThemeManager recursion
             };
             _inner.Enter += (s, e) => Invalidate();
             _inner.Leave += (s, e) => Invalidate();
