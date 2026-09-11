@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainForm_Title" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="MainForm_ConfigList" xml:space="preserve">
+    <value>Список конфигураций</value>
+  </data>
+  <data name="MainForm_ActionDetails" xml:space="preserve">
+    <value>Список действий</value>
+  </data>
+  <data name="MainForm_ConfigName" xml:space="preserve">
+    <value>Название конфигурации</value>
+  </data>
+  <data name="MainForm_New" xml:space="preserve">
+    <value>Новый</value>
+  </data>
+  <data name="MainForm_Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="MainForm_Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="MainForm_Setting" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="MainForm_About" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="MainForm_Import" xml:space="preserve">
+    <value>Импорт</value>
+  </data>
+  <data name="MainForm_Export" xml:space="preserve">
+    <value>Экспорт</value>
+  </data>
+  <data name="MainForm_AddKey" xml:space="preserve">
+    <value>Добавить клавишу</value>
+  </data>
+  <data name="MainForm_AddMouse" xml:space="preserve">
+    <value>Добавить мышь</value>
+  </data>
+  <data name="MainForm_MoveUp" xml:space="preserve">
+    <value>Вверх</value>
+  </data>
+  <data name="MainForm_MoveDown" xml:space="preserve">
+    <value>Вниз</value>
+  </data>
+  <data name="MainForm_Start" xml:space="preserve">
+    <value>Начать</value>
+  </data>
+  <data name="MainForm_Stop" xml:space="preserve">
+    <value>Остановить</value>
+  </data>
+  <data name="MainForm_DefaultConfigName" xml:space="preserve">
+    <value>Новая Конфигурация</value>
+  </data>
+  <data name="MainForm_ImportConfig" xml:space="preserve">
+    <value>Импорт конфигурации</value>
+  </data>
+  <data name="MainForm_ExportConfig" xml:space="preserve">
+    <value>Экспорт конфигурации</value>
+  </data>
+  <data name="MainForm_Status" xml:space="preserve">
+    <value>Статус: {0}</value>
+  </data>
+  <data name="MainForm_LoopCount" xml:space="preserve">
+    <value>Количество повторений</value>
+  </data>
+  <data name="MainForm_GlobalDelay" xml:space="preserve">
+    <value>Общая задержка (мс)</value>
+  </data>
+  <data name="MainForm_ColIndex" xml:space="preserve">
+    <value>�?/value>
+  </data>
+  <data name="MainForm_ColKeys" xml:space="preserve">
+    <value>Клавиша</value>
+  </data>
+  <data name="MainForm_ColCharacters" xml:space="preserve">
+    <value>Символ</value>
+  </data>
+  <data name="MainForm_ColCount" xml:space="preserve">
+    <value>Количество выполнений</value>
+  </data>
+  <data name="MainForm_ColDelay" xml:space="preserve">
+    <value>Задержка</value>
+  </data>
+  <data name="MainForm_ColSetPosition" xml:space="preserve">
+    <value>Установить координаты</value>
+  </data>
+  <data name="SettingForm_Title" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="SettingForm_Theme" xml:space="preserve">
+    <value>Интерфейс:</value>
+  </data>
+  <data name="SettingForm_Language" xml:space="preserve">
+    <value>Язык:</value>
+  </data>
+  <data name="SettingForm_Light" xml:space="preserve">
+    <value>Светлый</value>
+  </data>
+  <data name="SettingForm_Dark" xml:space="preserve">
+    <value>Тёмный</value>
+  </data>
+  <data name="SettingForm_Cyan" xml:space="preserve">
+    <value>Голубой</value>
+  </data>
+  <data name="SettingForm_Pink" xml:space="preserve">
+    <value>Розовый</value>
+  </data>
+  <data name="SettingForm_Green" xml:space="preserve">
+    <value>Зелёный</value>
+  </data>
+  <data name="SettingForm_Red" xml:space="preserve">
+    <value>Красный</value>
+  </data>
+  <data name="SettingForm_Orange" xml:space="preserve">
+    <value>Оранжевый</value>
+  </data>
+  <data name="SettingForm_Yellow" xml:space="preserve">
+    <value>Жёлтый</value>
+  </data>
+  <data name="SettingForm_Blue" xml:space="preserve">
+    <value>Синий</value>
+  </data>
+  <data name="SettingForm_Indigo" xml:space="preserve">
+    <value>Индиго</value>
+  </data>
+  <data name="SettingForm_Violet" xml:space="preserve">
+    <value>Фиолетовый</value>
+  </data>
+  <data name="SettingForm_OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="SettingForm_Note" xml:space="preserve">
+    <value>Больше настроек будет доступно в будущих обновлениях.</value>
+  </data>
+  <data name="AboutForm_Title" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="AboutForm_AppName" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="AboutForm_Version" xml:space="preserve">
+    <value>Версия: 1.0.0</value>
+  </data>
+  <data name="AboutForm_Author" xml:space="preserve">
+    <value>Автор: NDQITVN</value>
+  </data>
+  <data name="AboutForm_Description" xml:space="preserve">
+    <value>Инструмент автоматизации для кликов мыши и ввода с клавиатуры.</value>
+  </data>
+  <data name="AboutForm_DonateTitle" xml:space="preserve">
+    <value>Если вы хотите пожертвовать автору:</value>
+  </data>
+  <data name="AboutForm_DonateInfo" xml:space="preserve">
+    <value>Банк: {0}&#x0D;&#x0A;Номер счёта: {1}&#x0D;&#x0A;Владелец счёта: {2}&#x0D;&#x0A;&#x0D;&#x0A;Или отсканируйте QR-код рядом для быстрого перевода.</value>
+  </data>
+  <data name="KeyActionForm_Title" xml:space="preserve">
+    <value>Добавить клавишу</value>
+  </data>
+  <data name="KeyActionForm_Key" xml:space="preserve">
+    <value>Клавиша:</value>
+  </data>
+  <data name="KeyActionForm_Modifiers" xml:space="preserve">
+    <value>Удерживать клавиши:</value>
+  </data>
+  <data name="KeyActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyActionForm_Count" xml:space="preserve">
+    <value>Количество раз</value>
+  </data>
+  <data name="KeyActionForm_Interval" xml:space="preserve">
+    <value>Задержка (мс)</value>
+  </data>
+  <data name="KeyActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 секунда = 1000 миллисекунд)</value>
+  </data>
+  <data name="KeyActionForm_OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="KeyActionForm_Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="MouseActionForm_Title" xml:space="preserve">
+    <value>Добавить действие мыши</value>
+  </data>
+  <data name="MouseActionForm_Action" xml:space="preserve">
+    <value>Тип клика:</value>
+  </data>
+  <data name="MouseActionForm_Modifiers" xml:space="preserve">
+    <value>Удерживать клавиши:</value>
+  </data>
+  <data name="MouseActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="MouseActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="MouseActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="MouseActionForm_Position" xml:space="preserve">
+    <value>Координаты X,Y</value>
+  </data>
+  <data name="MouseActionForm_SetPosition" xml:space="preserve">
+    <value>Установить координаты</value>
+  </data>
+  <data name="MouseActionForm_Count" xml:space="preserve">
+    <value>Количество раз</value>
+  </data>
+  <data name="MouseActionForm_Interval" xml:space="preserve">
+    <value>Задержка (мс)</value>
+  </data>
+  <data name="MouseActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 секунда = 1000 миллисекунд)</value>
+  </data>
+  <data name="MouseActionForm_OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="MouseActionForm_Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>Готов</value>
+  </data>
+  <data name="Status_ConfigMoved" xml:space="preserve">
+    <value>Конфигурация перемещена: {0}</value>
+  </data>
+  <data name="Status_ConfigLoaded" xml:space="preserve">
+    <value>Конфигурация загружена: {0}</value>
+  </data>
+  <data name="Status_CreatingNew" xml:space="preserve">
+    <value>Создание новой конфигурации...</value>
+  </data>
+  <data name="Status_ConfigSaved" xml:space="preserve">
+    <value>Конфигурация сохранена</value>
+  </data>
+  <data name="Status_ConfigCopied" xml:space="preserve">
+    <value>Конфигурация скопирована: {0}</value>
+  </data>
+  <data name="Status_ConfigCreated" xml:space="preserve">
+    <value>Создана новая конфигурация: {0}</value>
+  </data>
+  <data name="Status_ConfigDeleted" xml:space="preserve">
+    <value>Конфигурация удалена</value>
+  </data>
+  <data name="Status_Running" xml:space="preserve">
+    <value>Выполняется...</value>
+  </data>
+  <data name="Status_Stopped" xml:space="preserve">
+    <value>Остановлено</value>
+  </data>
+  <data name="Status_Completed" xml:space="preserve">
+    <value>Последовательность действий завершена</value>
+  </data>
+  <data name="Status_EscPressed" xml:space="preserve">
+    <value>Обнаружено нажатие ESC, автоматическая операция остановлена</value>
+  </data>
+  <data name="Status_Error" xml:space="preserve">
+    <value>Ошибка при выполнении</value>
+  </data>
+  <data name="Status_ConfigImported" xml:space="preserve">
+    <value>Конфигурация импортирована: {0}</value>
+  </data>
+  <data name="Status_ConfigExported" xml:space="preserve">
+    <value>Конфигурация экспортирована</value>
+  </data>
+  <data name="Msg_DuplicateConfigName" xml:space="preserve">
+    <value>Название конфигурации "{0}" уже существует. Пожалуйста, выберите другое название.</value>
+  </data>
+  <data name="Msg_SaveSuccess" xml:space="preserve">
+    <value>Конфигурация успешно сохранена.</value>
+  </data>
+  <data name="Msg_SaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить</value>
+  </data>
+  <data name="Msg_PasteFailed" xml:space="preserve">
+    <value>Не удалось вставить конфигурацию</value>
+  </data>
+  <data name="Msg_ConfirmDelete" xml:space="preserve">
+    <value>Удалить конфигурацию "{0}"?</value>
+  </data>
+  <data name="Msg_CapturePosition" xml:space="preserve">
+    <value>Нажмите ОК, а затем щёлкните мышью в нужном месте, чтобы получить координаты.</value>
+  </data>
+  <data name="Msg_CapturePositionTitle" xml:space="preserve">
+    <value>Обновить координаты позиции</value>
+  </data>
+  <data name="Msg_CaptureFailed" xml:space="preserve">
+    <value>Не удалось получить координаты</value>
+  </data>
+  <data name="Msg_RunFailed" xml:space="preserve">
+    <value>Не удалось выполнить</value>
+  </data>
+  <data name="Msg_RunError" xml:space="preserve">
+    <value>Ошибка при выполнении</value>
+  </data>
+  <data name="Msg_ImportFailed" xml:space="preserve">
+    <value>Импорт не удался</value>
+  </data>
+  <data name="Msg_ExportFailed" xml:space="preserve">
+    <value>Не удалось экспортировать</value>
+  </data>
+  <data name="Msg_Success" xml:space="preserve">
+    <value>Успешно</value>
+  </data>
+  <data name="Msg_Confirm" xml:space="preserve">
+    <value>Подтвердить</value>
+  </data>
+  <data name="Msg_ConfigNameRequired" xml:space="preserve">
+    <value>Имя конфигурации не может быть пустым.</value>
+  </data>
+  <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
+    <value>Конфигурация должна иметь хотя бы 1 действие.</value>
+  </data>
+  <data name="Msg_ActionMissingKey" xml:space="preserve">
+    <value>Действие #{0} не имеет клавиши.</value>
+  </data>
+  <data name="Menu_F1F12Key" xml:space="preserve">
+    <value>Клавиши F1-F12</value>
+  </data>
+  <data name="Menu_AZKey" xml:space="preserve">
+    <value>Клавиши A-Z</value>
+  </data>
+  <data name="Menu_09Key" xml:space="preserve">
+    <value>Клавиши 0-9</value>
+  </data>
+  <data name="Menu_SymbolKey" xml:space="preserve">
+    <value>Клавиши специальных символов</value>
+  </data>
+  <data name="Menu_NumKey" xml:space="preserve">
+    <value>Цифровые клавиши справа</value>
+  </data>
+  <data name="Menu_OtherKey" xml:space="preserve">
+    <value>Другие клавиши</value>
+  </data>
+  <data name="MouseAction_LeftClick" xml:space="preserve">
+    <value>Клик левой кнопкой мыши</value>
+  </data>
+  <data name="MouseAction_LeftDouble" xml:space="preserve">
+    <value>Двойной клик левой кнопкой мыши</value>
+  </data>
+  <data name="MouseAction_RightClick" xml:space="preserve">
+    <value>Клик правой кнопкой мыши</value>
+  </data>
+  <data name="MouseAction_RightDouble" xml:space="preserve">
+    <value>Двойной клик правой кнопкой мыши</value>
+  </data>
+  <data name="MouseAction_MiddleClick" xml:space="preserve">
+    <value>Клик средней кнопкой мыши</value>
+  </data>
+  <data name="MouseAction_MiddleDouble" xml:space="preserve">
+    <value>Двойной клик средней кнопкой мыши</value>
+  </data>
+  <data name="KeyName_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="KeyName_Space" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="KeyName_Tab" xml:space="preserve">
+    <value>Tab</value>
+  </data>
+  <data name="KeyName_Esc" xml:space="preserve">
+    <value>Esc</value>
+  </data>
+  <data name="KeyName_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="KeyName_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="KeyName_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="KeyName_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="KeyName_End" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="KeyName_PageUp" xml:space="preserve">
+    <value>Page Up</value>
+  </data>
+  <data name="KeyName_PageDown" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="KeyName_Up" xml:space="preserve">
+    <value>Вверх</value>
+  </data>
+  <data name="KeyName_Down" xml:space="preserve">
+    <value>Вниз</value>
+  </data>
+  <data name="KeyName_Left" xml:space="preserve">
+    <value>Влево</value>
+  </data>
+  <data name="KeyName_Right" xml:space="preserve">
+    <value>Вправо</value>
+  </data>
+  <data name="KeyName_NumLock" xml:space="preserve">
+    <value>Num Lock</value>
+  </data>
+  <data name="KeyName_Num0" xml:space="preserve">
+    <value>Num 0</value>
+  </data>
+  <data name="KeyName_Num1" xml:space="preserve">
+    <value>Num 1</value>
+  </data>
+  <data name="KeyName_Num2" xml:space="preserve">
+    <value>Num 2</value>
+  </data>
+  <data name="KeyName_Num3" xml:space="preserve">
+    <value>Num 3</value>
+  </data>
+  <data name="KeyName_Num4" xml:space="preserve">
+    <value>Num 4</value>
+  </data>
+  <data name="KeyName_Num5" xml:space="preserve">
+    <value>Num 5</value>
+  </data>
+  <data name="KeyName_Num6" xml:space="preserve">
+    <value>Num 6</value>
+  </data>
+  <data name="KeyName_Num7" xml:space="preserve">
+    <value>Num 7</value>
+  </data>
+  <data name="KeyName_Num8" xml:space="preserve">
+    <value>Num 8</value>
+  </data>
+  <data name="KeyName_Num9" xml:space="preserve">
+    <value>Num 9</value>
+  </data>
+  <data name="KeyName_NumDot" xml:space="preserve">
+    <value>Num .</value>
+  </data>
+  <data name="KeyName_NumPlus" xml:space="preserve">
+    <value>Num +</value>
+  </data>
+  <data name="KeyName_NumMinus" xml:space="preserve">
+    <value>Num -</value>
+  </data>
+  <data name="KeyName_NumMultiply" xml:space="preserve">
+    <value>Num *</value>
+  </data>
+  <data name="KeyName_NumDivide" xml:space="preserve">
+    <value>Num /</value>
+  </data>
+  <data name="KeyName_PrintScreen" xml:space="preserve">
+    <value>Print Screen/SysRQ</value>
+  </data>
+  <data name="KeyName_ScrollLock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="KeyName_Pause" xml:space="preserve">
+    <value>Pause/Break</value>
+  </data>
+  <data name="KeyName_CapsLock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="KeyName_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyName_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyName_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyName_LeftWindows" xml:space="preserve">
+    <value>Left Windows</value>
+  </data>
+  <data name="KeyName_RightWindows" xml:space="preserve">
+    <value>Right Windows</value>
+  </data>
+  <data name="KeyName_Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="Msg_TelexWarning" xml:space="preserve">
+    <value>Пожалуйста, временно отключите "Метод ввода Telex", чтобы исправить ошибку при добавлении клавиш.</value>
+  </data>
+  <data name="Msg_TelexWarningTitle" xml:space="preserve">
+    <value>Уведомление</value>
+  </data>
+  <data name="Tray_OpenApp" xml:space="preserve">
+    <value>Открыть приложение</value>
+  </data>
+  <data name="Tray_ExitApp" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="Tray_RunningInBackground" xml:space="preserve">
+    <value>Приложение продолжает работать в области уведомлений.</value>
+  </data>
+  <data name="Tray_Tooltip" xml:space="preserve">
+    <value>AutoMouseKeyboard (работает)</value>
+  </data>
+  <data name="SettingForm_RunOnStartup" xml:space="preserve">
+    <value>Автозапуск вместе с Windows</value>
+  </data>
+  <data name="SettingForm_HideOnComplete" xml:space="preserve">
+    <value>Не показывать окно после завершения/ESC</value>
+  </data>
+  <data name="MainForm_SelectExportFolder" xml:space="preserve">
+    <value>Выберите папку для экспорта конфигураций</value>
+  </data>
+  <data name="Status_MultiConfigExported" xml:space="preserve">
+    <value>Экспортировано {0} конфигурация(й)</value>
+  </data>
+  <data name="Status_MultiConfigImported" xml:space="preserve">
+    <value>Импортировано {0} конфигурация(й)</value>
+  </data>
+  <data name="Msg_MultiExportSuccess" xml:space="preserve">
+    <value>{0} конфигурация(й) успешно экспортировано.</value>
+  </data>
+  <data name="Msg_MultiImportSuccess" xml:space="preserve">
+    <value>{0} конфигурация(й) успешно импортировано.</value>
+  </data>
+  <data name="Msg_NoConfigSelected" xml:space="preserve">
+    <value>Пожалуйста, выберите хотя бы одну конфигурацию для экспорта.</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>Удалить {0} выбранных конфигураций?</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>Поведение</value>
+  </data>
+</root>

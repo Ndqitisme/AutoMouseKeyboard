@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainForm_Title" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="MainForm_ConfigList" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन सूची</value>
+  </data>
+  <data name="MainForm_ActionDetails" xml:space="preserve">
+    <value>कार्रवाई सूची</value>
+  </data>
+  <data name="MainForm_ConfigName" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन का ना�?/value>
+  </data>
+  <data name="MainForm_New" xml:space="preserve">
+    <value>नय�?/value>
+  </data>
+  <data name="MainForm_Save" xml:space="preserve">
+    <value>सहेजें</value>
+  </data>
+  <data name="MainForm_Delete" xml:space="preserve">
+    <value>हटाए�?/value>
+  </data>
+  <data name="MainForm_Setting" xml:space="preserve">
+    <value>सेटिंग्स</value>
+  </data>
+  <data name="MainForm_About" xml:space="preserve">
+    <value>के बारे मे�?/value>
+  </data>
+  <data name="MainForm_Import" xml:space="preserve">
+    <value>आयात करें</value>
+  </data>
+  <data name="MainForm_Export" xml:space="preserve">
+    <value>निर्या�?करें</value>
+  </data>
+  <data name="MainForm_AddKey" xml:space="preserve">
+    <value>कुंजी जोड़ें</value>
+  </data>
+  <data name="MainForm_AddMouse" xml:space="preserve">
+    <value>माउस जोड़ें</value>
+  </data>
+  <data name="MainForm_MoveUp" xml:space="preserve">
+    <value>ऊप�?ले जाएं</value>
+  </data>
+  <data name="MainForm_MoveDown" xml:space="preserve">
+    <value>नीचे ले जाएं</value>
+  </data>
+  <data name="MainForm_Start" xml:space="preserve">
+    <value>शुरू करें</value>
+  </data>
+  <data name="MainForm_Stop" xml:space="preserve">
+    <value>रोके�?/value>
+  </data>
+  <data name="MainForm_DefaultConfigName" xml:space="preserve">
+    <value>नय�?कॉन्फ़िगरेशन</value>
+  </data>
+  <data name="MainForm_ImportConfig" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन आयात करें</value>
+  </data>
+  <data name="MainForm_ExportConfig" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन निर्या�?करें</value>
+  </data>
+  <data name="MainForm_Status" xml:space="preserve">
+    <value>स्थिति: {0}</value>
+  </data>
+  <data name="MainForm_LoopCount" xml:space="preserve">
+    <value>दोहराव की संख्या</value>
+  </data>
+  <data name="MainForm_GlobalDelay" xml:space="preserve">
+    <value>वैश्वि�?विलं�?(ms)</value>
+  </data>
+  <data name="MainForm_ColIndex" xml:space="preserve">
+    <value>क्�?सं.</value>
+  </data>
+  <data name="MainForm_ColKeys" xml:space="preserve">
+    <value>कुंजी</value>
+  </data>
+  <data name="MainForm_ColCharacters" xml:space="preserve">
+    <value>वर्ण</value>
+  </data>
+  <data name="MainForm_ColCount" xml:space="preserve">
+    <value>निष्पादन की संख्या</value>
+  </data>
+  <data name="MainForm_ColDelay" xml:space="preserve">
+    <value>विलं�?/value>
+  </data>
+  <data name="MainForm_ColSetPosition" xml:space="preserve">
+    <value>निर्देशांक से�?करें</value>
+  </data>
+  <data name="SettingForm_Title" xml:space="preserve">
+    <value>सेटिंग्स</value>
+  </data>
+  <data name="SettingForm_Theme" xml:space="preserve">
+    <value>इंटरफ़ेस:</value>
+  </data>
+  <data name="SettingForm_Language" xml:space="preserve">
+    <value>भाषा:</value>
+  </data>
+  <data name="SettingForm_Light" xml:space="preserve">
+    <value>हल्क�?/value>
+  </data>
+  <data name="SettingForm_Dark" xml:space="preserve">
+    <value>गहरा</value>
+  </data>
+  <data name="SettingForm_Cyan" xml:space="preserve">
+    <value>सिया�?/value>
+  </data>
+  <data name="SettingForm_Pink" xml:space="preserve">
+    <value>गुलाबी</value>
+  </data>
+  <data name="SettingForm_Green" xml:space="preserve">
+    <value>हर�?/value>
+  </data>
+  <data name="SettingForm_Red" xml:space="preserve">
+    <value>ला�?/value>
+  </data>
+  <data name="SettingForm_Orange" xml:space="preserve">
+    <value>नारंगी</value>
+  </data>
+  <data name="SettingForm_Yellow" xml:space="preserve">
+    <value>पीला</value>
+  </data>
+  <data name="SettingForm_Blue" xml:space="preserve">
+    <value>नीला</value>
+  </data>
+  <data name="SettingForm_Indigo" xml:space="preserve">
+    <value>नी�?/value>
+  </data>
+  <data name="SettingForm_Violet" xml:space="preserve">
+    <value>बैंगनी</value>
+  </data>
+  <data name="SettingForm_OK" xml:space="preserve">
+    <value>ठी�?है</value>
+  </data>
+  <data name="SettingForm_Note" xml:space="preserve">
+    <value>भविष्य के अपडे�?मे�?अधिक सेटिंग्स उपलब्ध होंगी�?/value>
+  </data>
+  <data name="AboutForm_Title" xml:space="preserve">
+    <value>के बारे मे�?/value>
+  </data>
+  <data name="AboutForm_AppName" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="AboutForm_Version" xml:space="preserve">
+    <value>संस्कर�? 1.0.0</value>
+  </data>
+  <data name="AboutForm_Author" xml:space="preserve">
+    <value>लेखक: NDQITVN</value>
+  </data>
+  <data name="AboutForm_Description" xml:space="preserve">
+    <value>माउस क्लि�?और कीबोर्�?इनपु�?के लि�?स्वचाल�?उपकरण।</value>
+  </data>
+  <data name="AboutForm_DonateTitle" xml:space="preserve">
+    <value>यद�?आप लेखक को दा�?करना चाहत�?है�?</value>
+  </data>
+  <data name="AboutForm_DonateInfo" xml:space="preserve">
+    <value>बैंक: {0}&#x0D;&#x0A;खाता संख्या: {1}&#x0D;&#x0A;खाता धारक: {2}&#x0D;&#x0A;&#x0D;&#x0A;या त्वरित स्थानांतरण के लि�?बग�?मे�?QR को�?स्कै�?करें�?/value>
+  </data>
+  <data name="KeyActionForm_Title" xml:space="preserve">
+    <value>कुंजी जोड़ें</value>
+  </data>
+  <data name="KeyActionForm_Key" xml:space="preserve">
+    <value>कुंजी:</value>
+  </data>
+  <data name="KeyActionForm_Modifiers" xml:space="preserve">
+    <value>कुंजियां दबाए रखें:</value>
+  </data>
+  <data name="KeyActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyActionForm_Count" xml:space="preserve">
+    <value>बा�?की संख्या</value>
+  </data>
+  <data name="KeyActionForm_Interval" xml:space="preserve">
+    <value>विलं�?(ms)</value>
+  </data>
+  <data name="KeyActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 सेकं�?= 1000 मिलीसेकं�?</value>
+  </data>
+  <data name="KeyActionForm_OK" xml:space="preserve">
+    <value>ठी�?है</value>
+  </data>
+  <data name="KeyActionForm_Cancel" xml:space="preserve">
+    <value>रद्द करें</value>
+  </data>
+  <data name="MouseActionForm_Title" xml:space="preserve">
+    <value>माउस कार्रवाई जोड़ें</value>
+  </data>
+  <data name="MouseActionForm_Action" xml:space="preserve">
+    <value>क्लि�?प्रकार:</value>
+  </data>
+  <data name="MouseActionForm_Modifiers" xml:space="preserve">
+    <value>कुंजियां दबाए रखें:</value>
+  </data>
+  <data name="MouseActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="MouseActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="MouseActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="MouseActionForm_Position" xml:space="preserve">
+    <value>निर्देशांक X,Y</value>
+  </data>
+  <data name="MouseActionForm_SetPosition" xml:space="preserve">
+    <value>निर्देशांक से�?करें</value>
+  </data>
+  <data name="MouseActionForm_Count" xml:space="preserve">
+    <value>बा�?की संख्या</value>
+  </data>
+  <data name="MouseActionForm_Interval" xml:space="preserve">
+    <value>विलं�?(ms)</value>
+  </data>
+  <data name="MouseActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 सेकं�?= 1000 मिलीसेकं�?</value>
+  </data>
+  <data name="MouseActionForm_OK" xml:space="preserve">
+    <value>ठी�?है</value>
+  </data>
+  <data name="MouseActionForm_Cancel" xml:space="preserve">
+    <value>रद्द करें</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>तैया�?/value>
+  </data>
+  <data name="Status_ConfigMoved" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन स्थानांतरि�? {0}</value>
+  </data>
+  <data name="Status_ConfigLoaded" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन लो�?किया गय�? {0}</value>
+  </data>
+  <data name="Status_CreatingNew" xml:space="preserve">
+    <value>नय�?कॉन्फ़िगरेशन बनाय�?जा रह�?है...</value>
+  </data>
+  <data name="Status_ConfigSaved" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन सहेज�?गय�?/value>
+  </data>
+  <data name="Status_ConfigCopied" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन कॉपी किया गय�? {0}</value>
+  </data>
+  <data name="Status_ConfigCreated" xml:space="preserve">
+    <value>नय�?कॉन्फ़िगरेशन बनाय�?गय�? {0}</value>
+  </data>
+  <data name="Status_ConfigDeleted" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन हटाय�?गय�?/value>
+  </data>
+  <data name="Status_Running" xml:space="preserve">
+    <value>चल रह�?है...</value>
+  </data>
+  <data name="Status_Stopped" xml:space="preserve">
+    <value>रो�?दिया गय�?/value>
+  </data>
+  <data name="Status_Completed" xml:space="preserve">
+    <value>कार्रवाई अनुक्र�?पूर्�?हो गय�?/value>
+  </data>
+  <data name="Status_EscPressed" xml:space="preserve">
+    <value>ESC दबान�?का पत�?चल�? स्वचालित ऑपरेशन रो�?दिया गय�?/value>
+  </data>
+  <data name="Status_Error" xml:space="preserve">
+    <value>चलात�?सम�?त्रुटि</value>
+  </data>
+  <data name="Status_ConfigImported" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन आयात किया गय�? {0}</value>
+  </data>
+  <data name="Status_ConfigExported" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन निर्या�?किया गय�?/value>
+  </data>
+  <data name="Msg_DuplicateConfigName" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन ना�?"{0}" पहले से मौजू�?है�?कृपय�?को�?अन्य ना�?चुनें।</value>
+  </data>
+  <data name="Msg_SaveSuccess" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन सफलतापूर्व�?सहेज�?गया।</value>
+  </data>
+  <data name="Msg_SaveFailed" xml:space="preserve">
+    <value>सहेज�?नही�?जा सकता</value>
+  </data>
+  <data name="Msg_PasteFailed" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन पेस्�?नही�?किया जा सकता</value>
+  </data>
+  <data name="Msg_ConfirmDelete" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन "{0}" हटाए�?</value>
+  </data>
+  <data name="Msg_CapturePosition" xml:space="preserve">
+    <value>ठी�?है दबाए�?और फि�?निर्देशांक प्राप्�?करने के लि�?वांछित स्था�?पर माउस पर क्लि�?करें�?/value>
+  </data>
+  <data name="Msg_CapturePositionTitle" xml:space="preserve">
+    <value>स्थिति निर्देशांक अपडे�?करें</value>
+  </data>
+  <data name="Msg_CaptureFailed" xml:space="preserve">
+    <value>निर्देशांक प्राप्�?नही�?कि�?जा सकते</value>
+  </data>
+  <data name="Msg_RunFailed" xml:space="preserve">
+    <value>चलाय�?नही�?जा सकता</value>
+  </data>
+  <data name="Msg_RunError" xml:space="preserve">
+    <value>चलात�?सम�?त्रुटि</value>
+  </data>
+  <data name="Msg_ImportFailed" xml:space="preserve">
+    <value>आयात विफल</value>
+  </data>
+  <data name="Msg_ExportFailed" xml:space="preserve">
+    <value>निर्या�?नही�?किया जा सकता</value>
+  </data>
+  <data name="Msg_Success" xml:space="preserve">
+    <value>सफ�?/value>
+  </data>
+  <data name="Msg_Confirm" xml:space="preserve">
+    <value>पुष्टि करें</value>
+  </data>
+  <data name="Msg_ConfigNameRequired" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन ना�?खाली नही�?हो सकता�?/value>
+  </data>
+  <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन मे�?कम से कम 1 क्रिया होनी चाहिए।</value>
+  </data>
+  <data name="Msg_ActionMissingKey" xml:space="preserve">
+    <value>क्रिया #{0} मे�?को�?कुंजी नही�?है�?/value>
+  </data>
+  <data name="Menu_F1F12Key" xml:space="preserve">
+    <value>F1-F12 कुंजियां</value>
+  </data>
+  <data name="Menu_AZKey" xml:space="preserve">
+    <value>A-Z कुंजियां</value>
+  </data>
+  <data name="Menu_09Key" xml:space="preserve">
+    <value>0-9 कुंजियां</value>
+  </data>
+  <data name="Menu_SymbolKey" xml:space="preserve">
+    <value>विशे�?वर्ण कुंजियां</value>
+  </data>
+  <data name="Menu_NumKey" xml:space="preserve">
+    <value>दाईं ओर संख्या कुंजियां</value>
+  </data>
+  <data name="Menu_OtherKey" xml:space="preserve">
+    <value>अन्य कुंजियां</value>
+  </data>
+  <data name="MouseAction_LeftClick" xml:space="preserve">
+    <value>बाएं माउस बट�?क्लि�?/value>
+  </data>
+  <data name="MouseAction_LeftDouble" xml:space="preserve">
+    <value>बाएं माउस बट�?डब�?क्लि�?/value>
+  </data>
+  <data name="MouseAction_RightClick" xml:space="preserve">
+    <value>दाएं माउस बट�?क्लि�?/value>
+  </data>
+  <data name="MouseAction_RightDouble" xml:space="preserve">
+    <value>दाएं माउस बट�?डब�?क्लि�?/value>
+  </data>
+  <data name="MouseAction_MiddleClick" xml:space="preserve">
+    <value>मध्य माउस बट�?क्लि�?/value>
+  </data>
+  <data name="MouseAction_MiddleDouble" xml:space="preserve">
+    <value>मध्य माउस बट�?डब�?क्लि�?/value>
+  </data>
+  <data name="KeyName_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="KeyName_Space" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="KeyName_Tab" xml:space="preserve">
+    <value>Tab</value>
+  </data>
+  <data name="KeyName_Esc" xml:space="preserve">
+    <value>Esc</value>
+  </data>
+  <data name="KeyName_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="KeyName_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="KeyName_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="KeyName_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="KeyName_End" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="KeyName_PageUp" xml:space="preserve">
+    <value>Page Up</value>
+  </data>
+  <data name="KeyName_PageDown" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="KeyName_Up" xml:space="preserve">
+    <value>ऊप�?/value>
+  </data>
+  <data name="KeyName_Down" xml:space="preserve">
+    <value>नीचे</value>
+  </data>
+  <data name="KeyName_Left" xml:space="preserve">
+    <value>बाएं</value>
+  </data>
+  <data name="KeyName_Right" xml:space="preserve">
+    <value>दाएं</value>
+  </data>
+  <data name="KeyName_NumLock" xml:space="preserve">
+    <value>Num Lock</value>
+  </data>
+  <data name="KeyName_Num0" xml:space="preserve">
+    <value>Num 0</value>
+  </data>
+  <data name="KeyName_Num1" xml:space="preserve">
+    <value>Num 1</value>
+  </data>
+  <data name="KeyName_Num2" xml:space="preserve">
+    <value>Num 2</value>
+  </data>
+  <data name="KeyName_Num3" xml:space="preserve">
+    <value>Num 3</value>
+  </data>
+  <data name="KeyName_Num4" xml:space="preserve">
+    <value>Num 4</value>
+  </data>
+  <data name="KeyName_Num5" xml:space="preserve">
+    <value>Num 5</value>
+  </data>
+  <data name="KeyName_Num6" xml:space="preserve">
+    <value>Num 6</value>
+  </data>
+  <data name="KeyName_Num7" xml:space="preserve">
+    <value>Num 7</value>
+  </data>
+  <data name="KeyName_Num8" xml:space="preserve">
+    <value>Num 8</value>
+  </data>
+  <data name="KeyName_Num9" xml:space="preserve">
+    <value>Num 9</value>
+  </data>
+  <data name="KeyName_NumDot" xml:space="preserve">
+    <value>Num .</value>
+  </data>
+  <data name="KeyName_NumPlus" xml:space="preserve">
+    <value>Num +</value>
+  </data>
+  <data name="KeyName_NumMinus" xml:space="preserve">
+    <value>Num -</value>
+  </data>
+  <data name="KeyName_NumMultiply" xml:space="preserve">
+    <value>Num *</value>
+  </data>
+  <data name="KeyName_NumDivide" xml:space="preserve">
+    <value>Num /</value>
+  </data>
+  <data name="KeyName_PrintScreen" xml:space="preserve">
+    <value>Print Screen/SysRQ</value>
+  </data>
+  <data name="KeyName_ScrollLock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="KeyName_Pause" xml:space="preserve">
+    <value>Pause/Break</value>
+  </data>
+  <data name="KeyName_CapsLock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="KeyName_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyName_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyName_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyName_LeftWindows" xml:space="preserve">
+    <value>Left Windows</value>
+  </data>
+  <data name="KeyName_RightWindows" xml:space="preserve">
+    <value>Right Windows</value>
+  </data>
+  <data name="KeyName_Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="Msg_TelexWarning" xml:space="preserve">
+    <value>कृपय�?कुंजियां जोड़ते सम�?त्रुटि को ठी�?करने के लि�?"Telex इनपु�?विधि" को अस्थायी रू�?से अक्ष�?करें�?/value>
+  </data>
+  <data name="Msg_TelexWarningTitle" xml:space="preserve">
+    <value>सूचन�?/value>
+  </data>
+  <data name="Tray_OpenApp" xml:space="preserve">
+    <value>ऐप खोले�?/value>
+  </data>
+  <data name="Tray_ExitApp" xml:space="preserve">
+    <value>बं�?करें</value>
+  </data>
+  <data name="Tray_RunningInBackground" xml:space="preserve">
+    <value>ऐप सिस्टम ट्रे मे�?चल रह�?है�?/value>
+  </data>
+  <data name="Tray_Tooltip" xml:space="preserve">
+    <value>AutoMouseKeyboard (चालू)</value>
+  </data>
+  <data name="SettingForm_RunOnStartup" xml:space="preserve">
+    <value>Windows शुरू होते ही स्वत�?चालू करें</value>
+  </data>
+  <data name="SettingForm_HideOnComplete" xml:space="preserve">
+    <value>पूर्�?ESC के बा�?विंड�?�?दिखाएं</value>
+  </data>
+  <data name="MainForm_SelectExportFolder" xml:space="preserve">
+    <value>कॉन्फ़िगरेशन निर्या�?करने के लि�?फ़ोल्ड�?चुने�?/value>
+  </data>
+  <data name="Status_MultiConfigExported" xml:space="preserve">
+    <value>{0} कॉन्फ़िगरेशन निर्या�?कि�?गए</value>
+  </data>
+  <data name="Status_MultiConfigImported" xml:space="preserve">
+    <value>{0} कॉन्फ़िगरेशन आयात कि�?गए</value>
+  </data>
+  <data name="Msg_MultiExportSuccess" xml:space="preserve">
+    <value>{0} कॉन्फ़िगरेशन सफलतापूर्व�?निर्या�?कि�?गए�?/value>
+  </data>
+  <data name="Msg_MultiImportSuccess" xml:space="preserve">
+    <value>{0} कॉन्फ़िगरेशन सफलतापूर्व�?आयात कि�?गए�?/value>
+  </data>
+  <data name="Msg_NoConfigSelected" xml:space="preserve">
+    <value>कृपय�?निर्या�?करने के लि�?कम से कम एक कॉन्फ़िगरेशन चुनें।</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>{0} चयनि�?कॉन्फ़िगरेशन हटाए�?</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>व्यवहा�?/value>
+  </data>
+</root>
+

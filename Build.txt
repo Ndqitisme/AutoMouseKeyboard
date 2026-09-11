@@ -1,0 +1,5 @@
+# Build x64 (self-contained, single file)
+# Build x86 (32-bit, self-contained, single file)
+
+dotnet publish AutoMouseKeyboard/AutoMouseKeyboard.csproj -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true /p:PublishTrimmed=false
+dotnet publish AutoMouseKeyboard/AutoMouseKeyboard.csproj -c Release -r win-x86 --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true /p:PublishTrimmed=false

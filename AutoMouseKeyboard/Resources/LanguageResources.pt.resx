@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainForm_Title" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="MainForm_ConfigList" xml:space="preserve">
+    <value>Lista de configurações</value>
+  </data>
+  <data name="MainForm_ActionDetails" xml:space="preserve">
+    <value>Lista de ações</value>
+  </data>
+  <data name="MainForm_ConfigName" xml:space="preserve">
+    <value>Nome da configuração</value>
+  </data>
+  <data name="MainForm_New" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="MainForm_Save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="MainForm_Delete" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="MainForm_Setting" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="MainForm_About" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="MainForm_Import" xml:space="preserve">
+    <value>Importar</value>
+  </data>
+  <data name="MainForm_Export" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+  <data name="MainForm_AddKey" xml:space="preserve">
+    <value>Adicionar tecla</value>
+  </data>
+  <data name="MainForm_AddMouse" xml:space="preserve">
+    <value>Adicionar mouse</value>
+  </data>
+  <data name="MainForm_MoveUp" xml:space="preserve">
+    <value>Subir</value>
+  </data>
+  <data name="MainForm_MoveDown" xml:space="preserve">
+    <value>Descer</value>
+  </data>
+  <data name="MainForm_Start" xml:space="preserve">
+    <value>Iniciar</value>
+  </data>
+  <data name="MainForm_Stop" xml:space="preserve">
+    <value>Parar</value>
+  </data>
+  <data name="MainForm_DefaultConfigName" xml:space="preserve">
+    <value>Nova Configuração</value>
+  </data>
+  <data name="MainForm_ImportConfig" xml:space="preserve">
+    <value>Importar configuração</value>
+  </data>
+  <data name="MainForm_ExportConfig" xml:space="preserve">
+    <value>Exportar configuração</value>
+  </data>
+  <data name="MainForm_Status" xml:space="preserve">
+    <value>Status: {0}</value>
+  </data>
+  <data name="MainForm_LoopCount" xml:space="preserve">
+    <value>Número de repetições</value>
+  </data>
+  <data name="MainForm_GlobalDelay" xml:space="preserve">
+    <value>Atraso global (ms)</value>
+  </data>
+  <data name="MainForm_ColIndex" xml:space="preserve">
+    <value>Nº</value>
+  </data>
+  <data name="MainForm_ColKeys" xml:space="preserve">
+    <value>Tecla</value>
+  </data>
+  <data name="MainForm_ColCharacters" xml:space="preserve">
+    <value>Caractere</value>
+  </data>
+  <data name="MainForm_ColCount" xml:space="preserve">
+    <value>Número de execuções</value>
+  </data>
+  <data name="MainForm_ColDelay" xml:space="preserve">
+    <value>Atraso</value>
+  </data>
+  <data name="MainForm_ColSetPosition" xml:space="preserve">
+    <value>Definir coordenadas</value>
+  </data>
+  <data name="SettingForm_Title" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="SettingForm_Theme" xml:space="preserve">
+    <value>Interface:</value>
+  </data>
+  <data name="SettingForm_Language" xml:space="preserve">
+    <value>Idioma:</value>
+  </data>
+  <data name="SettingForm_Light" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="SettingForm_Dark" xml:space="preserve">
+    <value>Escuro</value>
+  </data>
+  <data name="SettingForm_Cyan" xml:space="preserve">
+    <value>Ciano</value>
+  </data>
+  <data name="SettingForm_Pink" xml:space="preserve">
+    <value>Rosa</value>
+  </data>
+  <data name="SettingForm_Green" xml:space="preserve">
+    <value>Verde</value>
+  </data>
+  <data name="SettingForm_Red" xml:space="preserve">
+    <value>Vermelho</value>
+  </data>
+  <data name="SettingForm_Orange" xml:space="preserve">
+    <value>Laranja</value>
+  </data>
+  <data name="SettingForm_Yellow" xml:space="preserve">
+    <value>Amarelo</value>
+  </data>
+  <data name="SettingForm_Blue" xml:space="preserve">
+    <value>Azul</value>
+  </data>
+  <data name="SettingForm_Indigo" xml:space="preserve">
+    <value>Anil</value>
+  </data>
+  <data name="SettingForm_Violet" xml:space="preserve">
+    <value>Violeta</value>
+  </data>
+  <data name="SettingForm_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SettingForm_Note" xml:space="preserve">
+    <value>Mais configurações estarão disponíveis em atualizações futuras.</value>
+  </data>
+  <data name="AboutForm_Title" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="AboutForm_AppName" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="AboutForm_Version" xml:space="preserve">
+    <value>Versão: 1.0.0</value>
+  </data>
+  <data name="AboutForm_Author" xml:space="preserve">
+    <value>Autor: NDQITVN</value>
+  </data>
+  <data name="AboutForm_Description" xml:space="preserve">
+    <value>Ferramenta de automação para cliques do mouse e entrada de teclado.</value>
+  </data>
+  <data name="AboutForm_DonateTitle" xml:space="preserve">
+    <value>Se você deseja doar ao autor:</value>
+  </data>
+  <data name="AboutForm_DonateInfo" xml:space="preserve">
+    <value>Banco: {0}&#x0D;&#x0A;Número da conta: {1}&#x0D;&#x0A;Titular da conta: {2}&#x0D;&#x0A;&#x0D;&#x0A;Ou escaneie o código QR ao lado para transferência rápida.</value>
+  </data>
+  <data name="KeyActionForm_Title" xml:space="preserve">
+    <value>Adicionar tecla</value>
+  </data>
+  <data name="KeyActionForm_Key" xml:space="preserve">
+    <value>Tecla:</value>
+  </data>
+  <data name="KeyActionForm_Modifiers" xml:space="preserve">
+    <value>Manter teclas:</value>
+  </data>
+  <data name="KeyActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyActionForm_Count" xml:space="preserve">
+    <value>Número de vezes</value>
+  </data>
+  <data name="KeyActionForm_Interval" xml:space="preserve">
+    <value>Atraso (ms)</value>
+  </data>
+  <data name="KeyActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 segundo = 1000 milissegundos)</value>
+  </data>
+  <data name="KeyActionForm_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="KeyActionForm_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="MouseActionForm_Title" xml:space="preserve">
+    <value>Adicionar ação do mouse</value>
+  </data>
+  <data name="MouseActionForm_Action" xml:space="preserve">
+    <value>Tipo de clique:</value>
+  </data>
+  <data name="MouseActionForm_Modifiers" xml:space="preserve">
+    <value>Manter teclas:</value>
+  </data>
+  <data name="MouseActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="MouseActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="MouseActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="MouseActionForm_Position" xml:space="preserve">
+    <value>Coordenadas X,Y</value>
+  </data>
+  <data name="MouseActionForm_SetPosition" xml:space="preserve">
+    <value>Definir coordenadas</value>
+  </data>
+  <data name="MouseActionForm_Count" xml:space="preserve">
+    <value>Número de vezes</value>
+  </data>
+  <data name="MouseActionForm_Interval" xml:space="preserve">
+    <value>Atraso (ms)</value>
+  </data>
+  <data name="MouseActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 segundo = 1000 milissegundos)</value>
+  </data>
+  <data name="MouseActionForm_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="MouseActionForm_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>Pronto</value>
+  </data>
+  <data name="Status_ConfigMoved" xml:space="preserve">
+    <value>Configuração movida: {0}</value>
+  </data>
+  <data name="Status_ConfigLoaded" xml:space="preserve">
+    <value>Configuração carregada: {0}</value>
+  </data>
+  <data name="Status_CreatingNew" xml:space="preserve">
+    <value>Criando nova configuração...</value>
+  </data>
+  <data name="Status_ConfigSaved" xml:space="preserve">
+    <value>Configuração salva</value>
+  </data>
+  <data name="Status_ConfigCopied" xml:space="preserve">
+    <value>Configuração copiada: {0}</value>
+  </data>
+  <data name="Status_ConfigCreated" xml:space="preserve">
+    <value>Nova configuração criada: {0}</value>
+  </data>
+  <data name="Status_ConfigDeleted" xml:space="preserve">
+    <value>Configuração excluída</value>
+  </data>
+  <data name="Status_Running" xml:space="preserve">
+    <value>Executando...</value>
+  </data>
+  <data name="Status_Stopped" xml:space="preserve">
+    <value>Parado</value>
+  </data>
+  <data name="Status_Completed" xml:space="preserve">
+    <value>Sequência de ações concluída</value>
+  </data>
+  <data name="Status_EscPressed" xml:space="preserve">
+    <value>ESC detectado, operação automática interrompida</value>
+  </data>
+  <data name="Status_Error" xml:space="preserve">
+    <value>Erro ao executar</value>
+  </data>
+  <data name="Status_ConfigImported" xml:space="preserve">
+    <value>Configuração importada: {0}</value>
+  </data>
+  <data name="Status_ConfigExported" xml:space="preserve">
+    <value>Configuração exportada</value>
+  </data>
+  <data name="Msg_DuplicateConfigName" xml:space="preserve">
+    <value>O nome da configuração "{0}" já existe. Por favor, escolha outro nome.</value>
+  </data>
+  <data name="Msg_SaveSuccess" xml:space="preserve">
+    <value>Configuração salva com sucesso.</value>
+  </data>
+  <data name="Msg_SaveFailed" xml:space="preserve">
+    <value>Não é possível salvar</value>
+  </data>
+  <data name="Msg_PasteFailed" xml:space="preserve">
+    <value>Não é possível colar a configuração</value>
+  </data>
+  <data name="Msg_ConfirmDelete" xml:space="preserve">
+    <value>Excluir configuração "{0}"?</value>
+  </data>
+  <data name="Msg_CapturePosition" xml:space="preserve">
+    <value>Pressione OK e depois clique com o mouse na posição desejada para obter as coordenadas.</value>
+  </data>
+  <data name="Msg_CapturePositionTitle" xml:space="preserve">
+    <value>Atualizar coordenadas de posição</value>
+  </data>
+  <data name="Msg_CaptureFailed" xml:space="preserve">
+    <value>Não é possível obter as coordenadas</value>
+  </data>
+  <data name="Msg_RunFailed" xml:space="preserve">
+    <value>Não é possível executar</value>
+  </data>
+  <data name="Msg_RunError" xml:space="preserve">
+    <value>Erro ao executar</value>
+  </data>
+  <data name="Msg_ImportFailed" xml:space="preserve">
+    <value>Importação falhou</value>
+  </data>
+  <data name="Msg_ExportFailed" xml:space="preserve">
+    <value>Não é possível exportar</value>
+  </data>
+  <data name="Msg_Success" xml:space="preserve">
+    <value>Sucesso</value>
+  </data>
+  <data name="Msg_Confirm" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Msg_ConfigNameRequired" xml:space="preserve">
+    <value>O nome da configuração não pode estar vazio.</value>
+  </data>
+  <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
+    <value>A configuração deve ter pelo menos 1 ação.</value>
+  </data>
+  <data name="Msg_ActionMissingKey" xml:space="preserve">
+    <value>A ação #{0} não tem uma tecla.</value>
+  </data>
+  <data name="Menu_F1F12Key" xml:space="preserve">
+    <value>Teclas F1-F12</value>
+  </data>
+  <data name="Menu_AZKey" xml:space="preserve">
+    <value>Teclas A-Z</value>
+  </data>
+  <data name="Menu_09Key" xml:space="preserve">
+    <value>Teclas 0-9</value>
+  </data>
+  <data name="Menu_SymbolKey" xml:space="preserve">
+    <value>Teclas de caracteres especiais</value>
+  </data>
+  <data name="Menu_NumKey" xml:space="preserve">
+    <value>Teclas numéricas do lado direito</value>
+  </data>
+  <data name="Menu_OtherKey" xml:space="preserve">
+    <value>Outras teclas</value>
+  </data>
+  <data name="MouseAction_LeftClick" xml:space="preserve">
+    <value>Clique do botão esquerdo do mouse</value>
+  </data>
+  <data name="MouseAction_LeftDouble" xml:space="preserve">
+    <value>Duplo clique do botão esquerdo do mouse</value>
+  </data>
+  <data name="MouseAction_RightClick" xml:space="preserve">
+    <value>Clique do botão direito do mouse</value>
+  </data>
+  <data name="MouseAction_RightDouble" xml:space="preserve">
+    <value>Duplo clique do botão direito do mouse</value>
+  </data>
+  <data name="MouseAction_MiddleClick" xml:space="preserve">
+    <value>Clique do botão central do mouse</value>
+  </data>
+  <data name="MouseAction_MiddleDouble" xml:space="preserve">
+    <value>Duplo clique do botão central do mouse</value>
+  </data>
+  <data name="KeyName_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="KeyName_Space" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="KeyName_Tab" xml:space="preserve">
+    <value>Tab</value>
+  </data>
+  <data name="KeyName_Esc" xml:space="preserve">
+    <value>Esc</value>
+  </data>
+  <data name="KeyName_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="KeyName_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="KeyName_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="KeyName_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="KeyName_End" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="KeyName_PageUp" xml:space="preserve">
+    <value>Page Up</value>
+  </data>
+  <data name="KeyName_PageDown" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="KeyName_Up" xml:space="preserve">
+    <value>Acima</value>
+  </data>
+  <data name="KeyName_Down" xml:space="preserve">
+    <value>Abaixo</value>
+  </data>
+  <data name="KeyName_Left" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="KeyName_Right" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="KeyName_NumLock" xml:space="preserve">
+    <value>Num Lock</value>
+  </data>
+  <data name="KeyName_Num0" xml:space="preserve">
+    <value>Num 0</value>
+  </data>
+  <data name="KeyName_Num1" xml:space="preserve">
+    <value>Num 1</value>
+  </data>
+  <data name="KeyName_Num2" xml:space="preserve">
+    <value>Num 2</value>
+  </data>
+  <data name="KeyName_Num3" xml:space="preserve">
+    <value>Num 3</value>
+  </data>
+  <data name="KeyName_Num4" xml:space="preserve">
+    <value>Num 4</value>
+  </data>
+  <data name="KeyName_Num5" xml:space="preserve">
+    <value>Num 5</value>
+  </data>
+  <data name="KeyName_Num6" xml:space="preserve">
+    <value>Num 6</value>
+  </data>
+  <data name="KeyName_Num7" xml:space="preserve">
+    <value>Num 7</value>
+  </data>
+  <data name="KeyName_Num8" xml:space="preserve">
+    <value>Num 8</value>
+  </data>
+  <data name="KeyName_Num9" xml:space="preserve">
+    <value>Num 9</value>
+  </data>
+  <data name="KeyName_NumDot" xml:space="preserve">
+    <value>Num .</value>
+  </data>
+  <data name="KeyName_NumPlus" xml:space="preserve">
+    <value>Num +</value>
+  </data>
+  <data name="KeyName_NumMinus" xml:space="preserve">
+    <value>Num -</value>
+  </data>
+  <data name="KeyName_NumMultiply" xml:space="preserve">
+    <value>Num *</value>
+  </data>
+  <data name="KeyName_NumDivide" xml:space="preserve">
+    <value>Num /</value>
+  </data>
+  <data name="KeyName_PrintScreen" xml:space="preserve">
+    <value>Print Screen/SysRQ</value>
+  </data>
+  <data name="KeyName_ScrollLock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="KeyName_Pause" xml:space="preserve">
+    <value>Pause/Break</value>
+  </data>
+  <data name="KeyName_CapsLock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="KeyName_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyName_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyName_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyName_LeftWindows" xml:space="preserve">
+    <value>Left Windows</value>
+  </data>
+  <data name="KeyName_RightWindows" xml:space="preserve">
+    <value>Right Windows</value>
+  </data>
+  <data name="KeyName_Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="Msg_TelexWarning" xml:space="preserve">
+    <value>Por favor, desative temporariamente o "Método de entrada Telex" para corrigir o erro ao adicionar teclas.</value>
+  </data>
+  <data name="Msg_TelexWarningTitle" xml:space="preserve">
+    <value>Notificação</value>
+  </data>
+  <data name="Tray_OpenApp" xml:space="preserve">
+    <value>Abrir aplicativo</value>
+  </data>
+  <data name="Tray_ExitApp" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="Tray_RunningInBackground" xml:space="preserve">
+    <value>O app continua em execução na bandeja do sistema.</value>
+  </data>
+  <data name="Tray_Tooltip" xml:space="preserve">
+    <value>AutoMouseKeyboard (em execução)</value>
+  </data>
+  <data name="SettingForm_RunOnStartup" xml:space="preserve">
+    <value>Iniciar automaticamente com o Windows</value>
+  </data>
+  <data name="SettingForm_HideOnComplete" xml:space="preserve">
+    <value>Não mostrar a janela após finalizar/ESC</value>
+  </data>
+  <data name="MainForm_SelectExportFolder" xml:space="preserve">
+    <value>Selecionar pasta para exportar configurações</value>
+  </data>
+  <data name="Status_MultiConfigExported" xml:space="preserve">
+    <value>{0} configuração(ões) exportada(s)</value>
+  </data>
+  <data name="Status_MultiConfigImported" xml:space="preserve">
+    <value>{0} configuração(ões) importada(s)</value>
+  </data>
+  <data name="Msg_MultiExportSuccess" xml:space="preserve">
+    <value>{0} configuração(ões) exportada(s) com sucesso.</value>
+  </data>
+  <data name="Msg_MultiImportSuccess" xml:space="preserve">
+    <value>{0} configuração(ões) importada(s) com sucesso.</value>
+  </data>
+  <data name="Msg_NoConfigSelected" xml:space="preserve">
+    <value>Por favor, selecione pelo menos uma configuração para exportar.</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>Excluir {0} configurações selecionadas?</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>Comportamento</value>
+  </data>
+</root>

@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainForm_Title" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="MainForm_ConfigList" xml:space="preserve">
+    <value>Yapılandırma listesi</value>
+  </data>
+  <data name="MainForm_ActionDetails" xml:space="preserve">
+    <value>Eylem listesi</value>
+  </data>
+  <data name="MainForm_ConfigName" xml:space="preserve">
+    <value>Yapılandırma adı</value>
+  </data>
+  <data name="MainForm_New" xml:space="preserve">
+    <value>Yeni</value>
+  </data>
+  <data name="MainForm_Save" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="MainForm_Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="MainForm_Setting" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="MainForm_About" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="MainForm_Import" xml:space="preserve">
+    <value>İçe aktar</value>
+  </data>
+  <data name="MainForm_Export" xml:space="preserve">
+    <value>Dışa aktar</value>
+  </data>
+  <data name="MainForm_AddKey" xml:space="preserve">
+    <value>Tuş ekle</value>
+  </data>
+  <data name="MainForm_AddMouse" xml:space="preserve">
+    <value>Fare ekle</value>
+  </data>
+  <data name="MainForm_MoveUp" xml:space="preserve">
+    <value>Yukarı taşı</value>
+  </data>
+  <data name="MainForm_MoveDown" xml:space="preserve">
+    <value>Aşağı taşı</value>
+  </data>
+  <data name="MainForm_Start" xml:space="preserve">
+    <value>Başlat</value>
+  </data>
+  <data name="MainForm_Stop" xml:space="preserve">
+    <value>Durdur</value>
+  </data>
+  <data name="MainForm_DefaultConfigName" xml:space="preserve">
+    <value>Yeni Yapılandırma</value>
+  </data>
+  <data name="MainForm_ImportConfig" xml:space="preserve">
+    <value>Yapılandırma içe aktar</value>
+  </data>
+  <data name="MainForm_ExportConfig" xml:space="preserve">
+    <value>Yapılandırma dışa aktar</value>
+  </data>
+  <data name="MainForm_Status" xml:space="preserve">
+    <value>Durum: {0}</value>
+  </data>
+  <data name="MainForm_LoopCount" xml:space="preserve">
+    <value>Tekrar sayısı</value>
+  </data>
+  <data name="MainForm_GlobalDelay" xml:space="preserve">
+    <value>Genel gecikme (ms)</value>
+  </data>
+  <data name="MainForm_ColIndex" xml:space="preserve">
+    <value>Sıra</value>
+  </data>
+  <data name="MainForm_ColKeys" xml:space="preserve">
+    <value>Tuş</value>
+  </data>
+  <data name="MainForm_ColCharacters" xml:space="preserve">
+    <value>Karakter</value>
+  </data>
+  <data name="MainForm_ColCount" xml:space="preserve">
+    <value>Yürütme sayısı</value>
+  </data>
+  <data name="MainForm_ColDelay" xml:space="preserve">
+    <value>Gecikme</value>
+  </data>
+  <data name="MainForm_ColSetPosition" xml:space="preserve">
+    <value>Koordinatları ayarla</value>
+  </data>
+  <data name="SettingForm_Title" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="SettingForm_Theme" xml:space="preserve">
+    <value>Arayüz:</value>
+  </data>
+  <data name="SettingForm_Language" xml:space="preserve">
+    <value>Dil:</value>
+  </data>
+  <data name="SettingForm_Light" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="SettingForm_Dark" xml:space="preserve">
+    <value>Koyu</value>
+  </data>
+  <data name="SettingForm_Cyan" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="SettingForm_Pink" xml:space="preserve">
+    <value>Pembe</value>
+  </data>
+  <data name="SettingForm_Green" xml:space="preserve">
+    <value>Yeşil</value>
+  </data>
+  <data name="SettingForm_Red" xml:space="preserve">
+    <value>Kırmızı</value>
+  </data>
+  <data name="SettingForm_Orange" xml:space="preserve">
+    <value>Turuncu</value>
+  </data>
+  <data name="SettingForm_Yellow" xml:space="preserve">
+    <value>Sarı</value>
+  </data>
+  <data name="SettingForm_Blue" xml:space="preserve">
+    <value>Mavi</value>
+  </data>
+  <data name="SettingForm_Indigo" xml:space="preserve">
+    <value>İndigo</value>
+  </data>
+  <data name="SettingForm_Violet" xml:space="preserve">
+    <value>Mor</value>
+  </data>
+  <data name="SettingForm_OK" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="SettingForm_Note" xml:space="preserve">
+    <value>Daha fazla ayar gelecek güncellemelerde sunulacaktır.</value>
+  </data>
+  <data name="AboutForm_Title" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="AboutForm_AppName" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="AboutForm_Version" xml:space="preserve">
+    <value>Sürüm: 1.0.0</value>
+  </data>
+  <data name="AboutForm_Author" xml:space="preserve">
+    <value>Yazar: NDQITVN</value>
+  </data>
+  <data name="AboutForm_Description" xml:space="preserve">
+    <value>Fare tıklamaları ve klavye girişi için otomasyon aracı.</value>
+  </data>
+  <data name="AboutForm_DonateTitle" xml:space="preserve">
+    <value>Yazara bağış yapmak isterseniz:</value>
+  </data>
+  <data name="AboutForm_DonateInfo" xml:space="preserve">
+    <value>Banka: {0}&#x0D;&#x0A;Hesap numarası: {1}&#x0D;&#x0A;Hesap sahibi: {2}&#x0D;&#x0A;&#x0D;&#x0A;Veya hızlı transfer için yanındaki QR kodunu tarayın.</value>
+  </data>
+  <data name="KeyActionForm_Title" xml:space="preserve">
+    <value>Tuş ekle</value>
+  </data>
+  <data name="KeyActionForm_Key" xml:space="preserve">
+    <value>Tuş:</value>
+  </data>
+  <data name="KeyActionForm_Modifiers" xml:space="preserve">
+    <value>Tuşları basılı tut:</value>
+  </data>
+  <data name="KeyActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyActionForm_Count" xml:space="preserve">
+    <value>Kere sayısı</value>
+  </data>
+  <data name="KeyActionForm_Interval" xml:space="preserve">
+    <value>Gecikme (ms)</value>
+  </data>
+  <data name="KeyActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 saniye = 1000 milisaniye)</value>
+  </data>
+  <data name="KeyActionForm_OK" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="KeyActionForm_Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="MouseActionForm_Title" xml:space="preserve">
+    <value>Fare eylemi ekle</value>
+  </data>
+  <data name="MouseActionForm_Action" xml:space="preserve">
+    <value>Tıklama türü:</value>
+  </data>
+  <data name="MouseActionForm_Modifiers" xml:space="preserve">
+    <value>Tuşları basılı tut:</value>
+  </data>
+  <data name="MouseActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="MouseActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="MouseActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="MouseActionForm_Position" xml:space="preserve">
+    <value>Koordinatlar X,Y</value>
+  </data>
+  <data name="MouseActionForm_SetPosition" xml:space="preserve">
+    <value>Koordinatları ayarla</value>
+  </data>
+  <data name="MouseActionForm_Count" xml:space="preserve">
+    <value>Kere sayısı</value>
+  </data>
+  <data name="MouseActionForm_Interval" xml:space="preserve">
+    <value>Gecikme (ms)</value>
+  </data>
+  <data name="MouseActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 saniye = 1000 milisaniye)</value>
+  </data>
+  <data name="MouseActionForm_OK" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="MouseActionForm_Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>Hazır</value>
+  </data>
+  <data name="Status_ConfigMoved" xml:space="preserve">
+    <value>Yapılandırma taşındı: {0}</value>
+  </data>
+  <data name="Status_ConfigLoaded" xml:space="preserve">
+    <value>Yapılandırma yüklendi: {0}</value>
+  </data>
+  <data name="Status_CreatingNew" xml:space="preserve">
+    <value>Yeni yapılandırma oluşturuluyor...</value>
+  </data>
+  <data name="Status_ConfigSaved" xml:space="preserve">
+    <value>Yapılandırma kaydedildi</value>
+  </data>
+  <data name="Status_ConfigCopied" xml:space="preserve">
+    <value>Yapılandırma kopyalandı: {0}</value>
+  </data>
+  <data name="Status_ConfigCreated" xml:space="preserve">
+    <value>Yeni yapılandırma oluşturuldu: {0}</value>
+  </data>
+  <data name="Status_ConfigDeleted" xml:space="preserve">
+    <value>Yapılandırma silindi</value>
+  </data>
+  <data name="Status_Running" xml:space="preserve">
+    <value>Çalışıyor...</value>
+  </data>
+  <data name="Status_Stopped" xml:space="preserve">
+    <value>Durduruldu</value>
+  </data>
+  <data name="Status_Completed" xml:space="preserve">
+    <value>Eylem dizisi tamamlandı</value>
+  </data>
+  <data name="Status_EscPressed" xml:space="preserve">
+    <value>ESC algılandı, otomatik işlem durduruldu</value>
+  </data>
+  <data name="Status_Error" xml:space="preserve">
+    <value>Yürütme sırasında hata</value>
+  </data>
+  <data name="Status_ConfigImported" xml:space="preserve">
+    <value>Yapılandırma içe aktarıldı: {0}</value>
+  </data>
+  <data name="Status_ConfigExported" xml:space="preserve">
+    <value>Yapılandırma dışa aktarıldı</value>
+  </data>
+  <data name="Msg_DuplicateConfigName" xml:space="preserve">
+    <value>Yapılandırma adı "{0}" zaten mevcut. Lütfen başka bir ad seçin.</value>
+  </data>
+  <data name="Msg_SaveSuccess" xml:space="preserve">
+    <value>Yapılandırma başarıyla kaydedildi.</value>
+  </data>
+  <data name="Msg_SaveFailed" xml:space="preserve">
+    <value>Kaydedilemiyor</value>
+  </data>
+  <data name="Msg_PasteFailed" xml:space="preserve">
+    <value>Yapılandırma yapıştırılamıyor</value>
+  </data>
+  <data name="Msg_ConfirmDelete" xml:space="preserve">
+    <value>Yapılandırma "{0}" silinsin mi?</value>
+  </data>
+  <data name="Msg_CapturePosition" xml:space="preserve">
+    <value>Tamam'a basın ve ardından koordinatları almak için istediğiniz konumda fareyi tıklayın.</value>
+  </data>
+  <data name="Msg_CapturePositionTitle" xml:space="preserve">
+    <value>Konum koordinatlarını güncelle</value>
+  </data>
+  <data name="Msg_CaptureFailed" xml:space="preserve">
+    <value>Koordinatlar alınamıyor</value>
+  </data>
+  <data name="Msg_RunFailed" xml:space="preserve">
+    <value>Yürütülemiyor</value>
+  </data>
+  <data name="Msg_RunError" xml:space="preserve">
+    <value>Yürütme sırasında hata</value>
+  </data>
+  <data name="Msg_ImportFailed" xml:space="preserve">
+    <value>İçe aktarma başarısız</value>
+  </data>
+  <data name="Msg_ExportFailed" xml:space="preserve">
+    <value>Dışa aktarılamıyor</value>
+  </data>
+  <data name="Msg_Success" xml:space="preserve">
+    <value>Başarılı</value>
+  </data>
+  <data name="Msg_Confirm" xml:space="preserve">
+    <value>Onayla</value>
+  </data>
+  <data name="Msg_ConfigNameRequired" xml:space="preserve">
+    <value>Yapılandırma adı boş olamaz.</value>
+  </data>
+  <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
+    <value>Yapılandırma en az 1 eylem içermelidir.</value>
+  </data>
+  <data name="Msg_ActionMissingKey" xml:space="preserve">
+    <value>Eylem #{0} bir tuşa sahip değil.</value>
+  </data>
+  <data name="Menu_F1F12Key" xml:space="preserve">
+    <value>F1-F12 tuşları</value>
+  </data>
+  <data name="Menu_AZKey" xml:space="preserve">
+    <value>A-Z tuşları</value>
+  </data>
+  <data name="Menu_09Key" xml:space="preserve">
+    <value>0-9 tuşları</value>
+  </data>
+  <data name="Menu_SymbolKey" xml:space="preserve">
+    <value>Özel karakter tuşları</value>
+  </data>
+  <data name="Menu_NumKey" xml:space="preserve">
+    <value>Sağ taraftaki sayı tuşları</value>
+  </data>
+  <data name="Menu_OtherKey" xml:space="preserve">
+    <value>Diğer tuşlar</value>
+  </data>
+  <data name="MouseAction_LeftClick" xml:space="preserve">
+    <value>Sol fare düğmesi tıklaması</value>
+  </data>
+  <data name="MouseAction_LeftDouble" xml:space="preserve">
+    <value>Sol fare düğmesi çift tıklaması</value>
+  </data>
+  <data name="MouseAction_RightClick" xml:space="preserve">
+    <value>Sağ fare düğmesi tıklaması</value>
+  </data>
+  <data name="MouseAction_RightDouble" xml:space="preserve">
+    <value>Sağ fare düğmesi çift tıklaması</value>
+  </data>
+  <data name="MouseAction_MiddleClick" xml:space="preserve">
+    <value>Orta fare düğmesi tıklaması</value>
+  </data>
+  <data name="MouseAction_MiddleDouble" xml:space="preserve">
+    <value>Orta fare düğmesi çift tıklaması</value>
+  </data>
+  <data name="KeyName_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="KeyName_Space" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="KeyName_Tab" xml:space="preserve">
+    <value>Tab</value>
+  </data>
+  <data name="KeyName_Esc" xml:space="preserve">
+    <value>Esc</value>
+  </data>
+  <data name="KeyName_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="KeyName_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="KeyName_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="KeyName_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="KeyName_End" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="KeyName_PageUp" xml:space="preserve">
+    <value>Page Up</value>
+  </data>
+  <data name="KeyName_PageDown" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="KeyName_Up" xml:space="preserve">
+    <value>Yukarı</value>
+  </data>
+  <data name="KeyName_Down" xml:space="preserve">
+    <value>Aşağı</value>
+  </data>
+  <data name="KeyName_Left" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="KeyName_Right" xml:space="preserve">
+    <value>Sağ</value>
+  </data>
+  <data name="KeyName_NumLock" xml:space="preserve">
+    <value>Num Lock</value>
+  </data>
+  <data name="KeyName_Num0" xml:space="preserve">
+    <value>Num 0</value>
+  </data>
+  <data name="KeyName_Num1" xml:space="preserve">
+    <value>Num 1</value>
+  </data>
+  <data name="KeyName_Num2" xml:space="preserve">
+    <value>Num 2</value>
+  </data>
+  <data name="KeyName_Num3" xml:space="preserve">
+    <value>Num 3</value>
+  </data>
+  <data name="KeyName_Num4" xml:space="preserve">
+    <value>Num 4</value>
+  </data>
+  <data name="KeyName_Num5" xml:space="preserve">
+    <value>Num 5</value>
+  </data>
+  <data name="KeyName_Num6" xml:space="preserve">
+    <value>Num 6</value>
+  </data>
+  <data name="KeyName_Num7" xml:space="preserve">
+    <value>Num 7</value>
+  </data>
+  <data name="KeyName_Num8" xml:space="preserve">
+    <value>Num 8</value>
+  </data>
+  <data name="KeyName_Num9" xml:space="preserve">
+    <value>Num 9</value>
+  </data>
+  <data name="KeyName_NumDot" xml:space="preserve">
+    <value>Num .</value>
+  </data>
+  <data name="KeyName_NumPlus" xml:space="preserve">
+    <value>Num +</value>
+  </data>
+  <data name="KeyName_NumMinus" xml:space="preserve">
+    <value>Num -</value>
+  </data>
+  <data name="KeyName_NumMultiply" xml:space="preserve">
+    <value>Num *</value>
+  </data>
+  <data name="KeyName_NumDivide" xml:space="preserve">
+    <value>Num /</value>
+  </data>
+  <data name="KeyName_PrintScreen" xml:space="preserve">
+    <value>Print Screen/SysRQ</value>
+  </data>
+  <data name="KeyName_ScrollLock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="KeyName_Pause" xml:space="preserve">
+    <value>Pause/Break</value>
+  </data>
+  <data name="KeyName_CapsLock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="KeyName_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyName_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyName_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyName_LeftWindows" xml:space="preserve">
+    <value>Left Windows</value>
+  </data>
+  <data name="KeyName_RightWindows" xml:space="preserve">
+    <value>Right Windows</value>
+  </data>
+  <data name="KeyName_Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="Msg_TelexWarning" xml:space="preserve">
+    <value>Lütfen tuş eklerken hatayı düzeltmek için "Telex giriş yöntemi"ni geçici olarak devre dışı bırakın.</value>
+  </data>
+  <data name="Msg_TelexWarningTitle" xml:space="preserve">
+    <value>Bildirim</value>
+  </data>
+  <data name="Tray_OpenApp" xml:space="preserve">
+    <value>Uygulamayı aç</value>
+  </data>
+  <data name="Tray_ExitApp" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="Tray_RunningInBackground" xml:space="preserve">
+    <value>Uygulama bildirim alanında çalışmaya devam ediyor.</value>
+  </data>
+  <data name="Tray_Tooltip" xml:space="preserve">
+    <value>AutoMouseKeyboard (çalışıyor)</value>
+  </data>
+  <data name="SettingForm_RunOnStartup" xml:space="preserve">
+    <value>Windows açıldığında otomatik başlat</value>
+  </data>
+  <data name="SettingForm_HideOnComplete" xml:space="preserve">
+    <value>Tamamlandıktan/ESC sonra pencereyi gösterme</value>
+  </data>
+  <data name="MainForm_SelectExportFolder" xml:space="preserve">
+    <value>Yapılandırmaları dışa aktarmak için klasör seçin</value>
+  </data>
+  <data name="Status_MultiConfigExported" xml:space="preserve">
+    <value>{0} yapılandırma dışa aktarıldı</value>
+  </data>
+  <data name="Status_MultiConfigImported" xml:space="preserve">
+    <value>{0} yapılandırma içe aktarıldı</value>
+  </data>
+  <data name="Msg_MultiExportSuccess" xml:space="preserve">
+    <value>{0} yapılandırma başarıyla dışa aktarıldı.</value>
+  </data>
+  <data name="Msg_MultiImportSuccess" xml:space="preserve">
+    <value>{0} yapılandırma başarıyla içe aktarıldı.</value>
+  </data>
+  <data name="Msg_NoConfigSelected" xml:space="preserve">
+    <value>Lütfen dışa aktarmak için en az bir yapılandırma seçin.</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>Seçili {0} yapılandırmayı sil?</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>Davranış</value>
+  </data>
+</root>

@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>AutoMouseKeyboard</RootNamespace>
+    <AssemblyName>AutoMouseKeyboard</AssemblyName>
+    <ApplicationIcon>assets\app.ico</ApplicationIcon>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <Company>AutoMouseKeyboard</Company>
+    <Product>AutoMouseKeyboard</Product>
+    <Authors>AutoMouseKeyboard</Authors>
+    <Description>AutoMouseKeyboard - Auto click/keyboard tool</Description>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <PublishTrimmed>false</PublishTrimmed>
+    <SelfContained>true</SelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assets\app.ico" />
+    <EmbeddedResource Include="assets\app.png" />
+    <EmbeddedResource Include="assets\qr.jpg" />
+  </ItemGroup>
+
+</Project>

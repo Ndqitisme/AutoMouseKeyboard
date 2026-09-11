@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainForm_Title" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="MainForm_ConfigList" xml:space="preserve">
+    <value>Daftar konfigurasi</value>
+  </data>
+  <data name="MainForm_ActionDetails" xml:space="preserve">
+    <value>Daftar tindakan</value>
+  </data>
+  <data name="MainForm_ConfigName" xml:space="preserve">
+    <value>Nama konfigurasi</value>
+  </data>
+  <data name="MainForm_New" xml:space="preserve">
+    <value>Baru</value>
+  </data>
+  <data name="MainForm_Save" xml:space="preserve">
+    <value>Simpan</value>
+  </data>
+  <data name="MainForm_Delete" xml:space="preserve">
+    <value>Hapus</value>
+  </data>
+  <data name="MainForm_Setting" xml:space="preserve">
+    <value>Pengaturan</value>
+  </data>
+  <data name="MainForm_About" xml:space="preserve">
+    <value>Tentang</value>
+  </data>
+  <data name="MainForm_Import" xml:space="preserve">
+    <value>Impor</value>
+  </data>
+  <data name="MainForm_Export" xml:space="preserve">
+    <value>Ekspor</value>
+  </data>
+  <data name="MainForm_AddKey" xml:space="preserve">
+    <value>Tambah tombol</value>
+  </data>
+  <data name="MainForm_AddMouse" xml:space="preserve">
+    <value>Tambah mouse</value>
+  </data>
+  <data name="MainForm_MoveUp" xml:space="preserve">
+    <value>Pindah ke atas</value>
+  </data>
+  <data name="MainForm_MoveDown" xml:space="preserve">
+    <value>Pindah ke bawah</value>
+  </data>
+  <data name="MainForm_Start" xml:space="preserve">
+    <value>Mulai</value>
+  </data>
+  <data name="MainForm_Stop" xml:space="preserve">
+    <value>Berhenti</value>
+  </data>
+  <data name="MainForm_DefaultConfigName" xml:space="preserve">
+    <value>Konfigurasi Baru</value>
+  </data>
+  <data name="MainForm_ImportConfig" xml:space="preserve">
+    <value>Impor konfigurasi</value>
+  </data>
+  <data name="MainForm_ExportConfig" xml:space="preserve">
+    <value>Ekspor konfigurasi</value>
+  </data>
+  <data name="MainForm_Status" xml:space="preserve">
+    <value>Status: {0}</value>
+  </data>
+  <data name="MainForm_LoopCount" xml:space="preserve">
+    <value>Jumlah pengulangan</value>
+  </data>
+  <data name="MainForm_GlobalDelay" xml:space="preserve">
+    <value>Penundaan global (ms)</value>
+  </data>
+  <data name="MainForm_ColIndex" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="MainForm_ColKeys" xml:space="preserve">
+    <value>Tombol</value>
+  </data>
+  <data name="MainForm_ColCharacters" xml:space="preserve">
+    <value>Karakter</value>
+  </data>
+  <data name="MainForm_ColCount" xml:space="preserve">
+    <value>Jumlah eksekusi</value>
+  </data>
+  <data name="MainForm_ColDelay" xml:space="preserve">
+    <value>Penundaan</value>
+  </data>
+  <data name="MainForm_ColSetPosition" xml:space="preserve">
+    <value>Atur koordinat</value>
+  </data>
+  <data name="SettingForm_Title" xml:space="preserve">
+    <value>Pengaturan</value>
+  </data>
+  <data name="SettingForm_Theme" xml:space="preserve">
+    <value>Antarmuka:</value>
+  </data>
+  <data name="SettingForm_Language" xml:space="preserve">
+    <value>Bahasa:</value>
+  </data>
+  <data name="SettingForm_Light" xml:space="preserve">
+    <value>Terang</value>
+  </data>
+  <data name="SettingForm_Dark" xml:space="preserve">
+    <value>Gelap</value>
+  </data>
+  <data name="SettingForm_Cyan" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="SettingForm_Pink" xml:space="preserve">
+    <value>Merah muda</value>
+  </data>
+  <data name="SettingForm_Green" xml:space="preserve">
+    <value>Hijau</value>
+  </data>
+  <data name="SettingForm_Red" xml:space="preserve">
+    <value>Merah</value>
+  </data>
+  <data name="SettingForm_Orange" xml:space="preserve">
+    <value>Jingga</value>
+  </data>
+  <data name="SettingForm_Yellow" xml:space="preserve">
+    <value>Kuning</value>
+  </data>
+  <data name="SettingForm_Blue" xml:space="preserve">
+    <value>Biru</value>
+  </data>
+  <data name="SettingForm_Indigo" xml:space="preserve">
+    <value>Nila</value>
+  </data>
+  <data name="SettingForm_Violet" xml:space="preserve">
+    <value>Ungu</value>
+  </data>
+  <data name="SettingForm_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SettingForm_Note" xml:space="preserve">
+    <value>Pengaturan lebih lanjut akan tersedia dalam pembaruan mendatang.</value>
+  </data>
+  <data name="AboutForm_Title" xml:space="preserve">
+    <value>Tentang</value>
+  </data>
+  <data name="AboutForm_AppName" xml:space="preserve">
+    <value>AutoMouseKeyboard</value>
+  </data>
+  <data name="AboutForm_Version" xml:space="preserve">
+    <value>Versi: 1.0.0</value>
+  </data>
+  <data name="AboutForm_Author" xml:space="preserve">
+    <value>Penulis: NDQITVN</value>
+  </data>
+  <data name="AboutForm_Description" xml:space="preserve">
+    <value>Alat otomatisasi untuk klik mouse dan input keyboard.</value>
+  </data>
+  <data name="AboutForm_DonateTitle" xml:space="preserve">
+    <value>Jika Anda ingin menyumbang kepada penulis:</value>
+  </data>
+  <data name="AboutForm_DonateInfo" xml:space="preserve">
+    <value>Bank: {0}&#x0D;&#x0A;Nomor akun: {1}&#x0D;&#x0A;Pemilik akun: {2}&#x0D;&#x0A;&#x0D;&#x0A;Atau pindai kode QR di samping untuk transfer cepat.</value>
+  </data>
+  <data name="KeyActionForm_Title" xml:space="preserve">
+    <value>Tambah tombol</value>
+  </data>
+  <data name="KeyActionForm_Key" xml:space="preserve">
+    <value>Tombol:</value>
+  </data>
+  <data name="KeyActionForm_Modifiers" xml:space="preserve">
+    <value>Tahan tombol:</value>
+  </data>
+  <data name="KeyActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyActionForm_Count" xml:space="preserve">
+    <value>Jumlah kali</value>
+  </data>
+  <data name="KeyActionForm_Interval" xml:space="preserve">
+    <value>Penundaan (ms)</value>
+  </data>
+  <data name="KeyActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 detik = 1000 milidetik)</value>
+  </data>
+  <data name="KeyActionForm_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="KeyActionForm_Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="MouseActionForm_Title" xml:space="preserve">
+    <value>Tambah aksi mouse</value>
+  </data>
+  <data name="MouseActionForm_Action" xml:space="preserve">
+    <value>Jenis klik:</value>
+  </data>
+  <data name="MouseActionForm_Modifiers" xml:space="preserve">
+    <value>Tahan tombol:</value>
+  </data>
+  <data name="MouseActionForm_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="MouseActionForm_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="MouseActionForm_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="MouseActionForm_Position" xml:space="preserve">
+    <value>Koordinat X,Y</value>
+  </data>
+  <data name="MouseActionForm_SetPosition" xml:space="preserve">
+    <value>Atur koordinat</value>
+  </data>
+  <data name="MouseActionForm_Count" xml:space="preserve">
+    <value>Jumlah kali</value>
+  </data>
+  <data name="MouseActionForm_Interval" xml:space="preserve">
+    <value>Penundaan (ms)</value>
+  </data>
+  <data name="MouseActionForm_IntervalHint" xml:space="preserve">
+    <value>(1 detik = 1000 milidetik)</value>
+  </data>
+  <data name="MouseActionForm_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="MouseActionForm_Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>Siap</value>
+  </data>
+  <data name="Status_ConfigMoved" xml:space="preserve">
+    <value>Konfigurasi dipindahkan: {0}</value>
+  </data>
+  <data name="Status_ConfigLoaded" xml:space="preserve">
+    <value>Konfigurasi dimuat: {0}</value>
+  </data>
+  <data name="Status_CreatingNew" xml:space="preserve">
+    <value>Membuat konfigurasi baru...</value>
+  </data>
+  <data name="Status_ConfigSaved" xml:space="preserve">
+    <value>Konfigurasi disimpan</value>
+  </data>
+  <data name="Status_ConfigCopied" xml:space="preserve">
+    <value>Konfigurasi disalin: {0}</value>
+  </data>
+  <data name="Status_ConfigCreated" xml:space="preserve">
+    <value>Konfigurasi baru dibuat: {0}</value>
+  </data>
+  <data name="Status_ConfigDeleted" xml:space="preserve">
+    <value>Konfigurasi dihapus</value>
+  </data>
+  <data name="Status_Running" xml:space="preserve">
+    <value>Berjalan...</value>
+  </data>
+  <data name="Status_Stopped" xml:space="preserve">
+    <value>Dihentikan</value>
+  </data>
+  <data name="Status_Completed" xml:space="preserve">
+    <value>Urutan tindakan selesai</value>
+  </data>
+  <data name="Status_EscPressed" xml:space="preserve">
+    <value>ESC terdeteksi, operasi otomatis dihentikan</value>
+  </data>
+  <data name="Status_Error" xml:space="preserve">
+    <value>Kesalahan saat menjalankan</value>
+  </data>
+  <data name="Status_ConfigImported" xml:space="preserve">
+    <value>Konfigurasi diimpor: {0}</value>
+  </data>
+  <data name="Status_ConfigExported" xml:space="preserve">
+    <value>Konfigurasi diekspor</value>
+  </data>
+  <data name="Msg_DuplicateConfigName" xml:space="preserve">
+    <value>Nama konfigurasi "{0}" sudah ada. Silakan pilih nama lain.</value>
+  </data>
+  <data name="Msg_SaveSuccess" xml:space="preserve">
+    <value>Konfigurasi berhasil disimpan.</value>
+  </data>
+  <data name="Msg_SaveFailed" xml:space="preserve">
+    <value>Tidak dapat menyimpan</value>
+  </data>
+  <data name="Msg_PasteFailed" xml:space="preserve">
+    <value>Tidak dapat menempelkan konfigurasi</value>
+  </data>
+  <data name="Msg_ConfirmDelete" xml:space="preserve">
+    <value>Hapus konfigurasi "{0}"?</value>
+  </data>
+  <data name="Msg_CapturePosition" xml:space="preserve">
+    <value>Tekan OK lalu klik mouse di posisi yang diinginkan untuk mendapatkan koordinat.</value>
+  </data>
+  <data name="Msg_CapturePositionTitle" xml:space="preserve">
+    <value>Perbarui koordinat posisi</value>
+  </data>
+  <data name="Msg_CaptureFailed" xml:space="preserve">
+    <value>Tidak dapat mendapatkan koordinat</value>
+  </data>
+  <data name="Msg_RunFailed" xml:space="preserve">
+    <value>Tidak dapat menjalankan</value>
+  </data>
+  <data name="Msg_RunError" xml:space="preserve">
+    <value>Kesalahan saat menjalankan</value>
+  </data>
+  <data name="Msg_ImportFailed" xml:space="preserve">
+    <value>Impor gagal</value>
+  </data>
+  <data name="Msg_ExportFailed" xml:space="preserve">
+    <value>Tidak dapat mengekspor</value>
+  </data>
+  <data name="Msg_Success" xml:space="preserve">
+    <value>Berhasil</value>
+  </data>
+  <data name="Msg_Confirm" xml:space="preserve">
+    <value>Konfirmasi</value>
+  </data>
+  <data name="Msg_ConfigNameRequired" xml:space="preserve">
+    <value>Nama konfigurasi tidak boleh kosong.</value>
+  </data>
+  <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
+    <value>Konfigurasi harus memiliki setidaknya 1 tindakan.</value>
+  </data>
+  <data name="Msg_ActionMissingKey" xml:space="preserve">
+    <value>Tindakan #{0} tidak memiliki tombol.</value>
+  </data>
+  <data name="Menu_F1F12Key" xml:space="preserve">
+    <value>Tombol F1-F12</value>
+  </data>
+  <data name="Menu_AZKey" xml:space="preserve">
+    <value>Tombol A-Z</value>
+  </data>
+  <data name="Menu_09Key" xml:space="preserve">
+    <value>Tombol 0-9</value>
+  </data>
+  <data name="Menu_SymbolKey" xml:space="preserve">
+    <value>Tombol karakter khusus</value>
+  </data>
+  <data name="Menu_NumKey" xml:space="preserve">
+    <value>Tombol angka di sebelah kanan</value>
+  </data>
+  <data name="Menu_OtherKey" xml:space="preserve">
+    <value>Tombol lainnya</value>
+  </data>
+  <data name="MouseAction_LeftClick" xml:space="preserve">
+    <value>Klik tombol kiri mouse</value>
+  </data>
+  <data name="MouseAction_LeftDouble" xml:space="preserve">
+    <value>Klik ganda tombol kiri mouse</value>
+  </data>
+  <data name="MouseAction_RightClick" xml:space="preserve">
+    <value>Klik tombol kanan mouse</value>
+  </data>
+  <data name="MouseAction_RightDouble" xml:space="preserve">
+    <value>Klik ganda tombol kanan mouse</value>
+  </data>
+  <data name="MouseAction_MiddleClick" xml:space="preserve">
+    <value>Klik tombol tengah mouse</value>
+  </data>
+  <data name="MouseAction_MiddleDouble" xml:space="preserve">
+    <value>Klik ganda tombol tengah mouse</value>
+  </data>
+  <data name="KeyName_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="KeyName_Space" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="KeyName_Tab" xml:space="preserve">
+    <value>Tab</value>
+  </data>
+  <data name="KeyName_Esc" xml:space="preserve">
+    <value>Esc</value>
+  </data>
+  <data name="KeyName_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="KeyName_Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="KeyName_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="KeyName_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="KeyName_End" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="KeyName_PageUp" xml:space="preserve">
+    <value>Page Up</value>
+  </data>
+  <data name="KeyName_PageDown" xml:space="preserve">
+    <value>Page Down</value>
+  </data>
+  <data name="KeyName_Up" xml:space="preserve">
+    <value>Atas</value>
+  </data>
+  <data name="KeyName_Down" xml:space="preserve">
+    <value>Bawah</value>
+  </data>
+  <data name="KeyName_Left" xml:space="preserve">
+    <value>Kiri</value>
+  </data>
+  <data name="KeyName_Right" xml:space="preserve">
+    <value>Kanan</value>
+  </data>
+  <data name="KeyName_NumLock" xml:space="preserve">
+    <value>Num Lock</value>
+  </data>
+  <data name="KeyName_Num0" xml:space="preserve">
+    <value>Num 0</value>
+  </data>
+  <data name="KeyName_Num1" xml:space="preserve">
+    <value>Num 1</value>
+  </data>
+  <data name="KeyName_Num2" xml:space="preserve">
+    <value>Num 2</value>
+  </data>
+  <data name="KeyName_Num3" xml:space="preserve">
+    <value>Num 3</value>
+  </data>
+  <data name="KeyName_Num4" xml:space="preserve">
+    <value>Num 4</value>
+  </data>
+  <data name="KeyName_Num5" xml:space="preserve">
+    <value>Num 5</value>
+  </data>
+  <data name="KeyName_Num6" xml:space="preserve">
+    <value>Num 6</value>
+  </data>
+  <data name="KeyName_Num7" xml:space="preserve">
+    <value>Num 7</value>
+  </data>
+  <data name="KeyName_Num8" xml:space="preserve">
+    <value>Num 8</value>
+  </data>
+  <data name="KeyName_Num9" xml:space="preserve">
+    <value>Num 9</value>
+  </data>
+  <data name="KeyName_NumDot" xml:space="preserve">
+    <value>Num .</value>
+  </data>
+  <data name="KeyName_NumPlus" xml:space="preserve">
+    <value>Num +</value>
+  </data>
+  <data name="KeyName_NumMinus" xml:space="preserve">
+    <value>Num -</value>
+  </data>
+  <data name="KeyName_NumMultiply" xml:space="preserve">
+    <value>Num *</value>
+  </data>
+  <data name="KeyName_NumDivide" xml:space="preserve">
+    <value>Num /</value>
+  </data>
+  <data name="KeyName_PrintScreen" xml:space="preserve">
+    <value>Print Screen/SysRQ</value>
+  </data>
+  <data name="KeyName_ScrollLock" xml:space="preserve">
+    <value>Scroll Lock</value>
+  </data>
+  <data name="KeyName_Pause" xml:space="preserve">
+    <value>Pause/Break</value>
+  </data>
+  <data name="KeyName_CapsLock" xml:space="preserve">
+    <value>Caps Lock</value>
+  </data>
+  <data name="KeyName_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyName_Ctrl" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="KeyName_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="KeyName_LeftWindows" xml:space="preserve">
+    <value>Left Windows</value>
+  </data>
+  <data name="KeyName_RightWindows" xml:space="preserve">
+    <value>Right Windows</value>
+  </data>
+  <data name="KeyName_Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="Msg_TelexWarning" xml:space="preserve">
+    <value>Harap nonaktifkan sementara "Metode input Telex" untuk memperbaiki kesalahan saat menambahkan tombol.</value>
+  </data>
+  <data name="Msg_TelexWarningTitle" xml:space="preserve">
+    <value>Notifikasi</value>
+  </data>
+  <data name="Tray_OpenApp" xml:space="preserve">
+    <value>Buka aplikasi</value>
+  </data>
+  <data name="Tray_ExitApp" xml:space="preserve">
+    <value>Keluar</value>
+  </data>
+  <data name="Tray_RunningInBackground" xml:space="preserve">
+    <value>Aplikasi tetap berjalan di baki sistem.</value>
+  </data>
+  <data name="Tray_Tooltip" xml:space="preserve">
+    <value>AutoMouseKeyboard (berjalan)</value>
+  </data>
+  <data name="SettingForm_RunOnStartup" xml:space="preserve">
+    <value>Jalankan otomatis saat Windows mulai</value>
+  </data>
+  <data name="SettingForm_HideOnComplete" xml:space="preserve">
+    <value>Jangan tampilkan jendela setelah selesai/ESC</value>
+  </data>
+  <data name="MainForm_SelectExportFolder" xml:space="preserve">
+    <value>Pilih folder untuk mengekspor konfigurasi</value>
+  </data>
+  <data name="Status_MultiConfigExported" xml:space="preserve">
+    <value>{0} konfigurasi diekspor</value>
+  </data>
+  <data name="Status_MultiConfigImported" xml:space="preserve">
+    <value>{0} konfigurasi diimpor</value>
+  </data>
+  <data name="Msg_MultiExportSuccess" xml:space="preserve">
+    <value>{0} konfigurasi berhasil diekspor.</value>
+  </data>
+  <data name="Msg_MultiImportSuccess" xml:space="preserve">
+    <value>{0} konfigurasi berhasil diimpor.</value>
+  </data>
+  <data name="Msg_NoConfigSelected" xml:space="preserve">
+    <value>Silakan pilih setidaknya satu konfigurasi untuk diekspor.</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>Hapus {0} konfigurasi yang dipilih?</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>Perilaku</value>
+  </data>
+</root>
