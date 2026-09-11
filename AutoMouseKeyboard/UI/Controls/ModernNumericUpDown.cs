@@ -77,7 +77,7 @@ namespace AutoMouseKeyboard.UI.Controls
         /// <summary>The wrapped borderless text box.</summary>
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public TextBox Inner => _inner;
+        private TextBox Inner => _inner;
 
         public int CornerRadius { get; set; } = 6;
 

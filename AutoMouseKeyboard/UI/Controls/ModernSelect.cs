@@ -24,11 +24,13 @@ namespace AutoMouseKeyboard.UI.Controls
         private ThemePalette _palette = ThemeManager.Palette;
         private readonly List<object> _items = new List<object>();
         private string _displayMember = string.Empty;
+        private PropertyInfo? _displayProp;     // cached getter for _displayMember, resolved for _displayPropType
+        private Type? _displayPropType;
         private string _valueMember = string.Empty;
         private int _selectedIndex = -1;
         private bool _hover;
         private SelectDropDown? _dropDown;
-        private int _lastDropDownCloseTick;
+        private DateTime _lastDropDownCloseUtc;
 
         public ModernSelect()
         {
@@ -62,6 +64,8 @@ namespace AutoMouseKeyboard.UI.Controls
             set
             {
                 _displayMember = value ?? string.Empty;
+                _displayProp = null; // cached PropertyInfo is stale for the new member name
+                _displayPropType = null;
                 Invalidate();
             }
         }
@@ -167,10 +171,18 @@ namespace AutoMouseKeyboard.UI.Controls
 
             if (_displayMember.Length > 0)
             {
-                var prop = item.GetType().GetProperty(_displayMember, BindingFlags.Public | BindingFlags.Instance);
-                if (prop != null)
+                // Cache the reflected property per item type; the DisplayMember
+                // setter clears the cache so a new name re-resolves.
+                var type = item.GetType();
+                if (type != _displayPropType)
                 {
-                    return Convert.ToString(prop.GetValue(item), CultureInfo.CurrentCulture) ?? string.Empty;
+                    _displayPropType = type;
+                    _displayProp = type.GetProperty(_displayMember, BindingFlags.Public | BindingFlags.Instance);
+                }
+
+                if (_displayProp != null)
+                {
+                    return Convert.ToString(_displayProp.GetValue(item), CultureInfo.CurrentCulture) ?? string.Empty;
                 }
             }
 
@@ -200,7 +212,7 @@ namespace AutoMouseKeyboard.UI.Controls
                 {
                     _dropDown.Close();
                 }
-                else if (unchecked(Environment.TickCount - _lastDropDownCloseTick) >= ReopenGuardMs)
+                else if ((DateTime.UtcNow - _lastDropDownCloseUtc).TotalMilliseconds >= ReopenGuardMs)
                 {
                     // The click that dismissed a drop-down (via its Deactivate)
                     // lands here right after Close; swallow it so the list stays
@@ -355,6 +367,7 @@ namespace AutoMouseKeyboard.UI.Controls
                 x = Math.Max(workArea.Left, workArea.Right - Width);
             }
 
+            x = Math.Max(workArea.Left, x);
             dd.Bounds = new Rectangle(x, y, Width, height);
 
             // Close when the owner or its top-level form moves / resizes / hides.
@@ -392,7 +405,7 @@ namespace AutoMouseKeyboard.UI.Controls
                 // Esc/Enter closes shouldn't block a deliberate click or key.
                 if (dd.ClosedByDeactivate)
                 {
-                    _lastDropDownCloseTick = Environment.TickCount;
+                    _lastDropDownCloseUtc = DateTime.UtcNow;
                 }
 
                 _dropDown = null;
