@@ -68,7 +68,6 @@ namespace AutoMouseKeyboard
     private void PopulateKeys(string defaultKey)
     {
         cboKey.DisplayMember = "Label";
-        cboKey.ValueMember = "Token";
 
         var allKeys = new List<KeyOption>();
 

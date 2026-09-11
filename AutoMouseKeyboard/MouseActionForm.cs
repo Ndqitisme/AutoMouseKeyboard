@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutoMouseKeyboard.Models;
 using AutoMouseKeyboard.Services;
+using AutoMouseKeyboard.UI.Controls;
 using AutoMouseKeyboard.Utilities;
 
 namespace AutoMouseKeyboard
@@ -62,7 +63,6 @@ namespace AutoMouseKeyboard
     private void PopulateMouseActions(MouseButtonKind defaultKind)
     {
         cboMouseAction.DisplayMember = "Label";
-        cboMouseAction.ValueMember = "Kind";
         foreach (var option in ActionStep.MouseOptions)
         {
             cboMouseAction.Items.Add(option);
@@ -138,7 +138,7 @@ namespace AutoMouseKeyboard
         }
     }
 
-    private decimal ClampToRange(int value, NumericUpDown control)
+    private decimal ClampToRange(int value, ModernNumericUpDown control)
     {
         if (value > control.Maximum)
         {
