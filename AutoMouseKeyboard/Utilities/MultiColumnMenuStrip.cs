@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using AutoMouseKeyboard.UI;
+using AutoMouseKeyboard.UI.Controls;
 
 namespace AutoMouseKeyboard.Utilities
 {
@@ -44,8 +46,8 @@ namespace AutoMouseKeyboard.Utilities
         Size = new Size(width, height);
         MinimumSize = Size;
         MaximumSize = Size;
-        BackColor = SystemColors.Menu;
-        BorderStyle = BorderStyle.FixedSingle;
+        BackColor = ThemeManager.Palette.MenuBack;
+        BorderStyle = BorderStyle.None;
         
         SetStyle(ControlStyles.AllPaintingInWmPaint | 
                  ControlStyles.UserPaint | 
@@ -62,7 +64,10 @@ namespace AutoMouseKeyboard.Utilities
     {
         var g = e.Graphics;
         g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-        
+        // Read the palette live so an open menu picks up theme changes on the
+        // next repaint without subscribing to ThemeManager.ThemeChanged.
+        var palette = ThemeManager.Palette;
+
         for (var i = 0; i < _items.Count; i++)
         {
             var row = i / _columns;
@@ -70,37 +75,47 @@ namespace AutoMouseKeyboard.Utilities
             var x = ItemPadding + col * (_itemWidth + ItemPadding);
             var y = ItemPadding + row * (ItemHeight + ItemPadding);
             var rect = new Rectangle(x, y, _itemWidth, ItemHeight);
-            
+
             if (i == _hoveredIndex)
             {
-                using (var brush = new SolidBrush(SystemColors.Highlight))
+                // Hovered cell: rounded MenuHover fill, no outline.
+                using (var brush = new SolidBrush(palette.MenuHover))
                 {
-                    g.FillRectangle(brush, rect);
+                    g.FillRounded(brush, rect, 4);
                 }
             }
             else
             {
-                using (var brush = new SolidBrush(SystemColors.Menu))
+                using (var brush = new SolidBrush(palette.MenuBack))
                 {
-                    g.FillRectangle(brush, rect);
+                    g.FillRounded(brush, rect, 4);
+                }
+
+                using (var pen = new Pen(palette.Border))
+                {
+                    g.DrawRounded(pen, rect, 4);
                 }
             }
-            
-            using (var pen = new Pen(i == _hoveredIndex ? SystemColors.Highlight : SystemColors.ControlDark))
-            {
-                g.DrawRectangle(pen, rect);
-            }
-            
+
             var text = _items[i].Item1;
-            var textFormat = new StringFormat
+            using (var textFormat = new StringFormat
             {
                 Alignment = StringAlignment.Center,
                 LineAlignment = StringAlignment.Center
-            };
-            
-            using (var brush = new SolidBrush(i == _hoveredIndex ? SystemColors.HighlightText : SystemColors.MenuText))
+            })
+            using (var brush = new SolidBrush(palette.MenuText))
             {
                 g.DrawString(text, Font, brush, rect, textFormat);
+            }
+        }
+
+        // Panel edge: rounded 1px border replaces the old FixedSingle frame.
+        var borderRect = new Rectangle(0, 0, Width - 1, Height - 1);
+        if (borderRect.Width > 0 && borderRect.Height > 0)
+        {
+            using (var pen = new Pen(palette.Border))
+            {
+                g.DrawRounded(pen, borderRect, 4);
             }
         }
     }
@@ -176,7 +191,13 @@ public class MultiColumnMenuStrip : ToolStripDropDown
         
         Items.Add(host);
         AutoSize = false;
-        Size = new Size(_panel.Width + 2, _panel.Height + 2);
+        // The panel draws its own rounded border, so it fills the drop-down
+        // exactly; the themed renderer + BackColor keep any stray edge pixels
+        // off SystemColors.
+        Padding = Padding.Empty;
+        BackColor = ThemeManager.Palette.MenuBack;
+        Renderer = new ModernToolStripRenderer(ThemeManager.Palette);
+        Size = new Size(_panel.Width, _panel.Height);
     }
     }
 }
