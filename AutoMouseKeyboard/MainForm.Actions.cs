@@ -181,18 +181,6 @@ namespace AutoMouseKeyboard
             return map;
         }
 
-        private void KeyMenuItem_Click(object? sender, EventArgs e)
-        {
-            var menuItem = sender as ToolStripMenuItem;
-            if (menuItem == null || !(menuItem.Tag is string key))
-            {
-                return;
-            }
-
-            var step = CreateKeyboardStep(key);
-            AddAction(step);
-        }
-
         private void MouseMenuItem_Click(object? sender, EventArgs e)
         {
             var menuItem = sender as ToolStripMenuItem;
