@@ -44,12 +44,21 @@ namespace AutoMouseKeyboard.UI.Controls
         {
             // FontStyle has no SemiBold value; the named family does. It ships
             // with Windows 8+, but fall back to regular bold if absent.
-            using (var semibold = new FontFamily("Segoe UI Semibold"))
+            try
             {
-                return semibold.IsStyleAvailable(FontStyle.Regular)
-                    ? new Font(semibold, 9f, FontStyle.Regular)
-                    : new Font("Segoe UI", 9f, FontStyle.Bold);
+                using (var semibold = new FontFamily("Segoe UI Semibold"))
+                {
+                    if (semibold.IsStyleAvailable(FontStyle.Regular))
+                    {
+                        return new Font(semibold, 9f, FontStyle.Regular);
+                    }
+                }
             }
+            catch (ArgumentException)
+            {
+            }
+
+            return new Font("Segoe UI", 9f, FontStyle.Bold);
         }
 
         public void ApplyTheme(ThemePalette palette)

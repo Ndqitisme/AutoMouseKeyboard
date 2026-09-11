@@ -495,6 +495,22 @@ namespace AutoMouseKeyboard.UI.Controls
             }
 
             Size = new Size(120, PreferredHeight(items.Count));
+
+            // The palette snapshot is stale once the theme changes; the control
+            // re-opens with fresh colors, so closing is the correct reaction.
+            ThemeManager.ThemeChanged += ThemeChanged_Close;
+        }
+
+        private void ThemeChanged_Close(object? sender, ThemeMode e) => Close();
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ThemeManager.ThemeChanged -= ThemeChanged_Close;
+            }
+
+            base.Dispose(disposing);
         }
 
         /// <summary>Height for a given item count, capped at 260px total.</summary>

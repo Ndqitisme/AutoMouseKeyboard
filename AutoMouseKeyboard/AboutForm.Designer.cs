@@ -188,6 +188,7 @@ namespace AutoMouseKeyboard
         // picQRCode
         //
         picQRCode.Anchor = AnchorStyles.Top;
+        picQRCode.BackColor = Color.Transparent;
         picQRCode.BorderStyle = BorderStyle.None;
         picQRCode.Margin = new Padding(8, 0, 0, 0);
         picQRCode.Name = "picQRCode";

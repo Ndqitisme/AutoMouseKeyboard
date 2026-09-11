@@ -38,6 +38,12 @@ namespace AutoMouseKeyboard.UI.Controls
 
         private void TickAnimation()
         {
+            if (IsDisposed || Disposing)
+            {
+                _anim.Stop();
+                return;
+            }
+
             var step = 0.125f; // 8 ticks × 15ms ≈ 120ms transition
             var next = _hoverAmount + (_hoverTarget > _hoverAmount ? step : -step);
             if ((_hoverTarget > _hoverAmount && next >= _hoverTarget) ||
