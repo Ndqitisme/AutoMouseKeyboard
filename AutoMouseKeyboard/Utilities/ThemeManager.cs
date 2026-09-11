@@ -39,6 +39,12 @@ public static class ThemeManager
     /// </summary>
     internal const string SkipThemeTag = "SkipTheme";
 
+    /// <summary>
+    /// Tag value that marks a Label that should render in
+    /// <see cref="ThemePalette.TextMuted"/> instead of <see cref="ThemePalette.Text"/>.
+    /// </summary>
+    internal const string MutedTextTag = "MutedText";
+
     public static event EventHandler<ThemeMode>? ThemeChanged;
 
     static ThemeManager()
@@ -171,12 +177,21 @@ public static class ThemeManager
             }
             else if (control is GroupBox groupBox)
             {
-                groupBox.BackColor = SurfaceBack(groupBox, palette);
+                if (groupBox.BackColor != Color.Transparent)
+                {
+                    groupBox.BackColor = SurfaceBack(groupBox, palette);
+                }
                 groupBox.ForeColor = palette.Text;
             }
             else if (control is Panel panel)
             {
-                panel.BackColor = SurfaceBack(panel, palette);
+                // Transparent is the "show the parent surface through" marker used
+                // by layout containers inside cards — keep it, same convention as
+                // Label/CheckBox below.
+                if (panel.BackColor != Color.Transparent)
+                {
+                    panel.BackColor = SurfaceBack(panel, palette);
+                }
                 panel.ForeColor = palette.Text;
             }
             else if (control is ToolStrip toolStrip)
@@ -190,7 +205,7 @@ public static class ThemeManager
                 {
                     label.BackColor = SurfaceBack(label, palette);
                 }
-                label.ForeColor = palette.Text;
+                label.ForeColor = label.Tag as string == MutedTextTag ? palette.TextMuted : palette.Text;
             }
             else if (control is TextBox textBox)
             {

@@ -139,7 +139,7 @@ namespace AutoMouseKeyboard
         lblVersion.Margin = new Padding(0, 0, 0, 4);
         lblVersion.Name = "lblVersion";
         lblVersion.TabIndex = 1;
-        lblVersion.Tag = ThemeManager.SkipThemeTag;
+        lblVersion.Tag = ThemeManager.MutedTextTag;
         lblVersion.Text = "Version: 1.0.0";
         //
         // lblAuthor
@@ -150,7 +150,7 @@ namespace AutoMouseKeyboard
         lblAuthor.Margin = new Padding(0, 0, 0, 8);
         lblAuthor.Name = "lblAuthor";
         lblAuthor.TabIndex = 2;
-        lblAuthor.Tag = ThemeManager.SkipThemeTag;
+        lblAuthor.Tag = ThemeManager.MutedTextTag;
         lblAuthor.Text = "Author: NDQITVN";
         //
         // lblDescription
@@ -188,7 +188,7 @@ namespace AutoMouseKeyboard
         // picQRCode
         //
         picQRCode.Anchor = AnchorStyles.Top;
-        picQRCode.BorderStyle = BorderStyle.FixedSingle;
+        picQRCode.BorderStyle = BorderStyle.None;
         picQRCode.Margin = new Padding(8, 0, 0, 0);
         picQRCode.Name = "picQRCode";
         picQRCode.Size = new Size(200, 200);

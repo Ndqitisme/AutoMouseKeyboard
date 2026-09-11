@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using AutoMouseKeyboard.UI;
 using AutoMouseKeyboard.UI.Controls;
-using AutoMouseKeyboard.Utilities;
 
 namespace AutoMouseKeyboard
 {

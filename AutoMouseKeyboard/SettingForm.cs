@@ -17,10 +17,10 @@ namespace AutoMouseKeyboard
         LanguageManager.RegisterForm(this);
         LanguageManager.LanguageChanged += LanguageManager_LanguageChanged;
 
-        cboTheme!.SelectedIndex = (int)ThemeManager.CurrentTheme;
-        cboTheme.SelectedIndexChanged += CboTheme_SelectedIndexChanged;
-        cboLanguage!.SelectedIndex = (int)LanguageManager.CurrentLanguage;
-        cboLanguage.SelectedIndexChanged += CboLanguage_SelectedIndexChanged;
+        // Selections are applied inside UpdateLanguage() once the item lists
+        // exist; assigning them here (empty Items) would be a no-op.
+        cboTheme!.SelectedIndexChanged += CboTheme_SelectedIndexChanged;
+        cboLanguage!.SelectedIndexChanged += CboLanguage_SelectedIndexChanged;
 
         chkRunOnStartup!.Checked = StartupHelper.IsEnabled();
         AppSettings.RunOnStartup = chkRunOnStartup.Checked;
@@ -48,6 +48,13 @@ namespace AutoMouseKeyboard
 
     private void CboLanguage_SelectedIndexChanged(object? sender, EventArgs e)
     {
+        // Mirror the theme guard: an out-of-range index would cast to an
+        // undefined Language and throw in LanguageCultures[...].
+        if (cboLanguage.SelectedIndex < 0 || cboLanguage.SelectedIndex > (int)Language.Dutch)
+        {
+            return;
+        }
+
         var newLanguage = (Language)cboLanguage.SelectedIndex;
         LanguageManager.SetLanguage(newLanguage);
     }

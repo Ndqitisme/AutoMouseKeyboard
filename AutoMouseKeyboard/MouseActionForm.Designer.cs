@@ -315,7 +315,7 @@ namespace AutoMouseKeyboard
         lblIntervalHint.Margin = new Padding(0);
         lblIntervalHint.Name = "lblIntervalHint";
         lblIntervalHint.TabIndex = 5;
-        lblIntervalHint.Tag = ThemeManager.SkipThemeTag;
+        lblIntervalHint.Tag = ThemeManager.MutedTextTag;
         lblIntervalHint.Text = "(1 giây = 1000 mili giây)";
         //
         // buttonsFlow

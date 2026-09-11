@@ -64,7 +64,6 @@ namespace AutoMouseKeyboard
             LoadConfigs();
             LoadSettings();
             ThemeManager.RegisterForm(this);
-            ApplyContainerTransparency();
             ThemeManager.ThemeChanged += ThemeManager_ThemeChanged;
             LanguageManager.RegisterForm(this);
             LanguageManager.LanguageChanged += LanguageManager_LanguageChanged;
@@ -124,7 +123,6 @@ namespace AutoMouseKeyboard
         private void ThemeManager_ThemeChanged(object sender, ThemeMode e)
         {
             RefreshMenuRenderers();
-            ApplyContainerTransparency();
         }
 
         private void RefreshMenuRenderers()
@@ -147,23 +145,6 @@ namespace AutoMouseKeyboard
                     dropDown.Renderer = new ModernToolStripRenderer(palette);
                     dropDown.BackColor = palette.MenuBack;
                 }
-            }
-        }
-
-        private void ApplyContainerTransparency()
-        {
-            // ThemeManager.ApplyThemeToControls repaints every Panel (including
-            // TableLayoutPanel/FlowLayoutPanel) with a solid SurfaceBack derived
-            // from the immediate parent; the layout containers nested inside the
-            // cards must stay transparent so the card surface shows through.
-            foreach (var container in new Control[]
-            {
-                sidebarLayout, buttonsGrid, contentLayout, nameRow,
-                toolbarFlow, actionButtonsFlow, statusLayout, loopFlow, delayFlow
-            })
-            {
-                container.BackColor = Color.Transparent;
-                container.Invalidate();
             }
         }
 
