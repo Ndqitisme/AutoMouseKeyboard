@@ -1,6 +1,5 @@
 ﻿
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 using AutoMouseKeyboard.Utilities;
 
@@ -31,12 +30,6 @@ namespace AutoMouseKeyboard
 
         UpdateLanguage();
         _isLoading = false;
-        Load += SettingForm_Load;
-    }
-
-    private void SettingForm_Load(object? sender, EventArgs e)
-    {
-        AdjustComboBoxSizes();
     }
 
     private void LanguageManager_LanguageChanged(object? sender, LanguageChangedEventArgs e)
@@ -122,48 +115,6 @@ namespace AutoMouseKeyboard
         cboLanguage.Items.Add(LanguageManager.GetLanguageDisplayName(Language.Polish));
         cboLanguage.Items.Add(LanguageManager.GetLanguageDisplayName(Language.Dutch));
         cboLanguage.SelectedIndex = (int)LanguageManager.CurrentLanguage;
-        AdjustComboBoxSizes();
-    }
-
-    private void AdjustComboBoxSizes()
-    {
-        SuspendLayout();
-
-        const int rightPadding = 18;
-        const int dropdownArrowPadding = 30;
-        const int minWidth = 100;
-        const int maxWidthLimit = 200;
-
-        AdjustComboBoxSize(cboTheme, dropdownArrowPadding, minWidth, maxWidthLimit);
-        AdjustComboBoxSize(cboLanguage, dropdownArrowPadding, minWidth, maxWidthLimit);
-
-        // Position ComboBoxes within the GroupBox
-        var groupBoxInnerWidth = grpAppearance.ClientSize.Width;
-        cboTheme.Left = groupBoxInnerWidth - cboTheme.Width - rightPadding;
-        cboLanguage.Left = groupBoxInnerWidth - cboLanguage.Width - rightPadding;
-
-        // Position OK button within Form
-        btnOk.Left = ClientSize.Width - btnOk.Width - 15;
-
-        ResumeLayout(true);
-        PerformLayout();
-    }
-
-    private void AdjustComboBoxSize(ComboBox comboBox, int arrowPadding, int minWidth, int maxWidth)
-    {
-        int maxTextWidth = 0;
-        using (var g = CreateGraphics())
-        {
-            foreach (var item in comboBox.Items)
-            {
-                var text = item != null ? item.ToString() : "";
-                var size = g.MeasureString(text, comboBox.Font);
-                maxTextWidth = Math.Max(maxTextWidth, (int)Math.Ceiling(size.Width));
-            }
-        }
-
-        var newWidth = Math.Max(minWidth, Math.Min(maxTextWidth + arrowPadding, maxWidth));
-        comboBox.Width = newWidth;
     }
 
     private void chkRunOnStartup_CheckedChanged(object? sender, EventArgs e)
