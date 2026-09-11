@@ -67,6 +67,9 @@ namespace AutoMouseKeyboard.Utilities
         // Read the palette live so an open menu picks up theme changes on the
         // next repaint without subscribing to ThemeManager.ThemeChanged.
         var palette = ThemeManager.Palette;
+        // Keep the erased background in sync too - ctor-set BackColor goes stale
+        // on a theme switch and would bleed through the ItemPadding gaps.
+        BackColor = palette.MenuBack;
 
         for (var i = 0; i < _items.Count; i++)
         {
@@ -109,15 +112,6 @@ namespace AutoMouseKeyboard.Utilities
             }
         }
 
-        // Panel edge: rounded 1px border replaces the old FixedSingle frame.
-        var borderRect = new Rectangle(0, 0, Width - 1, Height - 1);
-        if (borderRect.Width > 0 && borderRect.Height > 0)
-        {
-            using (var pen = new Pen(palette.Border))
-            {
-                g.DrawRounded(pen, borderRect, 4);
-            }
-        }
     }
 
     private void MultiColumnMenuPanel_MouseMove(object? sender, MouseEventArgs e)

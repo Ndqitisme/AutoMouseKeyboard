@@ -8,7 +8,7 @@ namespace AutoMouseKeyboard.UI.Controls
     /// <summary>
     /// Borderless <see cref="EnterAwareDataGridView"/> styled from the theme
     /// palette: flat 32px header band (<see cref="ThemePalette.MenuBack"/> /
-    /// <see cref="ThemePalette.Text"/>, Segoe UI 9 bold), 30px rows, single
+    /// <see cref="ThemePalette.Text"/>, Segoe UI 9 semibold), 30px rows, single
     /// horizontal gridlines (<see cref="ThemePalette.GridLine"/> — also supplies
     /// the header bottom rule), palette selection colors and a
     /// <see cref="ThemePalette.HoverBack"/> row highlight under the mouse.
@@ -18,7 +18,7 @@ namespace AutoMouseKeyboard.UI.Controls
     {
         private ThemePalette _palette = ThemeManager.Palette;
         private int _hoveredRow = -1;
-        private readonly Font _headerFont = new Font("Segoe UI", 9f, FontStyle.Bold);
+        private readonly Font _headerFont = CreateHeaderFont();
 
         public StyledDataGridView()
         {
@@ -38,6 +38,18 @@ namespace AutoMouseKeyboard.UI.Controls
             ColumnHeadersDefaultCellStyle.Padding = new Padding(8, 0, 8, 0);
 
             ApplyTheme(_palette);
+        }
+
+        private static Font CreateHeaderFont()
+        {
+            // FontStyle has no SemiBold value; the named family does. It ships
+            // with Windows 8+, but fall back to regular bold if absent.
+            using (var semibold = new FontFamily("Segoe UI Semibold"))
+            {
+                return semibold.IsStyleAvailable(FontStyle.Regular)
+                    ? new Font(semibold, 9f, FontStyle.Regular)
+                    : new Font("Segoe UI", 9f, FontStyle.Bold);
+            }
         }
 
         public void ApplyTheme(ThemePalette palette)
