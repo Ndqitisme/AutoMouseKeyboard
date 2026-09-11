@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -107,7 +107,7 @@
     <value>停止</value>
   </data>
   <data name="MainForm_DefaultConfigName" xml:space="preserve">
-    <value>新設�?/value>
+    <value>新組態</value>
   </data>
   <data name="MainForm_ImportConfig" xml:space="preserve">
     <value>匯入設定</value>
@@ -146,10 +146,10 @@
     <value>設定</value>
   </data>
   <data name="SettingForm_Theme" xml:space="preserve">
-    <value>主題�?/value>
+    <value>主題：</value>
   </data>
   <data name="SettingForm_Language" xml:space="preserve">
-    <value>語言�?/value>
+    <value>語言：</value>
   </data>
   <data name="SettingForm_Light" xml:space="preserve">
     <value>淺色</value>
@@ -188,7 +188,13 @@
     <value>確定</value>
   </data>
   <data name="SettingForm_Note" xml:space="preserve">
-    <value>更多設定將在未來的更新中提供�?/value>
+    <value>更多設定將在未來的更新中提供。</value>
+  </data>
+  <data name="SettingForm_AppearanceGroup" xml:space="preserve">
+    <value>外觀</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>行為</value>
   </data>
   <data name="AboutForm_Title" xml:space="preserve">
     <value>關於</value>
@@ -197,28 +203,28 @@
     <value>AutoMouseKeyboard</value>
   </data>
   <data name="AboutForm_Version" xml:space="preserve">
-    <value>版本�?.0.0</value>
+    <value>版本：1.0.0</value>
   </data>
   <data name="AboutForm_Author" xml:space="preserve">
     <value>作者：NDQITVN</value>
   </data>
   <data name="AboutForm_Description" xml:space="preserve">
-    <value>用於滑鼠點擊和鍵盤輸入的自動化工具�?/value>
+    <value>用於滑鼠點擊和鍵盤輸入的自動化工具。</value>
   </data>
   <data name="AboutForm_DonateTitle" xml:space="preserve">
     <value>如果您想向作者捐款：</value>
   </data>
   <data name="AboutForm_DonateInfo" xml:space="preserve">
-    <value>銀行：{0}&#x0D;&#x0A;帳號：{1}&#x0D;&#x0A;戶名：{2}&#x0D;&#x0A;&#x0D;&#x0A;或掃�?QR 碼快速轉帳�?/value>
+    <value>銀行：{0}&#x0D;&#x0A;帳號：{1}&#x0D;&#x0A;戶名：{2}&#x0D;&#x0A;&#x0D;&#x0A;或掃描 QR 碼快速轉帳。</value>
   </data>
   <data name="KeyActionForm_Title" xml:space="preserve">
     <value>新增按鍵</value>
   </data>
   <data name="KeyActionForm_Key" xml:space="preserve">
-    <value>按鍵�?/value>
+    <value>按鍵：</value>
   </data>
   <data name="KeyActionForm_Modifiers" xml:space="preserve">
-    <value>按住按鍵�?/value>
+    <value>按住鍵：</value>
   </data>
   <data name="KeyActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -236,7 +242,7 @@
     <value>間隔（毫秒）</value>
   </data>
   <data name="KeyActionForm_IntervalHint" xml:space="preserve">
-    <value>�?�?= 1000毫秒�?/value>
+    <value>(1 秒 = 1000 ms)</value>
   </data>
   <data name="KeyActionForm_OK" xml:space="preserve">
     <value>確定</value>
@@ -248,10 +254,10 @@
     <value>新增滑鼠操作</value>
   </data>
   <data name="MouseActionForm_Action" xml:space="preserve">
-    <value>點擊類型�?/value>
+    <value>點擊類型：</value>
   </data>
   <data name="MouseActionForm_Modifiers" xml:space="preserve">
-    <value>按住按鍵�?/value>
+    <value>按住鍵：</value>
   </data>
   <data name="MouseActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -275,7 +281,7 @@
     <value>間隔（毫秒）</value>
   </data>
   <data name="MouseActionForm_IntervalHint" xml:space="preserve">
-    <value>�?�?= 1000毫秒�?/value>
+    <value>(1 秒 = 1000 ms)</value>
   </data>
   <data name="MouseActionForm_OK" xml:space="preserve">
     <value>確定</value>
@@ -293,10 +299,10 @@
     <value>已載入設定：{0}</value>
   </data>
   <data name="Status_CreatingNew" xml:space="preserve">
-    <value>正在建立新設�?..</value>
+    <value>正在建立新組態...</value>
   </data>
   <data name="Status_ConfigSaved" xml:space="preserve">
-    <value>設定已儲�?/value>
+    <value>組態已儲存</value>
   </data>
   <data name="Status_ConfigCopied" xml:space="preserve">
     <value>已複製設定：{0}</value>
@@ -305,34 +311,34 @@
     <value>已建立新設定：{0}</value>
   </data>
   <data name="Status_ConfigDeleted" xml:space="preserve">
-    <value>設定已刪�?/value>
+    <value>組態已刪除</value>
   </data>
   <data name="Status_Running" xml:space="preserve">
-    <value>執行�?..</value>
+    <value>正在執行...</value>
   </data>
   <data name="Status_Stopped" xml:space="preserve">
-    <value>已停�?/value>
+    <value>已停止</value>
   </data>
   <data name="Status_Completed" xml:space="preserve">
-    <value>操作序列已完�?/value>
+    <value>動作序列已完成</value>
   </data>
   <data name="Status_EscPressed" xml:space="preserve">
-    <value>偵測到按 ESC，已停止自動化操�?/value>
+    <value>已按下 ESC,自動化已停止</value>
   </data>
   <data name="Status_Error" xml:space="preserve">
-    <value>執行時出�?/value>
+    <value>發生錯誤</value>
   </data>
   <data name="Status_ConfigImported" xml:space="preserve">
     <value>已匯入設定：{0}</value>
   </data>
   <data name="Status_ConfigExported" xml:space="preserve">
-    <value>設定已匯�?/value>
+    <value>組態已匯出</value>
   </data>
   <data name="Msg_DuplicateConfigName" xml:space="preserve">
-    <value>設定名稱"{0}"已存在。請選擇其他名稱�?/value>
+    <value>組態名稱 "{0}" 已存在。請選擇其他名稱。</value>
   </data>
   <data name="Msg_SaveSuccess" xml:space="preserve">
-    <value>設定儲存成功�?/value>
+    <value>組態儲存成功。</value>
   </data>
   <data name="Msg_SaveFailed" xml:space="preserve">
     <value>無法儲存</value>
@@ -341,10 +347,13 @@
     <value>無法貼上設定</value>
   </data>
   <data name="Msg_ConfirmDelete" xml:space="preserve">
-    <value>刪除設定"{0}"�?/value>
+    <value>刪除組態 "{0}"?</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>刪除選中的 {0} 個組態?</value>
   </data>
   <data name="Msg_CapturePosition" xml:space="preserve">
-    <value>按確定然後在所需位置按一下滑鼠以取得座標�?/value>
+    <value>按確定後,在所需位置按一下滑鼠以取得座標。</value>
   </data>
   <data name="Msg_CapturePositionTitle" xml:space="preserve">
     <value>更新位置</value>
@@ -356,7 +365,7 @@
     <value>無法執行</value>
   </data>
   <data name="Msg_RunError" xml:space="preserve">
-    <value>執行時出�?/value>
+    <value>執行時發生錯誤</value>
   </data>
   <data name="Msg_ImportFailed" xml:space="preserve">
     <value>匯入失敗</value>
@@ -371,49 +380,49 @@
     <value>確認</value>
   </data>
   <data name="Msg_ConfigNameRequired" xml:space="preserve">
-    <value>設定名稱不能為空�?/value>
+    <value>組態名稱不能為空。</value>
   </data>
   <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
-    <value>設定必須至少包含1個操作�?/value>
+    <value>組態必須至少包含 1 個動作。</value>
   </data>
   <data name="Msg_ActionMissingKey" xml:space="preserve">
-    <value>操作 #{0} 缺少按鍵�?/value>
+    <value>動作 #{0} 缺少按鍵。</value>
   </data>
   <data name="Menu_F1F12Key" xml:space="preserve">
-    <value>F1-F12 �?/value>
+    <value>F1-F12 鍵</value>
   </data>
   <data name="Menu_AZKey" xml:space="preserve">
-    <value>A-Z �?/value>
+    <value>A-Z 鍵</value>
   </data>
   <data name="Menu_09Key" xml:space="preserve">
-    <value>0-9 �?/value>
+    <value>0-9 鍵</value>
   </data>
   <data name="Menu_SymbolKey" xml:space="preserve">
-    <value>符號�?/value>
+    <value>符號鍵</value>
   </data>
   <data name="Menu_NumKey" xml:space="preserve">
-    <value>數字�?/value>
+    <value>數字鍵</value>
   </data>
   <data name="Menu_OtherKey" xml:space="preserve">
-    <value>其他�?/value>
+    <value>其他鍵</value>
   </data>
   <data name="MouseAction_LeftClick" xml:space="preserve">
-    <value>滑鼠左鍵按一�?/value>
+    <value>滑鼠左鍵單擊</value>
   </data>
   <data name="MouseAction_LeftDouble" xml:space="preserve">
-    <value>滑鼠左鍵按兩�?/value>
+    <value>滑鼠左鍵雙擊</value>
   </data>
   <data name="MouseAction_RightClick" xml:space="preserve">
-    <value>滑鼠右鍵按一�?/value>
+    <value>滑鼠右鍵單擊</value>
   </data>
   <data name="MouseAction_RightDouble" xml:space="preserve">
-    <value>滑鼠右鍵按兩�?/value>
+    <value>滑鼠右鍵雙擊</value>
   </data>
   <data name="MouseAction_MiddleClick" xml:space="preserve">
-    <value>滑鼠中鍵按一�?/value>
+    <value>滑鼠中鍵單擊</value>
   </data>
   <data name="MouseAction_MiddleDouble" xml:space="preserve">
-    <value>滑鼠中鍵按兩�?/value>
+    <value>滑鼠中鍵雙擊</value>
   </data>
   <data name="KeyName_Enter" xml:space="preserve">
     <value>Enter</value>
@@ -449,16 +458,16 @@
     <value>Page Down</value>
   </data>
   <data name="KeyName_Up" xml:space="preserve">
-    <value>�?/value>
+    <value>Up</value>
   </data>
   <data name="KeyName_Down" xml:space="preserve">
-    <value>�?/value>
+    <value>Down</value>
   </data>
   <data name="KeyName_Left" xml:space="preserve">
-    <value>�?/value>
+    <value>Left</value>
   </data>
   <data name="KeyName_Right" xml:space="preserve">
-    <value>�?/value>
+    <value>Right</value>
   </data>
   <data name="KeyName_NumLock" xml:space="preserve">
     <value>Num Lock</value>
@@ -539,7 +548,7 @@
     <value>Application</value>
   </data>
   <data name="Msg_TelexWarning" xml:space="preserve">
-    <value>請暫時停�?Telex 輸入�?以修復新增按鍵時的錯誤�?/value>
+    <value>請暫時停用「Telex Input Method」以修復新增按鍵時的錯誤。</value>
   </data>
   <data name="Msg_TelexWarningTitle" xml:space="preserve">
     <value>通知</value>
@@ -548,16 +557,16 @@
     <value>打開程式</value>
   </data>
   <data name="Tray_ExitApp" xml:space="preserve">
-    <value>退�?/value>
+    <value>結束</value>
   </data>
   <data name="Tray_RunningInBackground" xml:space="preserve">
-    <value>程式正在系統匣中執行�?/value>
+    <value>應用程式仍在系統匣中執行。</value>
   </data>
   <data name="Tray_Tooltip" xml:space="preserve">
-    <value>AutoMouseKeyboard（運行中�?/value>
+    <value>AutoMouseKeyboard (執行中)</value>
   </data>
   <data name="SettingForm_RunOnStartup" xml:space="preserve">
-    <value>�?Windows 啟動</value>
+    <value>Windows 啟動時執行</value>
   </data>
   <data name="SettingForm_HideOnComplete" xml:space="preserve">
     <value>完成/按ESC後不顯示視窗</value>
@@ -566,24 +575,18 @@
     <value>選擇匯出配置的資料夾</value>
   </data>
   <data name="Status_MultiConfigExported" xml:space="preserve">
-    <value>已匯�?{0} 個配�?/value>
+    <value>已匯出 {0} 個組態</value>
   </data>
   <data name="Status_MultiConfigImported" xml:space="preserve">
-    <value>已匯�?{0} 個配�?/value>
+    <value>已匯入 {0} 個組態</value>
   </data>
   <data name="Msg_MultiExportSuccess" xml:space="preserve">
-    <value>成功匯出 {0} 個配置�?/value>
+    <value>成功匯出 {0} 個組態。</value>
   </data>
   <data name="Msg_MultiImportSuccess" xml:space="preserve">
-    <value>成功匯入 {0} 個配置�?/value>
+    <value>成功匯入 {0} 個組態。</value>
   </data>
   <data name="Msg_NoConfigSelected" xml:space="preserve">
-    <value>請至少選擇一個配置進行匯出�?/value>
-  </data>
-  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
-    <value>刪除 {0} 個選定的配置�?/value>
-  </data>
-  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
-    <value>行為</value>
+    <value>請至少選擇一個組態進行匯出。</value>
   </data>
 </root>

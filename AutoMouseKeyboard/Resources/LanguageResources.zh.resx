@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -101,13 +101,13 @@
     <value>下移</value>
   </data>
   <data name="MainForm_Start" xml:space="preserve">
-    <value>开�?/value>
+    <value>开始</value>
   </data>
   <data name="MainForm_Stop" xml:space="preserve">
     <value>停止</value>
   </data>
   <data name="MainForm_DefaultConfigName" xml:space="preserve">
-    <value>新配�?/value>
+    <value>新配置</value>
   </data>
   <data name="MainForm_ImportConfig" xml:space="preserve">
     <value>导入配置</value>
@@ -146,10 +146,10 @@
     <value>设置</value>
   </data>
   <data name="SettingForm_Theme" xml:space="preserve">
-    <value>主题�?/value>
+    <value>主题：</value>
   </data>
   <data name="SettingForm_Language" xml:space="preserve">
-    <value>语言�?/value>
+    <value>语言：</value>
   </data>
   <data name="SettingForm_Light" xml:space="preserve">
     <value>浅色</value>
@@ -188,7 +188,13 @@
     <value>确定</value>
   </data>
   <data name="SettingForm_Note" xml:space="preserve">
-    <value>更多设置将在未来的更新中提供�?/value>
+    <value>更多设置将在未来的更新中提供。</value>
+  </data>
+  <data name="SettingForm_AppearanceGroup" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>行为</value>
   </data>
   <data name="AboutForm_Title" xml:space="preserve">
     <value>关于</value>
@@ -197,28 +203,28 @@
     <value>AutoMouseKeyboard</value>
   </data>
   <data name="AboutForm_Version" xml:space="preserve">
-    <value>版本�?.0.0</value>
+    <value>版本：1.0.0</value>
   </data>
   <data name="AboutForm_Author" xml:space="preserve">
     <value>作者：NDQITVN</value>
   </data>
   <data name="AboutForm_Description" xml:space="preserve">
-    <value>用于鼠标点击和键盘输入的自动化工具�?/value>
+    <value>用于鼠标点击和键盘输入的自动化工具。</value>
   </data>
   <data name="AboutForm_DonateTitle" xml:space="preserve">
     <value>如果您想向作者捐款：</value>
   </data>
   <data name="AboutForm_DonateInfo" xml:space="preserve">
-    <value>银行：{0}&#x0D;&#x0A;账号：{1}&#x0D;&#x0A;户名：{2}&#x0D;&#x0A;&#x0D;&#x0A;或扫描二维码快速转账�?/value>
+    <value>银行：{0}&#x0D;&#x0A;账号：{1}&#x0D;&#x0A;户名：{2}&#x0D;&#x0A;&#x0D;&#x0A;或扫描二维码快速转账。</value>
   </data>
   <data name="KeyActionForm_Title" xml:space="preserve">
     <value>添加按键</value>
   </data>
   <data name="KeyActionForm_Key" xml:space="preserve">
-    <value>按键�?/value>
+    <value>按键：</value>
   </data>
   <data name="KeyActionForm_Modifiers" xml:space="preserve">
-    <value>按住按键�?/value>
+    <value>按住键：</value>
   </data>
   <data name="KeyActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -236,7 +242,7 @@
     <value>间隔（毫秒）</value>
   </data>
   <data name="KeyActionForm_IntervalHint" xml:space="preserve">
-    <value>�?�?= 1000毫秒�?/value>
+    <value>(1 秒 = 1000 ms)</value>
   </data>
   <data name="KeyActionForm_OK" xml:space="preserve">
     <value>确定</value>
@@ -248,10 +254,10 @@
     <value>添加鼠标操作</value>
   </data>
   <data name="MouseActionForm_Action" xml:space="preserve">
-    <value>点击类型�?/value>
+    <value>点击类型：</value>
   </data>
   <data name="MouseActionForm_Modifiers" xml:space="preserve">
-    <value>按住按键�?/value>
+    <value>按住键：</value>
   </data>
   <data name="MouseActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -275,7 +281,7 @@
     <value>间隔（毫秒）</value>
   </data>
   <data name="MouseActionForm_IntervalHint" xml:space="preserve">
-    <value>�?�?= 1000毫秒�?/value>
+    <value>(1 秒 = 1000 ms)</value>
   </data>
   <data name="MouseActionForm_OK" xml:space="preserve">
     <value>确定</value>
@@ -293,10 +299,10 @@
     <value>已加载配置：{0}</value>
   </data>
   <data name="Status_CreatingNew" xml:space="preserve">
-    <value>正在创建新配�?..</value>
+    <value>正在创建新配置...</value>
   </data>
   <data name="Status_ConfigSaved" xml:space="preserve">
-    <value>配置已保�?/value>
+    <value>配置已保存</value>
   </data>
   <data name="Status_ConfigCopied" xml:space="preserve">
     <value>已复制配置：{0}</value>
@@ -305,34 +311,34 @@
     <value>已创建新配置：{0}</value>
   </data>
   <data name="Status_ConfigDeleted" xml:space="preserve">
-    <value>配置已删�?/value>
+    <value>配置已删除</value>
   </data>
   <data name="Status_Running" xml:space="preserve">
-    <value>运行�?..</value>
+    <value>正在运行...</value>
   </data>
   <data name="Status_Stopped" xml:space="preserve">
-    <value>已停�?/value>
+    <value>已停止</value>
   </data>
   <data name="Status_Completed" xml:space="preserve">
-    <value>操作序列已完�?/value>
+    <value>动作序列已完成</value>
   </data>
   <data name="Status_EscPressed" xml:space="preserve">
-    <value>检测到按ESC，已停止自动化操�?/value>
+    <value>已按下 ESC,自动化已停止</value>
   </data>
   <data name="Status_Error" xml:space="preserve">
-    <value>运行时出�?/value>
+    <value>发生错误</value>
   </data>
   <data name="Status_ConfigImported" xml:space="preserve">
     <value>已导入配置：{0}</value>
   </data>
   <data name="Status_ConfigExported" xml:space="preserve">
-    <value>配置已导�?/value>
+    <value>配置已导出</value>
   </data>
   <data name="Msg_DuplicateConfigName" xml:space="preserve">
-    <value>配置名称"{0}"已存在。请选择其他名称�?/value>
+    <value>配置名称 "{0}" 已存在。请选择其他名称。</value>
   </data>
   <data name="Msg_SaveSuccess" xml:space="preserve">
-    <value>配置保存成功�?/value>
+    <value>配置保存成功。</value>
   </data>
   <data name="Msg_SaveFailed" xml:space="preserve">
     <value>无法保存</value>
@@ -341,10 +347,13 @@
     <value>无法粘贴配置</value>
   </data>
   <data name="Msg_ConfirmDelete" xml:space="preserve">
-    <value>删除配置"{0}"�?/value>
+    <value>删除配置 "{0}"?</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>删除 {0} 个选定的配置？</value>
   </data>
   <data name="Msg_CapturePosition" xml:space="preserve">
-    <value>按确定然后在所需位置单击鼠标以获取坐标�?/value>
+    <value>按确定后,在所需位置单击鼠标以获取坐标。</value>
   </data>
   <data name="Msg_CapturePositionTitle" xml:space="preserve">
     <value>更新位置</value>
@@ -356,7 +365,7 @@
     <value>无法运行</value>
   </data>
   <data name="Msg_RunError" xml:space="preserve">
-    <value>运行时出�?/value>
+    <value>运行时出错</value>
   </data>
   <data name="Msg_ImportFailed" xml:space="preserve">
     <value>导入失败</value>
@@ -371,31 +380,31 @@
     <value>确认</value>
   </data>
   <data name="Msg_ConfigNameRequired" xml:space="preserve">
-    <value>配置名称不能为空�?/value>
+    <value>配置名称不能为空。</value>
   </data>
   <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
-    <value>配置必须至少包含1个操作�?/value>
+    <value>配置必须至少包含 1 个动作。</value>
   </data>
   <data name="Msg_ActionMissingKey" xml:space="preserve">
-    <value>操作 #{0} 缺少按键�?/value>
+    <value>动作 #{0} 缺少按键。</value>
   </data>
   <data name="Menu_F1F12Key" xml:space="preserve">
-    <value>F1-F12 �?/value>
+    <value>F1-F12 键</value>
   </data>
   <data name="Menu_AZKey" xml:space="preserve">
-    <value>A-Z �?/value>
+    <value>A-Z 键</value>
   </data>
   <data name="Menu_09Key" xml:space="preserve">
-    <value>0-9 �?/value>
+    <value>0-9 键</value>
   </data>
   <data name="Menu_SymbolKey" xml:space="preserve">
-    <value>符号�?/value>
+    <value>符号键</value>
   </data>
   <data name="Menu_NumKey" xml:space="preserve">
-    <value>数字�?/value>
+    <value>数字键</value>
   </data>
   <data name="Menu_OtherKey" xml:space="preserve">
-    <value>其他�?/value>
+    <value>其他键</value>
   </data>
   <data name="MouseAction_LeftClick" xml:space="preserve">
     <value>鼠标左键单击</value>
@@ -449,16 +458,16 @@
     <value>Page Down</value>
   </data>
   <data name="KeyName_Up" xml:space="preserve">
-    <value>�?/value>
+    <value>Up</value>
   </data>
   <data name="KeyName_Down" xml:space="preserve">
-    <value>�?/value>
+    <value>Down</value>
   </data>
   <data name="KeyName_Left" xml:space="preserve">
-    <value>�?/value>
+    <value>Left</value>
   </data>
   <data name="KeyName_Right" xml:space="preserve">
-    <value>�?/value>
+    <value>Right</value>
   </data>
   <data name="KeyName_NumLock" xml:space="preserve">
     <value>Num Lock</value>
@@ -539,7 +548,7 @@
     <value>Application</value>
   </data>
   <data name="Msg_TelexWarning" xml:space="preserve">
-    <value>请暂时禁�?Telex输入�?以修复添加按键时的错误�?/value>
+    <value>请暂时禁用 "Telex Input Method" 以修复添加按键时的错误。</value>
   </data>
   <data name="Msg_TelexWarningTitle" xml:space="preserve">
     <value>通知</value>
@@ -548,16 +557,16 @@
     <value>打开程序</value>
   </data>
   <data name="Tray_ExitApp" xml:space="preserve">
-    <value>退�?/value>
+    <value>退出</value>
   </data>
   <data name="Tray_RunningInBackground" xml:space="preserve">
-    <value>程序正在系统托盘中运行�?/value>
+    <value>应用仍在系统托盘中运行。</value>
   </data>
   <data name="Tray_Tooltip" xml:space="preserve">
-    <value>AutoMouseKeyboard（运行中�?/value>
+    <value>AutoMouseKeyboard (运行中)</value>
   </data>
   <data name="SettingForm_RunOnStartup" xml:space="preserve">
-    <value>�?Windows 启动</value>
+    <value>Windows 启动时运行</value>
   </data>
   <data name="SettingForm_HideOnComplete" xml:space="preserve">
     <value>完成/按ESC后不显示窗口</value>
@@ -566,24 +575,18 @@
     <value>选择导出配置的文件夹</value>
   </data>
   <data name="Status_MultiConfigExported" xml:space="preserve">
-    <value>已导�?{0} 个配�?/value>
+    <value>已导出 {0} 个配置</value>
   </data>
   <data name="Status_MultiConfigImported" xml:space="preserve">
-    <value>已导�?{0} 个配�?/value>
+    <value>已导入 {0} 个配置</value>
   </data>
   <data name="Msg_MultiExportSuccess" xml:space="preserve">
-    <value>成功导出 {0} 个配置�?/value>
+    <value>成功导出 {0} 个配置。</value>
   </data>
   <data name="Msg_MultiImportSuccess" xml:space="preserve">
-    <value>成功导入 {0} 个配置�?/value>
+    <value>成功导入 {0} 个配置。</value>
   </data>
   <data name="Msg_NoConfigSelected" xml:space="preserve">
-    <value>请至少选择一个配置进行导出�?/value>
-  </data>
-  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
-    <value>删除 {0} 个选定的配置？</value>
-  </data>
-  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
-    <value>行为</value>
+    <value>请至少选择一个配置进行导出。</value>
   </data>
 </root>

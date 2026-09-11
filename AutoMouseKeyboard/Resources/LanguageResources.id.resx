@@ -190,6 +190,9 @@
   <data name="SettingForm_Note" xml:space="preserve">
     <value>Pengaturan lebih lanjut akan tersedia dalam pembaruan mendatang.</value>
   </data>
+  <data name="SettingForm_AppearanceGroup" xml:space="preserve">
+    <value>Tampilan</value>
+  </data>
   <data name="AboutForm_Title" xml:space="preserve">
     <value>Tentang</value>
   </data>
