@@ -71,6 +71,9 @@ namespace AutoMouseKeyboard.UI.Controls
             var header = ColumnHeadersDefaultCellStyle;
             header.BackColor = palette.MenuBack;
             header.ForeColor = palette.Text;
+            // Never wrap header text — an undersized column ellipsizes instead
+            // of growing a second line inside the fixed 32px header band.
+            header.WrapMode = DataGridViewTriState.False;
             // Keep the header flat when a column is "selected" via current cell.
             header.SelectionBackColor = palette.MenuBack;
             header.SelectionForeColor = palette.Text;

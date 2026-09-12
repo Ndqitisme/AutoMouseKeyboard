@@ -107,7 +107,7 @@ namespace AutoMouseKeyboard.UI.Controls
 
             using (var pen = new Pen(_palette.Border))
             {
-                g.DrawRounded(pen, r, CornerRadius);
+                g.DrawRoundedBorder(pen, r, CornerRadius);
             }
 
             if (_title.Length > 0)

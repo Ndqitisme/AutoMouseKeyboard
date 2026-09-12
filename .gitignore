@@ -125,3 +125,6 @@ Thumbs.db
 # Fody
 FodyWeavers.xsd
 
+
+# Publish output
+publish/

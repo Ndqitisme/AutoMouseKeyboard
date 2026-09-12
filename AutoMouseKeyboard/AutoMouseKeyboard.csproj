@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFrameworks>net6.0-windows;netcoreapp3.1</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -23,6 +23,12 @@
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <PublishTrimmed>false</PublishTrimmed>
     <SelfContained>true</SelfContained>
+  </PropertyGroup>
+
+  <!-- Single-file compression is .NET 6+ only; the netcoreapp3.1 (Win7) target
+       doesn't support it (NETSDK1167), so scope it to the net6 build. -->
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0-windows'">
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
   </PropertyGroup>
 
   <ItemGroup>

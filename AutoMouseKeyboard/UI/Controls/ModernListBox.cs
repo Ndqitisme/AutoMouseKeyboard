@@ -20,6 +20,8 @@ namespace AutoMouseKeyboard.UI.Controls
     /// </summary>
     public class ModernListBox : ListBox, IThemedControl
     {
+        private const int WM_ERASEBKGND = 0x0014;
+
         private ThemePalette _palette = ThemeManager.Palette;
         private int _hoverIndex = -1;
 
@@ -34,8 +36,38 @@ namespace AutoMouseKeyboard.UI.Controls
             ItemHeight = 28;
             IntegralHeight = false;
             BorderStyle = BorderStyle.None;
+            // Owner-drawn items repaint on every hover/selection change; without
+            // double buffering the erase-redraw pair shows as a visible flicker.
+            DoubleBuffered = true;
             BackColor = _palette.InputBack;
             ForeColor = _palette.Text;
+        }
+
+        /// <summary>
+        /// Fills the erase pass ourselves. The native listbox's default
+        /// WM_ERASEBKGND fill is a separate GDI step from WM_PAINT, so every
+        /// per-item repaint (hover pill, selection change) flashes white before
+        /// the owner-drawn item lands. Erasing into the same DC here keeps the
+        /// two stages identical — and under double buffering both hit the same
+        /// back buffer, so the composite stays atomic.
+        /// </summary>
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == WM_ERASEBKGND)
+            {
+                if (m.WParam != IntPtr.Zero)
+                {
+                    using (var g = Graphics.FromHdc(m.WParam))
+                    {
+                        g.Clear(BackColor);
+                    }
+                }
+
+                m.Result = (IntPtr)1;
+                return;
+            }
+
+            base.WndProc(ref m);
         }
 
         public void ApplyTheme(ThemePalette palette)

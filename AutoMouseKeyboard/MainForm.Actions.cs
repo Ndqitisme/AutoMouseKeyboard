@@ -33,6 +33,7 @@ namespace AutoMouseKeyboard
             };
             gridActions.CellClick += gridActions_CellClick;
             gridActions.CellFormatting += gridActions_CellFormatting;
+            gridActions.CellPainting += gridActions_CellPainting;
             gridActions.CellEndEdit += gridActions_CellEndEdit;
             gridActions.CellBeginEdit += gridActions_CellBeginEdit;
             gridActions.EnterKeyPressed += gridActions_EnterKeyPressed;
@@ -287,6 +288,28 @@ namespace AutoMouseKeyboard
 
                 row.Cells[colIndex.Name].Value = (i + 1).ToString();
             }
+        }
+
+        private void gridActions_CellPainting(object? sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // colGetPosition is a shared button column: non-mouse rows have no
+            // button action, but the column still paints an empty button chrome.
+            // Paint just the cell surface instead so the cell looks empty.
+            if (e.ColumnIndex < 0 || e.RowIndex < 0 || e.RowIndex >= _actions.Count ||
+                gridActions.Columns[e.ColumnIndex].Name != "colGetPosition")
+            {
+                return;
+            }
+
+            var step = _actions[e.RowIndex];
+            if (step != null && step.Type == ActionKind.Mouse)
+            {
+                return;
+            }
+
+            e.Paint(e.CellBounds, DataGridViewPaintParts.Background |
+                DataGridViewPaintParts.Border | DataGridViewPaintParts.SelectionBackground);
+            e.Handled = true;
         }
 
         private void gridActions_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)

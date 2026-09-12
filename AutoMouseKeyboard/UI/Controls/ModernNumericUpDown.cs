@@ -406,7 +406,7 @@ namespace AutoMouseKeyboard.UI.Controls
             var border = _inner.Focused ? p.Accent : p.Border;
             using (var pen = new Pen(border))
             {
-                g.DrawRounded(pen, r, CornerRadius);
+                g.DrawRoundedBorder(pen, r, CornerRadius);
             }
         }
 

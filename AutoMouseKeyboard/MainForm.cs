@@ -26,6 +26,7 @@ namespace AutoMouseKeyboard
         private BindingList<ActionStep> _actions = new BindingList<ActionStep>();
         private CancellationTokenSource _runTokenSource;
         private List<ActionConfig> _configCache = new List<ActionConfig>();
+        private readonly BindingList<ActionConfig> _configItems = new BindingList<ActionConfig>();
         private string _loadedConfigName;
         private bool _hasShownTelexWarning = false;
         private bool _hasShownCapturePositionHint = false;
@@ -274,8 +275,10 @@ namespace AutoMouseKeyboard
                     }
                 }
 
-                ShowInTaskbar = false;
+                // Hide first: toggling ShowInTaskbar on a visible form recreates
+                // the handle and flashes a blank ghost window for a second or two.
                 Hide();
+                ShowInTaskbar = false;
             }
             catch
             {
@@ -339,7 +342,11 @@ namespace AutoMouseKeyboard
                 }
 
                 var headerFont = gridActions.ColumnHeadersDefaultCellStyle.Font ?? gridActions.Font;
-                var padding = 30;
+                // Header cell padding (8+8) + a safety margin; the header itself
+                // renders via TextRenderer (GDI), which is wider than
+                // Graphics.MeasureString — measuring with GDI under-sizes the
+                // column and the header text wraps (e.g. "Số lần" -> two lines).
+                var padding = 30 + gridActions.ColumnHeadersDefaultCellStyle.Padding.Horizontal;
 
                 using (var g = gridActions.CreateGraphics())
                 {
@@ -364,9 +371,10 @@ namespace AutoMouseKeyboard
                 return;
             }
 
-            var textSize = g.MeasureString(column.HeaderText, font);
+            var textSize = TextRenderer.MeasureText(g, column.HeaderText, font,
+                new Size(int.MaxValue, int.MaxValue), TextFormatFlags.NoPadding | TextFormatFlags.SingleLine);
             column.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            var width = (int)Math.Ceiling(textSize.Width) + padding;
+            var width = textSize.Width + padding;
             column.Width = minWidth > 0 ? Math.Max(width, minWidth) : width;
         }
 
@@ -377,9 +385,10 @@ namespace AutoMouseKeyboard
                 return;
             }
 
-            var textSize = g.MeasureString(column.Text, font);
+            var textSize = TextRenderer.MeasureText(g, column.Text, font,
+                new Size(int.MaxValue, int.MaxValue), TextFormatFlags.NoPadding | TextFormatFlags.SingleLine);
             column.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            column.Width = Math.Max((int)Math.Ceiling(textSize.Width) + padding, minWidth);
+            column.Width = Math.Max(textSize.Width + padding, minWidth);
         }
 
         private void LoadFormIcon()

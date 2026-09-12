@@ -48,9 +48,14 @@ namespace AutoMouseKeyboard
 
             lstConfigs.SelectedIndexChanged -= lstConfigs_SelectedIndexChanged;
 
-            lstConfigs.DataSource = null;
-            lstConfigs.DataSource = _configCache;
-            lstConfigs.DisplayMember = nameof(ActionConfig.Name);
+            _configItems.RaiseListChangedEvents = false;
+            _configItems.Clear();
+            foreach (var config in _configCache)
+            {
+                _configItems.Add(config);
+            }
+            _configItems.RaiseListChangedEvents = true;
+            _configItems.ResetBindings();
             lstConfigs.SelectedIndex = -1;
 
             if (!string.IsNullOrWhiteSpace(selectName))
@@ -75,6 +80,12 @@ namespace AutoMouseKeyboard
 
         private void SetupDragAndDrop()
         {
+            // Bound once — LoadConfigs mutates this list in place. Rebinding via
+            // DataSource = null + set clears every item for a frame or two, which
+            // is the visible "item vanishes" flicker on the list.
+            lstConfigs.DataSource = _configItems;
+            lstConfigs.DisplayMember = nameof(ActionConfig.Name);
+
             lstConfigs.AllowDrop = true;
             lstConfigs.MouseDown += lstConfigs_MouseDown;
             lstConfigs.MouseMove += lstConfigs_MouseMove;
@@ -167,9 +178,14 @@ namespace AutoMouseKeyboard
             SaveConfigOrder();
 
             var selectedName = item.Name;
-            lstConfigs.DataSource = null;
-            lstConfigs.DataSource = _configCache;
-            lstConfigs.DisplayMember = nameof(ActionConfig.Name);
+            _configItems.RaiseListChangedEvents = false;
+            _configItems.Clear();
+            foreach (var config in _configCache)
+            {
+                _configItems.Add(config);
+            }
+            _configItems.RaiseListChangedEvents = true;
+            _configItems.ResetBindings();
 
             var newIndex = _configCache.FindIndex(c => c.Name.Equals(selectedName, StringComparison.CurrentCultureIgnoreCase));
             if (newIndex >= 0)
@@ -261,10 +277,16 @@ namespace AutoMouseKeyboard
 
         private void ApplyActions(IEnumerable<ActionStep> actions)
         {
-            _actions.ListChanged -= Actions_ListChanged;
-            _actions = new BindingList<ActionStep>(actions.Select(a => a.Clone()).ToList());
-            _actions.ListChanged += Actions_ListChanged;
-            gridActions.DataSource = _actions;
+            // Mutate the bound list in place — replacing the BindingList and
+            // rebinding clears the grid for a frame, which reads as a flicker.
+            _actions.RaiseListChangedEvents = false;
+            _actions.Clear();
+            foreach (var action in actions)
+            {
+                _actions.Add(action.Clone());
+            }
+            _actions.RaiseListChangedEvents = true;
+            _actions.ResetBindings();
             UpdateRowNumbers();
         }
 

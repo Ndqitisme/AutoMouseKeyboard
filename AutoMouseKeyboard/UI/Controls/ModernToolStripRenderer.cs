@@ -78,7 +78,7 @@ namespace AutoMouseKeyboard.UI.Controls
                 e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                 using (var pen = new Pen(_palette.Border))
                 {
-                    e.Graphics.DrawRounded(pen, rect, CornerRadius);
+                    e.Graphics.DrawRoundedBorder(pen, rect, CornerRadius);
                 }
             }
             else

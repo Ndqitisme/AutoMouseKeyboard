@@ -30,7 +30,7 @@ namespace AutoMouseKeyboard.UI.Controls
             _inner = new TextBox
             {
                 BorderStyle = BorderStyle.None,
-                Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top,
+                Anchor = AnchorStyles.Left | AnchorStyles.Top,
                 BackColor = _palette.InputBack,
                 ForeColor = _palette.Text,
                 Tag = ThemeManager.SkipThemeTag, // themed by ApplyTheme, not ThemeManager recursion
@@ -41,8 +41,7 @@ namespace AutoMouseKeyboard.UI.Controls
             Controls.Add(_inner);
 
             Height = _inner.Height + 10;
-            _inner.SetBounds(8, Math.Max(0, (Height - _inner.Height) / 2),
-                Math.Max(1, Width - 16), _inner.Height);
+            LayoutInner();
         }
 
         /// <summary>The wrapped borderless text box (exposed for MaxLength, PasswordChar, etc.).</summary>
@@ -84,13 +83,13 @@ namespace AutoMouseKeyboard.UI.Controls
             base.OnFontChanged(e);
             // The inner box inherits our font (ambient) so its height just changed.
             Height = _inner.Height + 10;
-            CenterInner();
+            LayoutInner();
         }
 
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-            CenterInner();
+            LayoutInner();
             Invalidate();
         }
 
@@ -111,18 +110,22 @@ namespace AutoMouseKeyboard.UI.Controls
                 : (BorderColor ?? _palette.Border);
             using (var pen = new Pen(border))
             {
-                g.DrawRounded(pen, r, CornerRadius);
+                g.DrawRoundedBorder(pen, r, CornerRadius);
             }
         }
 
-        private void CenterInner()
+        private void LayoutInner()
         {
             if (_inner == null)
             {
                 return;
             }
 
-            _inner.Top = Math.Max(0, (Height - _inner.Height) / 2);
+            // Bounds are managed explicitly — anchoring Right would capture a
+            // negative margin because the ctor runs while Width is still 0, and
+            // the inner box would spill past the right edge and cover the border.
+            _inner.SetBounds(8, Math.Max(0, (Height - _inner.Height) / 2),
+                Math.Max(1, Width - 16), _inner.Height);
         }
     }
 }

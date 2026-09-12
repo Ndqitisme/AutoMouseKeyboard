@@ -285,7 +285,7 @@ namespace AutoMouseKeyboard.UI.Controls
             var borderColor = Focused || _dropDown != null ? p.Accent : p.Border;
             using (var pen = new Pen(borderColor))
             {
-                g.DrawRounded(pen, r, CornerRadius);
+                g.DrawRoundedBorder(pen, r, CornerRadius);
             }
 
             // Chevron: two-segment polyline (V) centered in the right zone.
