@@ -128,3 +128,5 @@ FodyWeavers.xsd
 
 # Publish output
 publish/
+tools/
+Installer/
