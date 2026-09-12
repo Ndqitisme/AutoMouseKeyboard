@@ -1,5 +1,4 @@
 ﻿
-#nullable disable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +22,9 @@ namespace AutoMouseKeyboard
         }
     }
 
-    public ActionStep Result { get; private set; }
+    public ActionStep? Result { get; private set; }
 
-    public KeyActionForm(string defaultKey = null)
+    public KeyActionForm(string? defaultKey = null)
     {
         Result = null;
         InitializeComponent();
@@ -36,7 +35,7 @@ namespace AutoMouseKeyboard
         UpdateLanguage();
     }
 
-    private void LanguageManager_LanguageChanged(object sender, LanguageChangedEventArgs e)
+    private void LanguageManager_LanguageChanged(object? sender, LanguageChangedEventArgs e)
     {
         UpdateLanguage();
     }
@@ -56,7 +55,7 @@ namespace AutoMouseKeyboard
         btnCancel.Text = LanguageManager.GetString("KeyActionForm_Cancel");
     }
 
-    public KeyActionForm(ActionStep existingStep) : this(ParseBaseKey(existingStep?.Key, existingStep, out var parsedCtrl, out var parsedAlt, out var parsedShift))
+    public KeyActionForm(ActionStep existingStep) : this(ParseBaseKey(existingStep.Key, existingStep, out var parsedCtrl, out var parsedAlt, out var parsedShift))
     {
         chkCtrl.Checked = parsedCtrl || existingStep.HoldCtrl;
         chkAlt.Checked = parsedAlt || existingStep.HoldAlt;
@@ -65,10 +64,9 @@ namespace AutoMouseKeyboard
         numInterval.Value = Math.Max(0, Math.Min(600000, existingStep.Delay));
     }
 
-    private void PopulateKeys(string defaultKey)
+    private void PopulateKeys(string? defaultKey)
     {
         cboKey.DisplayMember = "Label";
-        cboKey.ValueMember = "Token";
 
         var allKeys = new List<KeyOption>();
 
@@ -123,7 +121,7 @@ namespace AutoMouseKeyboard
         }
     }
 
-    private static string ParseBaseKey(string raw, ActionStep existingStep, out bool holdCtrl, out bool holdAlt, out bool holdShift)
+    private static string? ParseBaseKey(string? raw, ActionStep? existingStep, out bool holdCtrl, out bool holdAlt, out bool holdShift)
     {
         holdCtrl = existingStep?.HoldCtrl ?? false;
         holdAlt = existingStep?.HoldAlt ?? false;
@@ -139,7 +137,7 @@ namespace AutoMouseKeyboard
                         .Where(t => !string.IsNullOrEmpty(t))
                         .ToList();
 
-        string baseKey = null;
+        string? baseKey = null;
         foreach (var token in tokens)
         {
             switch (token.ToLowerInvariant())
@@ -171,7 +169,7 @@ namespace AutoMouseKeyboard
         return baseKey;
     }
 
-    private void btnOk_Click(object sender, EventArgs e)
+    private void btnOk_Click(object? sender, EventArgs e)
     {
         var option = cboKey.SelectedItem as KeyOption;
 

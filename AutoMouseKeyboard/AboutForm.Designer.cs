@@ -1,149 +1,239 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using AutoMouseKeyboard.UI;
+using AutoMouseKeyboard.UI.Controls;
+using AutoMouseKeyboard.Utilities;
 
 namespace AutoMouseKeyboard
 {
     partial class AboutForm
+{
+    private IContainer components = null;
+    private TableLayoutPanel rootLayout = null;
+    private CardPanel cardAbout = null;
+    private TableLayoutPanel aboutLayout = null;
+    private TableLayoutPanel textLayout = null;
+    private Label lblTitle = null;
+    private Label lblVersion = null;
+    private Label lblAuthor = null;
+    private Label lblDescription = null;
+    private Label lblDonateTitle = null;
+    private Label lblDonateInfo = null;
+    private PictureBox picQRCode = null;
+    private ModernButton btnOk = null;
+
+    /// <summary>
+    ///  Clean up any resources being used.
+    /// </summary>
+    protected override void Dispose(bool disposing)
     {
-        private IContainer components = null!;
-        private Label lblTitle = null!;
-        private Label lblVersion = null!;
-        private Label lblAuthor = null!;
-        private Label lblDescription = null!;
-        private Button btnOk = null!;
-        private PictureBox picQRCode = null!;
-        private Label lblDonateTitle = null!;
-        private Label lblDonateInfo = null!;
-
-        protected override void Dispose(bool disposing)
+        if (disposing && components != null)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-
-            base.Dispose(disposing);
+            components.Dispose();
         }
 
-        private void InitializeComponent()
-        {
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblVersion = new System.Windows.Forms.Label();
-            this.lblAuthor = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.picQRCode = new System.Windows.Forms.PictureBox();
-            this.lblDonateTitle = new System.Windows.Forms.Label();
-            this.lblDonateInfo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picQRCode)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(17, 17);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(179, 25);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "AutoMouseKeyboard";
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(17, 48);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(72, 13);
-            this.lblVersion.TabIndex = 1;
-            this.lblVersion.Text = "Version: 1.0.0";
-            // 
-            // lblAuthor
-            // 
-            this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(17, 69);
-            this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(196, 13);
-            this.lblAuthor.TabIndex = 2;
-            this.lblAuthor.Text = "Author: NDQITVN";
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.Location = new System.Drawing.Point(17, 95);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(271, 43);
-            this.lblDescription.TabIndex = 3;
-            this.lblDescription.Text = "Automation tool for mouse clicks and keyboard input.";
-            this.lblDescription.UseMnemonic = false;
-            // 
-            // btnOk
-            // 
-            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.Location = new System.Drawing.Point(440, 369);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(64, 26);
-            this.btnOk.TabIndex = 4;
-            this.btnOk.Text = "OK";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // picQRCode
-            // 
-            this.picQRCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picQRCode.Location = new System.Drawing.Point(305, 142);
-            this.picQRCode.Name = "picQRCode";
-            this.picQRCode.Size = new System.Drawing.Size(199, 206);
-            this.picQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picQRCode.TabIndex = 5;
-            this.picQRCode.TabStop = false;
-            // 
-            // lblDonateTitle
-            // 
-            this.lblDonateTitle.AutoSize = true;
-            this.lblDonateTitle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblDonateTitle.Location = new System.Drawing.Point(17, 156);
-            this.lblDonateTitle.Name = "lblDonateTitle";
-            this.lblDonateTitle.Size = new System.Drawing.Size(110, 19);
-            this.lblDonateTitle.TabIndex = 6;
-            this.lblDonateTitle.Text = "Ủng hộ tác giả:";
-            // 
-            // lblDonateInfo
-            // 
-            this.lblDonateInfo.Location = new System.Drawing.Point(17, 182);
-            this.lblDonateInfo.Name = "lblDonateInfo";
-            this.lblDonateInfo.Size = new System.Drawing.Size(274, 89);
-            this.lblDonateInfo.TabIndex = 7;
-            this.lblDonateInfo.Text = "Ngân hàng: [Tên ngân hàng]\r\nSố tài khoản: [Số tài khoản]\r\nChủ tài khoản: [Tên chủ" +
-    " tài khoản]\r\n\r\nHoặc quét mã QR bên cạnh để chuyển khoản nhanh.";
-            this.lblDonateInfo.Click += new System.EventHandler(this.lblDonateInfo_Click);
-            // 
-            // AboutForm
-            // 
-            this.AcceptButton = this.btnOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 407);
-            this.Controls.Add(this.lblDonateInfo);
-            this.Controls.Add(this.lblDonateTitle);
-            this.Controls.Add(this.picQRCode);
-            this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.lblDescription);
-            this.Controls.Add(this.lblAuthor);
-            this.Controls.Add(this.lblVersion);
-            this.Controls.Add(this.lblTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "AboutForm";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "About";
-            ((System.ComponentModel.ISupportInitialize)(this.picQRCode)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+        base.Dispose(disposing);
+    }
 
-        }
+    private void InitializeComponent()
+    {
+        components = new Container();
+        rootLayout = new TableLayoutPanel();
+        cardAbout = new CardPanel();
+        aboutLayout = new TableLayoutPanel();
+        textLayout = new TableLayoutPanel();
+        lblTitle = new Label();
+        lblVersion = new Label();
+        lblAuthor = new Label();
+        lblDescription = new Label();
+        lblDonateTitle = new Label();
+        lblDonateInfo = new Label();
+        picQRCode = new PictureBox();
+        btnOk = new ModernButton();
+        ((ISupportInitialize)picQRCode).BeginInit();
+        rootLayout.SuspendLayout();
+        cardAbout.SuspendLayout();
+        aboutLayout.SuspendLayout();
+        textLayout.SuspendLayout();
+        SuspendLayout();
+        //
+        // rootLayout
+        //
+        rootLayout.ColumnCount = 1;
+        rootLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        rootLayout.Controls.Add(cardAbout, 0, 0);
+        rootLayout.Controls.Add(btnOk, 0, 1);
+        rootLayout.Dock = DockStyle.Fill;
+        rootLayout.Location = new Point(0, 0);
+        rootLayout.Name = "rootLayout";
+        rootLayout.Padding = new Padding(12);
+        rootLayout.RowCount = 2;
+        rootLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+        rootLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        rootLayout.TabIndex = 0;
+        //
+        // cardAbout
+        //
+        cardAbout.Controls.Add(aboutLayout);
+        cardAbout.Dock = DockStyle.Fill;
+        cardAbout.Margin = new Padding(0, 0, 0, 8);
+        cardAbout.Name = "cardAbout";
+        cardAbout.TabIndex = 0;
+        cardAbout.TabStop = false;
+        //
+        // aboutLayout
+        //
+        aboutLayout.BackColor = Color.Transparent;
+        aboutLayout.ColumnCount = 2;
+        aboutLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        aboutLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+        aboutLayout.Controls.Add(textLayout, 0, 0);
+        aboutLayout.Controls.Add(picQRCode, 1, 0);
+        aboutLayout.Dock = DockStyle.Fill;
+        aboutLayout.Margin = new Padding(0);
+        aboutLayout.Name = "aboutLayout";
+        aboutLayout.RowCount = 1;
+        aboutLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+        aboutLayout.TabIndex = 0;
+        //
+        // textLayout
+        //
+        textLayout.BackColor = Color.Transparent;
+        textLayout.ColumnCount = 1;
+        textLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        textLayout.Controls.Add(lblTitle, 0, 0);
+        textLayout.Controls.Add(lblVersion, 0, 1);
+        textLayout.Controls.Add(lblAuthor, 0, 2);
+        textLayout.Controls.Add(lblDescription, 0, 3);
+        textLayout.Controls.Add(lblDonateTitle, 0, 4);
+        textLayout.Controls.Add(lblDonateInfo, 0, 5);
+        textLayout.Dock = DockStyle.Fill;
+        textLayout.Margin = new Padding(0);
+        textLayout.Name = "textLayout";
+        textLayout.RowCount = 6;
+        textLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        textLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        textLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        textLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+        textLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        textLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        textLayout.TabIndex = 0;
+        //
+        // lblTitle
+        //
+        lblTitle.AutoSize = true;
+        lblTitle.BackColor = Color.Transparent;
+        lblTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+        lblTitle.Margin = new Padding(0, 0, 0, 4);
+        lblTitle.Name = "lblTitle";
+        lblTitle.TabIndex = 0;
+        lblTitle.Text = "AutoMouseKeyboard";
+        //
+        // lblVersion
+        //
+        lblVersion.AutoSize = true;
+        lblVersion.BackColor = Color.Transparent;
+        lblVersion.ForeColor = ThemeManager.Palette.TextMuted;
+        lblVersion.Margin = new Padding(0, 0, 0, 4);
+        lblVersion.Name = "lblVersion";
+        lblVersion.TabIndex = 1;
+        lblVersion.Tag = ThemeManager.MutedTextTag;
+        lblVersion.Text = "Version: 1.0.0";
+        //
+        // lblAuthor
+        //
+        lblAuthor.AutoSize = true;
+        lblAuthor.BackColor = Color.Transparent;
+        lblAuthor.ForeColor = ThemeManager.Palette.TextMuted;
+        lblAuthor.Margin = new Padding(0, 0, 0, 8);
+        lblAuthor.Name = "lblAuthor";
+        lblAuthor.TabIndex = 2;
+        lblAuthor.Tag = ThemeManager.MutedTextTag;
+        lblAuthor.Text = "Author: NDQITVN";
+        //
+        // lblDescription
+        //
+        lblDescription.BackColor = Color.Transparent;
+        lblDescription.Dock = DockStyle.Fill;
+        lblDescription.Margin = new Padding(0, 0, 0, 8);
+        lblDescription.Name = "lblDescription";
+        lblDescription.Size = new Size(280, 60);
+        lblDescription.TabIndex = 3;
+        lblDescription.Text = "Automation tool for mouse clicks and keyboard input.";
+        lblDescription.UseMnemonic = false;
+        //
+        // lblDonateTitle
+        //
+        lblDonateTitle.AutoSize = true;
+        lblDonateTitle.BackColor = Color.Transparent;
+        lblDonateTitle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+        lblDonateTitle.Margin = new Padding(0, 8, 0, 4);
+        lblDonateTitle.Name = "lblDonateTitle";
+        lblDonateTitle.TabIndex = 4;
+        lblDonateTitle.Text = "Ủng hộ tác giả:";
+        //
+        // lblDonateInfo
+        //
+        lblDonateInfo.BackColor = Color.Transparent;
+        lblDonateInfo.Dock = DockStyle.Fill;
+        lblDonateInfo.Margin = new Padding(0);
+        lblDonateInfo.Name = "lblDonateInfo";
+        lblDonateInfo.Size = new Size(280, 90);
+        lblDonateInfo.TabIndex = 5;
+        lblDonateInfo.Text = "Ngân hàng: [Tên ngân hàng]\r\nSố tài khoản: [Số tài khoản]\r\nChủ tài khoản: [Tên chủ tài khoản]\r\n\r\nHoặc quét mã QR bên cạnh để chuyển khoản nhanh.";
+        lblDonateInfo.Click += lblDonateInfo_Click;
+        //
+        // picQRCode
+        //
+        picQRCode.Anchor = AnchorStyles.Top;
+        picQRCode.BackColor = Color.Transparent;
+        picQRCode.BorderStyle = BorderStyle.None;
+        picQRCode.Margin = new Padding(8, 0, 0, 0);
+        picQRCode.Name = "picQRCode";
+        picQRCode.Size = new Size(200, 200);
+        picQRCode.SizeMode = PictureBoxSizeMode.StretchImage;
+        picQRCode.TabIndex = 1;
+        picQRCode.TabStop = false;
+        //
+        // btnOk
+        //
+        btnOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+        btnOk.Margin = new Padding(0);
+        btnOk.Name = "btnOk";
+        btnOk.Size = new Size(96, 32);
+        btnOk.StyleKind = ButtonStyleKind.Primary;
+        btnOk.TabIndex = 1;
+        btnOk.Text = "OK";
+        btnOk.Click += btnOk_Click;
+        //
+        // AboutForm
+        //
+        AcceptButton = btnOk;
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(560, 420);
+        Controls.Add(rootLayout);
+        Font = new Font("Segoe UI", 9F);
+        FormBorderStyle = FormBorderStyle.FixedDialog;
+        MaximizeBox = false;
+        MinimizeBox = false;
+        Name = "AboutForm";
+        ShowIcon = false;
+        ShowInTaskbar = false;
+        StartPosition = FormStartPosition.CenterParent;
+        Text = "About";
+        textLayout.ResumeLayout(false);
+        textLayout.PerformLayout();
+        aboutLayout.ResumeLayout(false);
+        aboutLayout.PerformLayout();
+        cardAbout.ResumeLayout(false);
+        cardAbout.PerformLayout();
+        rootLayout.ResumeLayout(false);
+        rootLayout.PerformLayout();
+        ((ISupportInitialize)picQRCode).EndInit();
+        ResumeLayout(false);
+    }
     }
 }
-

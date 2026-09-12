@@ -40,13 +40,13 @@ namespace AutoMouseKeyboard
 
         private void InitializeActionMenus()
         {
-            menuAddKey.DropDownItems.Clear();
-            menuAddMouse.DropDownItems.Clear();
+            ctxAddKey.Items.Clear();
+            ctxAddMouse.Items.Clear();
 
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_F1F12Key"), KeyHelper.EnumerateKeys(i => string.Format("F{0}", i), 1, 12), 3));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_AZKey"), KeyHelper.EnumerateKeys(i => ((char)('A' + i - 1)).ToString(), 1, 26), 4));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_09Key"), KeyHelper.EnumerateKeys(i => (i - 1).ToString(), 1, 10), 3));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_SymbolKey"), new[]
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_F1F12Key"), KeyHelper.EnumerateKeys(i => string.Format("F{0}", i), 1, 12), 3));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_AZKey"), KeyHelper.EnumerateKeys(i => ((char)('A' + i - 1)).ToString(), 1, 26), 4));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_09Key"), KeyHelper.EnumerateKeys(i => (i - 1).ToString(), 1, 10), 3));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_SymbolKey"), new[]
             {
                 Tuple.Create("-", "OemMinus"),
                 Tuple.Create("=", "Oemplus"),
@@ -60,14 +60,14 @@ namespace AutoMouseKeyboard
                 Tuple.Create("\\", "OemPipe"),
                 Tuple.Create("`", "Oemtilde")
             }, 3));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_NumKey"), CreateNumPadKeys(), 3));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_OtherKey"), CreateOtherKeys(), 3));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_NumKey"), CreateNumPadKeys(), 3));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_OtherKey"), CreateOtherKeys(), 3));
 
             foreach (var option in ActionStep.MouseOptions)
             {
                 var item = new ToolStripMenuItem(option.Label) { Tag = option.Kind };
                 item.Click += MouseMenuItem_Click;
-                menuAddMouse.DropDownItems.Add(item);
+                ctxAddMouse.Items.Add(item);
             }
         }
 
@@ -138,10 +138,7 @@ namespace AutoMouseKeyboard
                 {
                     var step = CreateKeyboardStep(token);
                     AddAction(step);
-                    if (menuAddKey.DropDown != null)
-                    {
-                        menuAddKey.DropDown.Close();
-                    }
+                    ctxAddKey.Close();
                 };
 
                 if (menu != null)
@@ -182,18 +179,6 @@ namespace AutoMouseKeyboard
             Add(Keys.OemPipe, nameof(Keys.OemPipe));
 
             return map;
-        }
-
-        private void KeyMenuItem_Click(object? sender, EventArgs e)
-        {
-            var menuItem = sender as ToolStripMenuItem;
-            if (menuItem == null || !(menuItem.Tag is string key))
-            {
-                return;
-            }
-
-            var step = CreateKeyboardStep(key);
-            AddAction(step);
         }
 
         private void MouseMenuItem_Click(object? sender, EventArgs e)

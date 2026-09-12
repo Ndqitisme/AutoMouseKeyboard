@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutoMouseKeyboard.Models;
 using AutoMouseKeyboard.Services;
+using AutoMouseKeyboard.UI.Controls;
 using AutoMouseKeyboard.Utilities;
 
 namespace AutoMouseKeyboard
@@ -62,10 +63,8 @@ namespace AutoMouseKeyboard
             SetupDragAndDrop();
             LoadConfigs();
             LoadSettings();
-            CenterActionButtons();
-            grpActions.Resize += (sender, e) => CenterActionButtons();
-            Resize += MainForm_Resize;
             ThemeManager.RegisterForm(this);
+            ThemeManager.ThemeChanged += ThemeManager_ThemeChanged;
             LanguageManager.RegisterForm(this);
             LanguageManager.LanguageChanged += LanguageManager_LanguageChanged;
             UpdateLanguage();
@@ -121,9 +120,32 @@ namespace AutoMouseKeyboard
             UpdateLanguage();
         }
 
-        private void MainForm_Resize(object sender, EventArgs e)
+        private void ThemeManager_ThemeChanged(object sender, ThemeMode e)
         {
-            AdjustLabelSizes();
+            RefreshMenuRenderers();
+        }
+
+        private void RefreshMenuRenderers()
+        {
+            var palette = ThemeManager.Palette;
+            ctxAddKey.Renderer = new ModernToolStripRenderer(palette);
+            ctxAddMouse.Renderer = new ModernToolStripRenderer(palette);
+            if (_trayMenu != null)
+            {
+                _trayMenu.Renderer = new ModernToolStripRenderer(palette);
+            }
+
+            // MultiColumnMenuStrip caches BackColor + a palette-bound renderer at
+            // construction; the lazily-created section dropdowns would otherwise
+            // stay on the old palette after a theme switch.
+            foreach (var item in ctxAddKey.Items.OfType<ToolStripMenuItem>())
+            {
+                if (item.DropDown is MultiColumnMenuStrip dropDown)
+                {
+                    dropDown.Renderer = new ModernToolStripRenderer(palette);
+                    dropDown.BackColor = palette.MenuBack;
+                }
+            }
         }
 
         public void UpdateLanguage()
@@ -139,8 +161,8 @@ namespace AutoMouseKeyboard
             btnAbout.Text = LanguageManager.GetString("MainForm_About");
             btnImport.Text = LanguageManager.GetString("MainForm_Import");
             btnExport.Text = LanguageManager.GetString("MainForm_Export");
-            menuAddKey.Text = LanguageManager.GetString("MainForm_AddKey");
-            menuAddMouse.Text = LanguageManager.GetString("MainForm_AddMouse");
+            btnAddKey.Text = LanguageManager.GetString("MainForm_AddKey");
+            btnAddMouse.Text = LanguageManager.GetString("MainForm_AddMouse");
             btnMoveUp.Text = LanguageManager.GetString("MainForm_MoveUp");
             btnMoveDown.Text = LanguageManager.GetString("MainForm_MoveDown");
             btnDeleteAction.Text = LanguageManager.GetString("MainForm_Delete");
@@ -169,7 +191,6 @@ namespace AutoMouseKeyboard
             }
 
             UpdateTrayLanguage();
-            AdjustLabelSizes();
 
             try
             {
@@ -222,6 +243,7 @@ namespace AutoMouseKeyboard
 
                 _trayMenu = new ContextMenuStrip(components);
                 _trayMenu.Items.AddRange(new ToolStripItem[] { _trayOpenMenuItem, _trayExitMenuItem });
+                _trayMenu.Renderer = new ModernToolStripRenderer(ThemeManager.Palette);
 
                 _trayIcon = new NotifyIcon(components)
                 {
@@ -295,47 +317,6 @@ namespace AutoMouseKeyboard
             }
             catch
             {
-            }
-        }
-
-        private void AdjustLabelSizes()
-        {
-            lblConfigName.AutoSize = true;
-            lblConfigName.AutoEllipsis = false;
-
-            var minGap = 10;
-            var configNameTextSize = TextRenderer.MeasureText(lblConfigName.Text, lblConfigName.Font);
-            var newTxtConfigNameLeft = lblConfigName.Left + configNameTextSize.Width + minGap;
-            var availableWidth = grpActions.Width - newTxtConfigNameLeft - 12;
-
-            if (availableWidth > 100 && newTxtConfigNameLeft != txtConfigName.Left)
-            {
-                var oldWidth = txtConfigName.Width;
-                txtConfigName.Left = newTxtConfigNameLeft;
-                txtConfigName.Width = availableWidth;
-                if (txtConfigName.Width < oldWidth * 0.5)
-                {
-                    txtConfigName.Width = (int)(oldWidth * 0.5);
-                }
-            }
-
-            lblLoop.AutoSize = true;
-            lblLoop.AutoEllipsis = false;
-
-            lblGlobalDelay.AutoSize = true;
-            lblGlobalDelay.AutoEllipsis = false;
-
-            lblStatus.AutoSize = true;
-            lblStatus.AutoEllipsis = false;
-
-            var statusTextSize = TextRenderer.MeasureText(lblStatus.Text, lblStatus.Font);
-            var maxStatusWidth = btnStart.Left - lblStatus.Left - 20;
-            if (statusTextSize.Width > maxStatusWidth && maxStatusWidth > 100)
-            {
-                lblStatus.AutoSize = false;
-                lblStatus.Width = maxStatusWidth;
-                lblStatus.AutoEllipsis = true;
-                lblStatus.TextAlign = ContentAlignment.MiddleLeft;
             }
         }
 
@@ -625,6 +606,7 @@ namespace AutoMouseKeyboard
                 _runTokenSource.Cancel();
             }
             LanguageManager.LanguageChanged -= LanguageManager_LanguageChanged;
+            ThemeManager.ThemeChanged -= ThemeManager_ThemeChanged;
             ThemeManager.UnregisterForm(this);
             LanguageManager.UnregisterForm(this);
             _trayIcon?.Dispose();
@@ -648,35 +630,14 @@ namespace AutoMouseKeyboard
             _currentStatusParams = parameters;
         }
 
-        private void CenterActionButtons()
+        private void btnAddKey_Click(object sender, EventArgs e)
         {
-            const int buttonSpacing = 10;
-            const int bottomMargin = 14;
-            const int buttonHeight = 30;
+            ctxAddKey.Show(btnAddKey, new Point(0, btnAddKey.Height));
+        }
 
-            var actionButtons = grpActions.Controls
-                .OfType<Button>()
-                .Where(b => (b.Anchor & AnchorStyles.Bottom) == AnchorStyles.Bottom &&
-                            (b.Anchor & AnchorStyles.Left) == AnchorStyles.Left)
-                .OrderBy(b => b.TabIndex)
-                .ToList();
-
-            if (actionButtons.Count == 0)
-            {
-                return;
-            }
-
-            var totalWidth = actionButtons.Sum(b => b.Width) + (buttonSpacing * (actionButtons.Count - 1));
-
-            var startX = (grpActions.Width - totalWidth) / 2;
-            var bottomY = grpActions.Height - bottomMargin - buttonHeight;
-
-            var currentX = startX;
-            foreach (var button in actionButtons)
-            {
-                button.Location = new Point(currentX, bottomY);
-                currentX += button.Width + buttonSpacing;
-            }
+        private void btnAddMouse_Click(object sender, EventArgs e)
+        {
+            ctxAddMouse.Show(btnAddMouse, new Point(0, btnAddMouse.Height));
         }
     }
 }

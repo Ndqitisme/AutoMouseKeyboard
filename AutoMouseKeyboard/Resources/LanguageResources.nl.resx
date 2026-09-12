@@ -190,6 +190,9 @@
   <data name="SettingForm_Note" xml:space="preserve">
     <value>Meer instellingen zullen beschikbaar zijn in toekomstige updates.</value>
   </data>
+  <data name="SettingForm_AppearanceGroup" xml:space="preserve">
+    <value>Uiterlijk</value>
+  </data>
   <data name="AboutForm_Title" xml:space="preserve">
     <value>Over</value>
   </data>

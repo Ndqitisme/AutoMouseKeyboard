@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -65,16 +65,16 @@
     <value>কর্ম তালিকা</value>
   </data>
   <data name="MainForm_ConfigName" xml:space="preserve">
-    <value>কনফিগারেশনের না�?/value>
+    <value>কনফিগারেশনের নাম</value>
   </data>
   <data name="MainForm_New" xml:space="preserve">
     <value>নতুন</value>
   </data>
   <data name="MainForm_Save" xml:space="preserve">
-    <value>সংরক্ষ�?করুন</value>
+    <value>সংরক্ষণ করুন</value>
   </data>
   <data name="MainForm_Delete" xml:space="preserve">
-    <value>মুছু�?/value>
+    <value>মুছুন</value>
   </data>
   <data name="MainForm_Setting" xml:space="preserve">
     <value>সেটিংস</value>
@@ -86,13 +86,13 @@
     <value>আমদানি</value>
   </data>
   <data name="MainForm_Export" xml:space="preserve">
-    <value>রপ্তান�?/value>
+    <value>রপ্তানি</value>
   </data>
   <data name="MainForm_AddKey" xml:space="preserve">
-    <value>কী যো�?করুন</value>
+    <value>কী যোগ করুন</value>
   </data>
   <data name="MainForm_AddMouse" xml:space="preserve">
-    <value>মাউস যো�?করুন</value>
+    <value>মাউস যোগ করুন</value>
   </data>
   <data name="MainForm_MoveUp" xml:space="preserve">
     <value>উপরে সরান</value>
@@ -113,7 +113,7 @@
     <value>কনফিগারেশন আমদানি করুন</value>
   </data>
   <data name="MainForm_ExportConfig" xml:space="preserve">
-    <value>কনফিগারেশন রপ্তান�?করুন</value>
+    <value>কনফিগারেশন রপ্তানি করুন</value>
   </data>
   <data name="MainForm_Status" xml:space="preserve">
     <value>স্থিতি: {0}</value>
@@ -122,7 +122,7 @@
     <value>পুনরাবৃত্তির সংখ্যা</value>
   </data>
   <data name="MainForm_GlobalDelay" xml:space="preserve">
-    <value>সর্বজনী�?বিলম্ব (ms)</value>
+    <value>গ্লোবাল বিলম্ব (ms)</value>
   </data>
   <data name="MainForm_ColIndex" xml:space="preserve">
     <value>নং</value>
@@ -131,31 +131,31 @@
     <value>কী</value>
   </data>
   <data name="MainForm_ColCharacters" xml:space="preserve">
-    <value>অক্ষ�?/value>
+    <value>অক্ষর</value>
   </data>
   <data name="MainForm_ColCount" xml:space="preserve">
-    <value>সম্পাদনে�?সংখ্যা</value>
+    <value>সংখ্যা</value>
   </data>
   <data name="MainForm_ColDelay" xml:space="preserve">
     <value>বিলম্ব</value>
   </data>
   <data name="MainForm_ColSetPosition" xml:space="preserve">
-    <value>স্থানাঙ্�?সে�?করুন</value>
+    <value>স্থানাঙ্ক সেট করুন</value>
   </data>
   <data name="SettingForm_Title" xml:space="preserve">
     <value>সেটিংস</value>
   </data>
   <data name="SettingForm_Theme" xml:space="preserve">
-    <value>ইন্টারফে�?</value>
+    <value>ইন্টারফেস:</value>
   </data>
   <data name="SettingForm_Language" xml:space="preserve">
     <value>ভাষা:</value>
   </data>
   <data name="SettingForm_Light" xml:space="preserve">
-    <value>হালক�?/value>
+    <value>হালকা</value>
   </data>
   <data name="SettingForm_Dark" xml:space="preserve">
-    <value>অন্ধকা�?/value>
+    <value>অন্ধকার</value>
   </data>
   <data name="SettingForm_Cyan" xml:space="preserve">
     <value>সায়ান</value>
@@ -167,7 +167,7 @@
     <value>সবুজ</value>
   </data>
   <data name="SettingForm_Red" xml:space="preserve">
-    <value>লা�?/value>
+    <value>লাল</value>
   </data>
   <data name="SettingForm_Orange" xml:space="preserve">
     <value>কমলা</value>
@@ -176,7 +176,7 @@
     <value>হলুদ</value>
   </data>
   <data name="SettingForm_Blue" xml:space="preserve">
-    <value>নী�?/value>
+    <value>নীল</value>
   </data>
   <data name="SettingForm_Indigo" xml:space="preserve">
     <value>নীলা</value>
@@ -185,10 +185,16 @@
     <value>বেগুনি</value>
   </data>
   <data name="SettingForm_OK" xml:space="preserve">
-    <value>ঠি�?আছ�?/value>
+    <value>ঠিক আছে</value>
   </data>
   <data name="SettingForm_Note" xml:space="preserve">
-    <value>আর�?সেটিংস ভবিষ্যতে�?আপডেটে উপলব্ধ হবে।</value>
+    <value>আরও সেটিংস ভবিষ্যতের আপডেটে উপলব্ধ হবে।</value>
+  </data>
+  <data name="SettingForm_AppearanceGroup" xml:space="preserve">
+    <value>চেহারা</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>আচরণ</value>
   </data>
   <data name="AboutForm_Title" xml:space="preserve">
     <value>সম্পর্কে</value>
@@ -197,28 +203,28 @@
     <value>AutoMouseKeyboard</value>
   </data>
   <data name="AboutForm_Version" xml:space="preserve">
-    <value>সংস্কর�? 1.0.0</value>
+    <value>সংস্করণ: 1.0.0</value>
   </data>
   <data name="AboutForm_Author" xml:space="preserve">
     <value>লেখক: NDQITVN</value>
   </data>
   <data name="AboutForm_Description" xml:space="preserve">
-    <value>মাউস ক্লি�?এব�?কীবোর্�?ইনপুটে�?জন্য স্বয়ংক্রিয়কর�?সরঞ্জাম।</value>
+    <value>মাউস ক্লিক এবং কীবোর্ড ইনপুটের জন্য স্বয়ংক্রিয়করণ সরঞ্জাম।</value>
   </data>
   <data name="AboutForm_DonateTitle" xml:space="preserve">
-    <value>আপনি যদ�?লেখককে দা�?করতে চা�?</value>
+    <value>আপনি যদি লেখককে দান করতে চান:</value>
   </data>
   <data name="AboutForm_DonateInfo" xml:space="preserve">
-    <value>ব্যাঙ্�? {0}&#x0D;&#x0A;অ্যাকাউন্ট নম্ব�? {1}&#x0D;&#x0A;অ্যাকাউন্ট ধারক: {2}&#x0D;&#x0A;&#x0D;&#x0A;অথবা দ্রু�?স্থানান্তরের জন্য পাশে�?QR কো�?স্ক্যা�?করুন�?/value>
+    <value>ব্যাংক: {0}&#x0D;&#x0A;অ্যাকাউন্ট নম্বর: {1}&#x0D;&#x0A;অ্যাকাউন্ট ধারক: {2}&#x0D;&#x0A;&#x0D;&#x0A;অথবা দ্রুত স্থানান্তরের জন্য পাশের QR কোড স্ক্যান করুন।</value>
   </data>
   <data name="KeyActionForm_Title" xml:space="preserve">
-    <value>কী যো�?করুন</value>
+    <value>কী যোগ করুন</value>
   </data>
   <data name="KeyActionForm_Key" xml:space="preserve">
     <value>কী:</value>
   </data>
   <data name="KeyActionForm_Modifiers" xml:space="preserve">
-    <value>কী ধর�?রাখু�?</value>
+    <value>ধরে রাখার কী:</value>
   </data>
   <data name="KeyActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -230,28 +236,28 @@
     <value>Shift</value>
   </data>
   <data name="KeyActionForm_Count" xml:space="preserve">
-    <value>বারে�?সংখ্যা</value>
+    <value>সংখ্যা</value>
   </data>
   <data name="KeyActionForm_Interval" xml:space="preserve">
     <value>বিলম্ব (ms)</value>
   </data>
   <data name="KeyActionForm_IntervalHint" xml:space="preserve">
-    <value>(1 সেকেন্�?= 1000 মিলিসেকেন্�?</value>
+    <value>(1 সেকেন্ড = 1000 ms)</value>
   </data>
   <data name="KeyActionForm_OK" xml:space="preserve">
-    <value>ঠি�?আছ�?/value>
+    <value>ঠিক আছে</value>
   </data>
   <data name="KeyActionForm_Cancel" xml:space="preserve">
-    <value>বাতি�?/value>
+    <value>বাতিল</value>
   </data>
   <data name="MouseActionForm_Title" xml:space="preserve">
-    <value>মাউস কর্ম যো�?করুন</value>
+    <value>মাউস অ্যাকশন যোগ করুন</value>
   </data>
   <data name="MouseActionForm_Action" xml:space="preserve">
-    <value>ক্লিকে�?ধর�?</value>
+    <value>ক্লিকের ধরন:</value>
   </data>
   <data name="MouseActionForm_Modifiers" xml:space="preserve">
-    <value>কী ধর�?রাখু�?</value>
+    <value>ধরে রাখার কী:</value>
   </data>
   <data name="MouseActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -263,46 +269,46 @@
     <value>Shift</value>
   </data>
   <data name="MouseActionForm_Position" xml:space="preserve">
-    <value>স্থানাঙ্�?X,Y</value>
+    <value>স্থানাঙ্ক X,Y</value>
   </data>
   <data name="MouseActionForm_SetPosition" xml:space="preserve">
-    <value>স্থানাঙ্�?সে�?করুন</value>
+    <value>অবস্থান নির্ধারণ</value>
   </data>
   <data name="MouseActionForm_Count" xml:space="preserve">
-    <value>বারে�?সংখ্যা</value>
+    <value>সংখ্যা</value>
   </data>
   <data name="MouseActionForm_Interval" xml:space="preserve">
     <value>বিলম্ব (ms)</value>
   </data>
   <data name="MouseActionForm_IntervalHint" xml:space="preserve">
-    <value>(1 সেকেন্�?= 1000 মিলিসেকেন্�?</value>
+    <value>(1 সেকেন্ড = 1000 ms)</value>
   </data>
   <data name="MouseActionForm_OK" xml:space="preserve">
-    <value>ঠি�?আছ�?/value>
+    <value>ঠিক আছে</value>
   </data>
   <data name="MouseActionForm_Cancel" xml:space="preserve">
-    <value>বাতি�?/value>
+    <value>বাতিল</value>
   </data>
   <data name="Status_Ready" xml:space="preserve">
     <value>প্রস্তুত</value>
   </data>
   <data name="Status_ConfigMoved" xml:space="preserve">
-    <value>কনফিগারেশন সরান�?হয়েছে: {0}</value>
+    <value>কনফিগারেশন সরানো হয়েছে: {0}</value>
   </data>
   <data name="Status_ConfigLoaded" xml:space="preserve">
-    <value>কনফিগারেশন লো�?কর�?হয়েছে: {0}</value>
+    <value>কনফিগারেশন লোড হয়েছে: {0}</value>
   </data>
   <data name="Status_CreatingNew" xml:space="preserve">
-    <value>নতুন কনফিগারেশন তৈরি কর�?হচ্ছ�?..</value>
+    <value>নতুন কনফিগারেশন তৈরি হচ্ছে...</value>
   </data>
   <data name="Status_ConfigSaved" xml:space="preserve">
-    <value>কনফিগারেশন সংরক্ষ�?কর�?হয়েছে</value>
+    <value>কনফিগারেশন সংরক্ষিত হয়েছে</value>
   </data>
   <data name="Status_ConfigCopied" xml:space="preserve">
-    <value>কনফিগারেশন কপ�?কর�?হয়েছে: {0}</value>
+    <value>কনফিগারেশন কপি হয়েছে: {0}</value>
   </data>
   <data name="Status_ConfigCreated" xml:space="preserve">
-    <value>নতুন কনফিগারেশন তৈরি কর�?হয়েছে: {0}</value>
+    <value>নতুন কনফিগারেশন তৈরি হয়েছে: {0}</value>
   </data>
   <data name="Status_ConfigDeleted" xml:space="preserve">
     <value>কনফিগারেশন মুছে ফেলা হয়েছে</value>
@@ -311,73 +317,76 @@
     <value>চলছে...</value>
   </data>
   <data name="Status_Stopped" xml:space="preserve">
-    <value>বন্ধ কর�?হয়েছে</value>
+    <value>বন্ধ হয়েছে</value>
   </data>
   <data name="Status_Completed" xml:space="preserve">
-    <value>কর্ম ক্রম সম্পন্�?হয়েছে</value>
+    <value>অ্যাকশন ক্রম সম্পন্ন হয়েছে</value>
   </data>
   <data name="Status_EscPressed" xml:space="preserve">
-    <value>ESC সনাক্ত কর�?হয়েছে, স্বয়ংক্রিয় অপারেশ�?বন্ধ কর�?হয়েছে</value>
+    <value>ESC চাপা হয়েছে, অটোমেশন বন্ধ হয়েছে</value>
   </data>
   <data name="Status_Error" xml:space="preserve">
-    <value>সম্পাদ�?করার সময় ত্রুটি</value>
+    <value>ত্রুটি ঘটেছে</value>
   </data>
   <data name="Status_ConfigImported" xml:space="preserve">
-    <value>কনফিগারেশন আমদানি কর�?হয়েছে: {0}</value>
+    <value>কনফিগারেশন আমদানি হয়েছে: {0}</value>
   </data>
   <data name="Status_ConfigExported" xml:space="preserve">
-    <value>কনফিগারেশন রপ্তান�?কর�?হয়েছে</value>
+    <value>কনফিগারেশন রপ্তানি হয়েছে</value>
   </data>
   <data name="Msg_DuplicateConfigName" xml:space="preserve">
-    <value>কনফিগারেশন না�?"{0}" ইতিমধ্যে বিদ্যমান�?অনুগ্র�?কর�?অন্য না�?নির্বাচন করুন�?/value>
+    <value>"{0}" নামের কনফিগারেশন ইতিমধ্যে বিদ্যমান। অনুগ্রহ করে অন্য নাম বেছে নিন।</value>
   </data>
   <data name="Msg_SaveSuccess" xml:space="preserve">
-    <value>কনফিগারেশন সফলভাব�?সংরক্ষ�?কর�?হয়েছে�?/value>
+    <value>কনফিগারেশন সফলভাবে সংরক্ষিত হয়েছে।</value>
   </data>
   <data name="Msg_SaveFailed" xml:space="preserve">
-    <value>সংরক্ষ�?কর�?যায়নি</value>
+    <value>সংরক্ষণ করা যায়নি</value>
   </data>
   <data name="Msg_PasteFailed" xml:space="preserve">
-    <value>কনফিগারেশন পেস্�?কর�?যায়নি</value>
+    <value>কনফিগারেশন পেস্ট করা যায়নি</value>
   </data>
   <data name="Msg_ConfirmDelete" xml:space="preserve">
-    <value>কনফিগারেশন "{0}" মুছবেন?</value>
+    <value>কনফিগারেশন "{0}" মুছে ফেলবেন?</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>নির্বাচিত {0}টি কনফিগারেশন মুছে ফেলবেন?</value>
   </data>
   <data name="Msg_CapturePosition" xml:space="preserve">
-    <value>ঠি�?আছ�?টিপু�?এব�?তারপ�?স্থানাঙ্�?পেতে কাঙ্ক্ষি�?অবস্থানে মাউস ক্লি�?করুন�?/value>
+    <value>OK চাপুন তারপর স্থানাঙ্ক পেতে পছন্দসই অবস্থানে মাউস ক্লিক করুন।</value>
   </data>
   <data name="Msg_CapturePositionTitle" xml:space="preserve">
-    <value>অবস্থা�?স্থানাঙ্�?আপডে�?করুন</value>
+    <value>অবস্থান আপডেট করুন</value>
   </data>
   <data name="Msg_CaptureFailed" xml:space="preserve">
-    <value>স্থানাঙ্�?পাওয়া যায়নি</value>
+    <value>স্থানাঙ্ক পাওয়া যায়নি</value>
   </data>
   <data name="Msg_RunFailed" xml:space="preserve">
-    <value>সম্পাদ�?কর�?যায়নি</value>
+    <value>চালানো যায়নি</value>
   </data>
   <data name="Msg_RunError" xml:space="preserve">
-    <value>সম্পাদ�?করার সময় ত্রুটি</value>
+    <value>চালানোর সময় ত্রুটি</value>
   </data>
   <data name="Msg_ImportFailed" xml:space="preserve">
     <value>আমদানি ব্যর্থ হয়েছে</value>
   </data>
   <data name="Msg_ExportFailed" xml:space="preserve">
-    <value>রপ্তান�?কর�?যায়নি</value>
+    <value>রপ্তানি করা যায়নি</value>
   </data>
   <data name="Msg_Success" xml:space="preserve">
-    <value>সফ�?/value>
+    <value>সফল</value>
   </data>
   <data name="Msg_Confirm" xml:space="preserve">
-    <value>নিশ্চি�?করুন</value>
+    <value>নিশ্চিত করুন</value>
   </data>
   <data name="Msg_ConfigNameRequired" xml:space="preserve">
-    <value>কনফিগারেশন না�?খালি হত�?পারে না�?/value>
+    <value>কনফিগারেশনের নাম খালি রাখা যাবে না।</value>
   </data>
   <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
-    <value>কনফিগারেশন�?কমপক্ষ�?1টি ক্রিয়�?থাকত�?হবে।</value>
+    <value>কনফিগারেশনে কমপক্ষে 1টি অ্যাকশন থাকতে হবে।</value>
   </data>
   <data name="Msg_ActionMissingKey" xml:space="preserve">
-    <value>ক্রিয়�?#{0} এর কো�?কী নেই।</value>
+    <value>#{0} অ্যাকশনে কী নেই।</value>
   </data>
   <data name="Menu_F1F12Key" xml:space="preserve">
     <value>F1-F12 কী</value>
@@ -389,7 +398,7 @@
     <value>0-9 কী</value>
   </data>
   <data name="Menu_SymbolKey" xml:space="preserve">
-    <value>বিশে�?অক্ষ�?কী</value>
+    <value>চিহ্ন কী</value>
   </data>
   <data name="Menu_NumKey" xml:space="preserve">
     <value>ডানদিকের সংখ্যা কী</value>
@@ -398,22 +407,22 @@
     <value>অন্যান্য কী</value>
   </data>
   <data name="MouseAction_LeftClick" xml:space="preserve">
-    <value>বা�?মাউস ক্লি�?/value>
+    <value>মাউস বাম বোতাম ক্লিক</value>
   </data>
   <data name="MouseAction_LeftDouble" xml:space="preserve">
-    <value>বা�?মাউস ডাবল ক্লি�?/value>
+    <value>মাউস বাম বোতাম ডাবল ক্লিক</value>
   </data>
   <data name="MouseAction_RightClick" xml:space="preserve">
-    <value>ডা�?মাউস ক্লি�?/value>
+    <value>মাউস ডান বোতাম ক্লিক</value>
   </data>
   <data name="MouseAction_RightDouble" xml:space="preserve">
-    <value>ডা�?মাউস ডাবল ক্লি�?/value>
+    <value>মাউস ডান বোতাম ডাবল ক্লিক</value>
   </data>
   <data name="MouseAction_MiddleClick" xml:space="preserve">
-    <value>মাঝখানের মাউস ক্লি�?/value>
+    <value>মাউস মধ্য বোতাম ক্লিক</value>
   </data>
   <data name="MouseAction_MiddleDouble" xml:space="preserve">
-    <value>মাঝখানের মাউস ডাবল ক্লি�?/value>
+    <value>মাউস মধ্য বোতাম ডাবল ক্লিক</value>
   </data>
   <data name="KeyName_Enter" xml:space="preserve">
     <value>Enter</value>
@@ -455,10 +464,10 @@
     <value>নিচে</value>
   </data>
   <data name="KeyName_Left" xml:space="preserve">
-    <value>বা�?/value>
+    <value>Left</value>
   </data>
   <data name="KeyName_Right" xml:space="preserve">
-    <value>ডা�?/value>
+    <value>Right</value>
   </data>
   <data name="KeyName_NumLock" xml:space="preserve">
     <value>Num Lock</value>
@@ -539,51 +548,45 @@
     <value>Application</value>
   </data>
   <data name="Msg_TelexWarning" xml:space="preserve">
-    <value>কী যো�?করার সময় ত্রুটি ঠি�?করতে অনুগ্র�?কর�?"Telex ইনপু�?পদ্ধতি" সাময়িকভাব�?নিষ্ক্রিয় করুন�?/value>
+    <value>কী যোগ করার সময় ত্রুটি ঠিক করতে অনুগ্রহ করে সাময়িকভাবে "Telex Input Method" নিষ্ক্রিয় করুন।</value>
   </data>
   <data name="Msg_TelexWarningTitle" xml:space="preserve">
-    <value>বিজ্ঞপ্ত�?/value>
+    <value>বিজ্ঞপ্তি</value>
   </data>
   <data name="Tray_OpenApp" xml:space="preserve">
-    <value>অ্যা�?খুলু�?/value>
+    <value>অ্যাপ্লিকেশন খুলুন</value>
   </data>
   <data name="Tray_ExitApp" xml:space="preserve">
     <value>প্রস্থান</value>
   </data>
   <data name="Tray_RunningInBackground" xml:space="preserve">
-    <value>অ্যাপট�?সিস্টে�?ট্রেতে চলতে থাকবে।</value>
+    <value>অ্যাপটি এখনও সিস্টেম ট্রেতে চলছে।</value>
   </data>
   <data name="Tray_Tooltip" xml:space="preserve">
     <value>AutoMouseKeyboard (চলছে)</value>
   </data>
   <data name="SettingForm_RunOnStartup" xml:space="preserve">
-    <value>উইন্ডো�?চালু হল�?স্বয়ংক্রিয়ভাবে চালু করুন</value>
+    <value>Windows শুরু হলে চালু হোক</value>
   </data>
   <data name="SettingForm_HideOnComplete" xml:space="preserve">
-    <value>সম্পূর্ণ/ESC এর পর�?উইন্ডো প্রদর্শন করবে�?না</value>
+    <value>অ্যাকশন শেষ হওয়ার পর উইন্ডো লুকিয়ে রাখুন</value>
   </data>
   <data name="MainForm_SelectExportFolder" xml:space="preserve">
-    <value>কনফিগারেশন রপ্তান�?করতে ফোল্ডা�?নির্বাচন করুন</value>
+    <value>কনফিগারেশন রপ্তানির ফোল্ডার নির্বাচন করুন</value>
   </data>
   <data name="Status_MultiConfigExported" xml:space="preserve">
-    <value>{0}টি কনফিগারেশন রপ্তান�?হয়েছে</value>
+    <value>{0}টি কনফিগারেশন রপ্তানি হয়েছে</value>
   </data>
   <data name="Status_MultiConfigImported" xml:space="preserve">
     <value>{0}টি কনফিগারেশন আমদানি হয়েছে</value>
   </data>
   <data name="Msg_MultiExportSuccess" xml:space="preserve">
-    <value>{0}টি কনফিগারেশন সফলভাব�?রপ্তান�?হয়েছে�?/value>
+    <value>{0}টি কনফিগারেশন সফলভাবে রপ্তানি হয়েছে।</value>
   </data>
   <data name="Msg_MultiImportSuccess" xml:space="preserve">
-    <value>{0}টি কনফিগারেশন সফলভাব�?আমদানি হয়েছে�?/value>
+    <value>{0}টি কনফিগারেশন সফলভাবে আমদানি হয়েছে।</value>
   </data>
   <data name="Msg_NoConfigSelected" xml:space="preserve">
-    <value>অনুগ্র�?কর�?রপ্তান�?করতে কমপক্ষ�?একটি কনফিগারেশন নির্বাচন করুন�?/value>
-  </data>
-  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
-    <value>{0} টি নির্বাচি�?কনফিগারেশন মুছবেন?</value>
-  </data>
-  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
-    <value>আচরণ</value>
+    <value>রপ্তানি করতে অনুগ্রহ করে কমপক্ষে একটি কনফিগারেশন নির্বাচন করুন।</value>
   </data>
 </root>

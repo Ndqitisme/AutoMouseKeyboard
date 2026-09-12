@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -125,7 +125,7 @@
     <value>Общая задержка (мс)</value>
   </data>
   <data name="MainForm_ColIndex" xml:space="preserve">
-    <value>�?/value>
+    <value>№</value>
   </data>
   <data name="MainForm_ColKeys" xml:space="preserve">
     <value>Клавиша</value>
@@ -189,6 +189,12 @@
   </data>
   <data name="SettingForm_Note" xml:space="preserve">
     <value>Больше настроек будет доступно в будущих обновлениях.</value>
+  </data>
+  <data name="SettingForm_AppearanceGroup" xml:space="preserve">
+    <value>Внешний вид</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>Поведение</value>
   </data>
   <data name="AboutForm_Title" xml:space="preserve">
     <value>О программе</value>
@@ -342,6 +348,9 @@
   </data>
   <data name="Msg_ConfirmDelete" xml:space="preserve">
     <value>Удалить конфигурацию "{0}"?</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>Удалить выбранные конфигурации ({0})?</value>
   </data>
   <data name="Msg_CapturePosition" xml:space="preserve">
     <value>Нажмите ОК, а затем щёлкните мышью в нужном месте, чтобы получить координаты.</value>
@@ -579,11 +588,5 @@
   </data>
   <data name="Msg_NoConfigSelected" xml:space="preserve">
     <value>Пожалуйста, выберите хотя бы одну конфигурацию для экспорта.</value>
-  </data>
-  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
-    <value>Удалить {0} выбранных конфигураций?</value>
-  </data>
-  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
-    <value>Поведение</value>
   </data>
 </root>
