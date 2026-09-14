@@ -131,19 +131,6 @@ namespace AutoMouseKeyboard.UI.Controls
             TextRenderer.DrawText(g, Text, Font, textRect,
                 Enabled ? p.Text : p.TextMuted,
                 TextFormatFlags.Left | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
-
-            if (Focused)
-            {
-                var focusRect = ClientRectangle;
-                focusRect.Inflate(-2, -2);
-                if (focusRect.Width > 0 && focusRect.Height > 0)
-                {
-                    using (var pen = new Pen(p.Accent) { DashStyle = DashStyle.Dot })
-                    {
-                        g.DrawRectangle(pen, focusRect);
-                    }
-                }
-            }
         }
     }
 }

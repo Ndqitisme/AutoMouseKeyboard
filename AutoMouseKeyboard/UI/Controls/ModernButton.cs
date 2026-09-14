@@ -81,8 +81,6 @@ namespace AutoMouseKeyboard.UI.Controls
             using (var br = new SolidBrush(back)) g.FillRounded(br, r, CornerRadius);
             if (border != Color.Transparent)
                 using (var pen = new Pen(border)) g.DrawRounded(pen, r, CornerRadius);
-            if (Focused)
-                using (var pen = new Pen(p.Accent, 1.5f)) g.DrawRounded(pen, new Rectangle(1, 1, Width - 3, Height - 3), Math.Max(0, CornerRadius - 1));
 
             TextRenderer.DrawText(g, Text, Font, ClientRectangle, fore,
                 TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
