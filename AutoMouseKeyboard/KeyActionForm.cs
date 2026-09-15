@@ -60,7 +60,7 @@ namespace AutoMouseKeyboard
         chkCtrl.Checked = parsedCtrl || existingStep.HoldCtrl;
         chkAlt.Checked = parsedAlt || existingStep.HoldAlt;
         chkShift.Checked = parsedShift || existingStep.HoldShift;
-        numCount.Value = Math.Max(1, Math.Min(1000, existingStep.Repeat));
+        numCount.Value = Math.Max(1, Math.Min(100000, existingStep.Repeat));
         numInterval.Value = Math.Max(0, Math.Min(600000, existingStep.Delay));
     }
 

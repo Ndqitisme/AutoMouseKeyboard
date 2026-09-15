@@ -263,7 +263,7 @@ namespace AutoMouseKeyboard
         // numCount
         //
         numCount.Margin = new Padding(0, 0, 0, 6);
-        numCount.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+        numCount.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
         numCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
         numCount.Name = "numCount";
         numCount.Size = new Size(110, 30);

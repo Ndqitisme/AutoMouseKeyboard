@@ -11,10 +11,10 @@
     <AssemblyName>AutoMouseKeyboard</AssemblyName>
     <ApplicationIcon>assets\app.ico</ApplicationIcon>
     <Platforms>AnyCPU;x86;x64</Platforms>
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-    <InformationalVersion>1.0.0</InformationalVersion>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <InformationalVersion>1.0.1</InformationalVersion>
     <Company>AutoMouseKeyboard</Company>
     <Product>AutoMouseKeyboard</Product>
     <Authors>AutoMouseKeyboard</Authors>

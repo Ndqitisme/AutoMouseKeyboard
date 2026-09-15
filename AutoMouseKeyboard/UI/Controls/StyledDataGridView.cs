@@ -103,13 +103,38 @@ namespace AutoMouseKeyboard.UI.Controls
         {
             // CellStyle is a per-paint clone: overriding BackColor repaints only
             // unselected cells in the hovered row; SelectionBackColor still wins
-            // for selected cells.
-            if (e.RowIndex >= 0 && e.RowIndex == _hoveredRow && e.ColumnIndex >= 0 && e.CellStyle != null)
+            // for selected cells. The cell hosting the editing control is
+            // skipped: the hosted TextBox is inset by the cell padding, so a
+            // hover-colored band would show on both sides of the editor.
+            var editingThisCell = IsCurrentCellInEditMode && CurrentCell != null &&
+                e.RowIndex == CurrentCell.RowIndex && e.ColumnIndex == CurrentCell.ColumnIndex;
+            if (!editingThisCell && e.RowIndex >= 0 && e.RowIndex == _hoveredRow && e.ColumnIndex >= 0 && e.CellStyle != null)
             {
                 e.CellStyle.BackColor = _palette.HoverBack;
             }
 
             base.OnCellPainting(e);
+        }
+
+        protected override void OnEditingControlShowing(DataGridViewEditingControlShowingEventArgs e)
+        {
+            // Native editor fallback: match the cell surface and the hosted
+            // TextBox to the input colors so the padding bands and the editor
+            // read as one uniform field. RoundedTextBoxEditingControl paints
+            // its own surface and needs the cell to keep its normal colors.
+            if (e.Control is DataGridViewTextBoxEditingControl textBox)
+            {
+                e.CellStyle.BackColor = _palette.InputBack;
+                e.CellStyle.ForeColor = _palette.Text;
+                e.CellStyle.SelectionBackColor = _palette.InputBack;
+                e.CellStyle.SelectionForeColor = _palette.Text;
+
+                textBox.BorderStyle = BorderStyle.FixedSingle;
+                textBox.BackColor = _palette.InputBack;
+                textBox.ForeColor = _palette.Text;
+            }
+
+            base.OnEditingControlShowing(e);
         }
 
         protected override void OnCellMouseEnter(DataGridViewCellEventArgs e)

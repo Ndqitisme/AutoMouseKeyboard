@@ -56,7 +56,7 @@ namespace AutoMouseKeyboard
         chkShift.Checked = existingStep.HoldShift;
         numPosX.Value = ClampToRange(existingStep.X, numPosX);
         numPosY.Value = ClampToRange(existingStep.Y, numPosY);
-        numCount.Value = Math.Max(1, Math.Min(1000, existingStep.Repeat));
+        numCount.Value = Math.Max(1, Math.Min(100000, existingStep.Repeat));
         numInterval.Value = Math.Max(0, Math.Min(600000, existingStep.Delay));
     }
 

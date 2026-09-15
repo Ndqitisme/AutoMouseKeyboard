@@ -634,11 +634,11 @@ namespace AutoMouseKeyboard
             {
                 if (_editingColumnName == "colCount")
                 {
-                    currentStep.Repeat = Math.Max(1, intValue);
+                    currentStep.Repeat = Math.Min(100000, Math.Max(1, intValue));
                 }
                 else if (_editingColumnName == "colDelay")
                 {
-                    currentStep.Delay = Math.Max(0, intValue);
+                    currentStep.Delay = Math.Min(600000, Math.Max(0, intValue));
                 }
             }
 
@@ -653,11 +653,11 @@ namespace AutoMouseKeyboard
                 {
                     if (_editingColumnName == "colCount")
                     {
-                        step.Repeat = Math.Max(1, intValue);
+                        step.Repeat = Math.Min(100000, Math.Max(1, intValue));
                     }
                     else if (_editingColumnName == "colDelay")
                     {
-                        step.Delay = Math.Max(0, intValue);
+                        step.Delay = Math.Min(600000, Math.Max(0, intValue));
                     }
                 }
             }

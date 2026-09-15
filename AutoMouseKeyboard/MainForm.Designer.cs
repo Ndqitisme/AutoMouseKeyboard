@@ -52,9 +52,9 @@ namespace AutoMouseKeyboard
     private DataGridViewTextBoxColumn colIndex = null;
     private DataGridViewTextBoxColumn colKeys = null;
     private DataGridViewTextBoxColumn colCharacters = null;
-    private DataGridViewButtonColumn colGetPosition = null;
-    private DataGridViewTextBoxColumn colCount = null;
-    private DataGridViewTextBoxColumn colDelay = null;
+    private ModernButtonColumn colGetPosition = null;
+    private RoundedTextBoxColumn colCount = null;
+    private RoundedTextBoxColumn colDelay = null;
 
     /// <summary>
     ///  Clean up any resources being used.
@@ -98,9 +98,9 @@ namespace AutoMouseKeyboard
         colIndex = new DataGridViewTextBoxColumn();
         colKeys = new DataGridViewTextBoxColumn();
         colCharacters = new DataGridViewTextBoxColumn();
-        colGetPosition = new DataGridViewButtonColumn();
-        colCount = new DataGridViewTextBoxColumn();
-        colDelay = new DataGridViewTextBoxColumn();
+        colGetPosition = new ModernButtonColumn();
+        colCount = new RoundedTextBoxColumn();
+        colDelay = new RoundedTextBoxColumn();
         actionButtonsFlow = new FlowLayoutPanel();
         btnMoveUp = new ModernButton();
         btnMoveDown = new ModernButton();
@@ -569,7 +569,7 @@ namespace AutoMouseKeyboard
         // numLoopCount
         //
         numLoopCount.Margin = new Padding(0);
-        numLoopCount.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+        numLoopCount.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
         numLoopCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
         numLoopCount.Name = "numLoopCount";
         numLoopCount.Size = new Size(110, 30);
