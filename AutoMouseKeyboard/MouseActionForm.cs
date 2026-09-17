@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutoMouseKeyboard.Models;
 using AutoMouseKeyboard.Services;
+using AutoMouseKeyboard.UI.Controls;
 using AutoMouseKeyboard.Utilities;
 
 namespace AutoMouseKeyboard
@@ -55,14 +56,13 @@ namespace AutoMouseKeyboard
         chkShift.Checked = existingStep.HoldShift;
         numPosX.Value = ClampToRange(existingStep.X, numPosX);
         numPosY.Value = ClampToRange(existingStep.Y, numPosY);
-        numCount.Value = Math.Max(1, Math.Min(1000, existingStep.Repeat));
+        numCount.Value = Math.Max(1, Math.Min(100000, existingStep.Repeat));
         numInterval.Value = Math.Max(0, Math.Min(600000, existingStep.Delay));
     }
 
     private void PopulateMouseActions(MouseButtonKind defaultKind)
     {
         cboMouseAction.DisplayMember = "Label";
-        cboMouseAction.ValueMember = "Kind";
         foreach (var option in ActionStep.MouseOptions)
         {
             cboMouseAction.Items.Add(option);
@@ -138,7 +138,7 @@ namespace AutoMouseKeyboard
         }
     }
 
-    private decimal ClampToRange(int value, NumericUpDown control)
+    private decimal ClampToRange(int value, ModernNumericUpDown control)
     {
         if (value > control.Maximum)
         {

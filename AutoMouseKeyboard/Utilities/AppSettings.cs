@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using AutoMouseKeyboard.UI;
 using Newtonsoft.Json;
 
 namespace AutoMouseKeyboard.Utilities
@@ -70,7 +71,7 @@ namespace AutoMouseKeyboard.Utilities
         get
         {
             var settings = LoadSettings();
-            return settings.Theme.HasValue ? settings.Theme.Value : ThemeMode.Light;
+            return settings.Theme ?? WindowsThemeDetector.Detect();
         }
         set
         {

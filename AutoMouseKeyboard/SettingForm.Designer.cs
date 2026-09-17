@@ -1,181 +1,213 @@
-﻿namespace AutoMouseKeyboard
+﻿using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+using AutoMouseKeyboard.UI;
+using AutoMouseKeyboard.UI.Controls;
+
+namespace AutoMouseKeyboard
 {
     partial class SettingForm
+{
+    private IContainer components = null;
+    private TableLayoutPanel rootLayout = null;
+    private CardPanel grpAppearance = null;
+    private TableLayoutPanel appearanceLayout = null;
+    private Label lblTheme = null;
+    private ModernSelect cboTheme = null;
+    private Label lblLanguage = null;
+    private ModernSelect cboLanguage = null;
+    private CardPanel grpBehavior = null;
+    private ModernCheckBox chkRunOnStartup = null;
+    private ModernCheckBox chkHideOnComplete = null;
+    private ModernButton btnOk = null;
+
+    /// <summary>
+    ///  Clean up any resources being used.
+    /// </summary>
+    protected override void Dispose(bool disposing)
     {
-        private System.ComponentModel.IContainer components = null!;
-        private System.Windows.Forms.GroupBox grpAppearance = null!;
-        private System.Windows.Forms.GroupBox grpBehavior = null!;
-        private System.Windows.Forms.Label lblTheme = null!;
-        private System.Windows.Forms.ComboBox cboTheme = null!;
-        private System.Windows.Forms.Label lblLanguage = null!;
-        private System.Windows.Forms.ComboBox cboLanguage = null!;
-        private System.Windows.Forms.Button btnOk = null!;
-        private System.Windows.Forms.CheckBox chkRunOnStartup = null!;
-        private System.Windows.Forms.CheckBox chkHideOnComplete = null!;
-
-        protected override void Dispose(bool disposing)
+        if (disposing && components != null)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
+            components.Dispose();
         }
 
-        private void InitializeComponent()
-        {
-            components = new System.ComponentModel.Container();
-            grpAppearance = new System.Windows.Forms.GroupBox();
-            grpBehavior = new System.Windows.Forms.GroupBox();
-            lblTheme = new System.Windows.Forms.Label();
-            cboTheme = new System.Windows.Forms.ComboBox();
-            lblLanguage = new System.Windows.Forms.Label();
-            cboLanguage = new System.Windows.Forms.ComboBox();
-            btnOk = new System.Windows.Forms.Button();
-            chkRunOnStartup = new System.Windows.Forms.CheckBox();
-            chkHideOnComplete = new System.Windows.Forms.CheckBox();
+        base.Dispose(disposing);
+    }
 
-            grpAppearance.SuspendLayout();
-            grpBehavior.SuspendLayout();
-            SuspendLayout();
-
-            // 
-            // grpAppearance
-            // 
-            grpAppearance.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            grpAppearance.Controls.Add(lblTheme);
-            grpAppearance.Controls.Add(cboTheme);
-            grpAppearance.Controls.Add(lblLanguage);
-            grpAppearance.Controls.Add(cboLanguage);
-            grpAppearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular);
-            grpAppearance.Location = new System.Drawing.Point(15, 15);
-            grpAppearance.Name = "grpAppearance";
-            grpAppearance.Padding = new System.Windows.Forms.Padding(15, 10, 15, 15);
-            grpAppearance.Size = new System.Drawing.Size(320, 100);
-            grpAppearance.TabIndex = 0;
-            grpAppearance.TabStop = false;
-            grpAppearance.Text = "Appearance";
-
-            // 
-            // lblTheme
-            // 
-            lblTheme.AutoSize = true;
-            lblTheme.Location = new System.Drawing.Point(18, 30);
-            lblTheme.Name = "lblTheme";
-            lblTheme.Size = new System.Drawing.Size(50, 15);
-            lblTheme.TabIndex = 0;
-            lblTheme.Text = "Theme:";
-
-            // 
-            // cboTheme
-            // 
-            cboTheme.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            cboTheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cboTheme.FormattingEnabled = true;
-            cboTheme.Location = new System.Drawing.Point(100, 27);
-            cboTheme.Name = "cboTheme";
-            cboTheme.Size = new System.Drawing.Size(185, 23);
-            cboTheme.TabIndex = 1;
-
-            // 
-            // lblLanguage
-            // 
-            lblLanguage.AutoSize = true;
-            lblLanguage.Location = new System.Drawing.Point(18, 63);
-            lblLanguage.Name = "lblLanguage";
-            lblLanguage.Size = new System.Drawing.Size(62, 15);
-            lblLanguage.TabIndex = 2;
-            lblLanguage.Text = "Language:";
-
-            // 
-            // cboLanguage
-            // 
-            cboLanguage.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cboLanguage.FormattingEnabled = true;
-            cboLanguage.Location = new System.Drawing.Point(100, 60);
-            cboLanguage.Name = "cboLanguage";
-            cboLanguage.Size = new System.Drawing.Size(185, 23);
-            cboLanguage.TabIndex = 3;
-            cboLanguage.SelectedIndexChanged += CboLanguage_SelectedIndexChanged;
-
-            // 
-            // grpBehavior
-            // 
-            grpBehavior.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            grpBehavior.Controls.Add(chkRunOnStartup);
-            grpBehavior.Controls.Add(chkHideOnComplete);
-            grpBehavior.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular);
-            grpBehavior.Location = new System.Drawing.Point(15, 125);
-            grpBehavior.Name = "grpBehavior";
-            grpBehavior.Padding = new System.Windows.Forms.Padding(15, 10, 15, 15);
-            grpBehavior.Size = new System.Drawing.Size(320, 90);
-            grpBehavior.TabIndex = 1;
-            grpBehavior.TabStop = false;
-            grpBehavior.Text = "Behavior";
-
-            // 
-            // chkRunOnStartup
-            // 
-            chkRunOnStartup.AutoSize = true;
-            chkRunOnStartup.Location = new System.Drawing.Point(18, 28);
-            chkRunOnStartup.Name = "chkRunOnStartup";
-            chkRunOnStartup.Size = new System.Drawing.Size(180, 19);
-            chkRunOnStartup.TabIndex = 0;
-            chkRunOnStartup.Text = "Run when Windows starts";
-            chkRunOnStartup.UseVisualStyleBackColor = true;
-            chkRunOnStartup.CheckedChanged += chkRunOnStartup_CheckedChanged;
-
-            // 
-            // chkHideOnComplete
-            // 
-            chkHideOnComplete.AutoSize = true;
-            chkHideOnComplete.Location = new System.Drawing.Point(18, 55);
-            chkHideOnComplete.Name = "chkHideOnComplete";
-            chkHideOnComplete.Size = new System.Drawing.Size(280, 19);
-            chkHideOnComplete.TabIndex = 1;
-            chkHideOnComplete.Text = "Keep window hidden after finishing actions";
-            chkHideOnComplete.UseVisualStyleBackColor = true;
-            chkHideOnComplete.CheckedChanged += chkHideOnComplete_CheckedChanged;
-
-            // 
-            // btnOk
-            // 
-            btnOk.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
-            btnOk.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular);
-            btnOk.Location = new System.Drawing.Point(250, 230);
-            btnOk.Name = "btnOk";
-            btnOk.Size = new System.Drawing.Size(85, 32);
-            btnOk.TabIndex = 2;
-            btnOk.Text = "OK";
-            btnOk.UseVisualStyleBackColor = true;
-            btnOk.Click += btnOk_Click;
-
-            // 
-            // SettingForm
-            // 
-            AcceptButton = btnOk;
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(350, 280);
-            Controls.Add(grpAppearance);
-            Controls.Add(grpBehavior);
-            Controls.Add(btnOk);
-            Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "SettingForm";
-            ShowIcon = false;
-            ShowInTaskbar = false;
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            Text = "Settings";
-
-            grpAppearance.ResumeLayout(false);
-            grpAppearance.PerformLayout();
-            grpBehavior.ResumeLayout(false);
-            grpBehavior.PerformLayout();
-            ResumeLayout(false);
-        }
+    private void InitializeComponent()
+    {
+        components = new Container();
+        rootLayout = new TableLayoutPanel();
+        grpAppearance = new CardPanel();
+        appearanceLayout = new TableLayoutPanel();
+        lblTheme = new Label();
+        cboTheme = new ModernSelect();
+        lblLanguage = new Label();
+        cboLanguage = new ModernSelect();
+        grpBehavior = new CardPanel();
+        chkRunOnStartup = new ModernCheckBox();
+        chkHideOnComplete = new ModernCheckBox();
+        btnOk = new ModernButton();
+        rootLayout.SuspendLayout();
+        grpAppearance.SuspendLayout();
+        appearanceLayout.SuspendLayout();
+        grpBehavior.SuspendLayout();
+        SuspendLayout();
+        //
+        // rootLayout
+        //
+        rootLayout.ColumnCount = 1;
+        rootLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        rootLayout.Controls.Add(grpAppearance, 0, 0);
+        rootLayout.Controls.Add(grpBehavior, 0, 1);
+        rootLayout.Controls.Add(btnOk, 0, 2);
+        rootLayout.Dock = DockStyle.Fill;
+        rootLayout.Location = new Point(0, 0);
+        rootLayout.Name = "rootLayout";
+        rootLayout.Padding = new Padding(12);
+        rootLayout.RowCount = 3;
+        rootLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        rootLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        rootLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+        rootLayout.TabIndex = 0;
+        //
+        // grpAppearance
+        //
+        grpAppearance.AutoSize = true;
+        grpAppearance.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        grpAppearance.Controls.Add(appearanceLayout);
+        grpAppearance.Dock = DockStyle.Fill;
+        grpAppearance.Margin = new Padding(0, 0, 0, 8);
+        grpAppearance.Name = "grpAppearance";
+        grpAppearance.TabIndex = 0;
+        grpAppearance.TabStop = false;
+        grpAppearance.Text = "Appearance";
+        //
+        // appearanceLayout
+        //
+        appearanceLayout.AutoSize = true;
+        appearanceLayout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        appearanceLayout.BackColor = Color.Transparent;
+        appearanceLayout.ColumnCount = 2;
+        appearanceLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+        appearanceLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        appearanceLayout.Controls.Add(lblTheme, 0, 0);
+        appearanceLayout.Controls.Add(cboTheme, 1, 0);
+        appearanceLayout.Controls.Add(lblLanguage, 0, 1);
+        appearanceLayout.Controls.Add(cboLanguage, 1, 1);
+        appearanceLayout.Dock = DockStyle.Top;
+        appearanceLayout.Margin = new Padding(0);
+        appearanceLayout.Name = "appearanceLayout";
+        appearanceLayout.RowCount = 2;
+        appearanceLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        appearanceLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        appearanceLayout.TabIndex = 0;
+        //
+        // lblTheme
+        //
+        lblTheme.Anchor = AnchorStyles.Left;
+        lblTheme.AutoSize = true;
+        lblTheme.BackColor = Color.Transparent;
+        lblTheme.Margin = new Padding(0, 0, 8, 0);
+        lblTheme.Name = "lblTheme";
+        lblTheme.TabIndex = 0;
+        lblTheme.Text = "Theme:";
+        //
+        // cboTheme
+        //
+        cboTheme.Dock = DockStyle.Fill;
+        cboTheme.Margin = new Padding(0, 0, 0, 6);
+        cboTheme.Name = "cboTheme";
+        cboTheme.Size = new Size(200, 28);
+        cboTheme.TabIndex = 1;
+        //
+        // lblLanguage
+        //
+        lblLanguage.Anchor = AnchorStyles.Left;
+        lblLanguage.AutoSize = true;
+        lblLanguage.BackColor = Color.Transparent;
+        lblLanguage.Margin = new Padding(0, 0, 8, 0);
+        lblLanguage.Name = "lblLanguage";
+        lblLanguage.TabIndex = 2;
+        lblLanguage.Text = "Language:";
+        //
+        // cboLanguage
+        //
+        cboLanguage.Dock = DockStyle.Fill;
+        cboLanguage.Margin = new Padding(0);
+        cboLanguage.Name = "cboLanguage";
+        cboLanguage.Size = new Size(200, 28);
+        cboLanguage.TabIndex = 3;
+        //
+        // grpBehavior
+        //
+        grpBehavior.AutoSize = true;
+        grpBehavior.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        grpBehavior.Controls.Add(chkHideOnComplete);
+        grpBehavior.Controls.Add(chkRunOnStartup);
+        grpBehavior.Dock = DockStyle.Fill;
+        grpBehavior.Margin = new Padding(0);
+        grpBehavior.Name = "grpBehavior";
+        grpBehavior.TabIndex = 1;
+        grpBehavior.TabStop = false;
+        grpBehavior.Text = "Behavior";
+        //
+        // chkRunOnStartup
+        //
+        chkRunOnStartup.Dock = DockStyle.Top;
+        chkRunOnStartup.Margin = new Padding(0, 0, 0, 4);
+        chkRunOnStartup.Name = "chkRunOnStartup";
+        chkRunOnStartup.Size = new Size(320, 26);
+        chkRunOnStartup.TabIndex = 0;
+        chkRunOnStartup.Text = "Run when Windows starts";
+        //
+        // chkHideOnComplete
+        //
+        chkHideOnComplete.Dock = DockStyle.Top;
+        chkHideOnComplete.Margin = new Padding(0);
+        chkHideOnComplete.Name = "chkHideOnComplete";
+        chkHideOnComplete.Size = new Size(320, 26);
+        chkHideOnComplete.TabIndex = 1;
+        chkHideOnComplete.Text = "Keep window hidden after finishing actions";
+        //
+        // btnOk
+        //
+        btnOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+        btnOk.Margin = new Padding(0, 8, 0, 0);
+        btnOk.Name = "btnOk";
+        btnOk.Size = new Size(96, 32);
+        btnOk.StyleKind = ButtonStyleKind.Primary;
+        btnOk.TabIndex = 2;
+        btnOk.Text = "OK";
+        btnOk.Click += btnOk_Click;
+        //
+        // SettingForm
+        //
+        AcceptButton = btnOk;
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(420, 320);
+        Controls.Add(rootLayout);
+        Font = new Font("Segoe UI", 9F);
+        FormBorderStyle = FormBorderStyle.FixedDialog;
+        MaximizeBox = false;
+        MinimizeBox = false;
+        Name = "SettingForm";
+        ShowIcon = false;
+        ShowInTaskbar = false;
+        StartPosition = FormStartPosition.CenterParent;
+        Text = "Settings";
+        appearanceLayout.ResumeLayout(false);
+        appearanceLayout.PerformLayout();
+        grpAppearance.ResumeLayout(false);
+        grpAppearance.PerformLayout();
+        grpBehavior.ResumeLayout(false);
+        grpBehavior.PerformLayout();
+        rootLayout.ResumeLayout(false);
+        rootLayout.PerformLayout();
+        ResumeLayout(false);
+        PerformLayout();
+    }
     }
 }

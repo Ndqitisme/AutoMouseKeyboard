@@ -33,6 +33,7 @@ namespace AutoMouseKeyboard
             };
             gridActions.CellClick += gridActions_CellClick;
             gridActions.CellFormatting += gridActions_CellFormatting;
+            gridActions.CellPainting += gridActions_CellPainting;
             gridActions.CellEndEdit += gridActions_CellEndEdit;
             gridActions.CellBeginEdit += gridActions_CellBeginEdit;
             gridActions.EnterKeyPressed += gridActions_EnterKeyPressed;
@@ -40,13 +41,13 @@ namespace AutoMouseKeyboard
 
         private void InitializeActionMenus()
         {
-            menuAddKey.DropDownItems.Clear();
-            menuAddMouse.DropDownItems.Clear();
+            ctxAddKey.Items.Clear();
+            ctxAddMouse.Items.Clear();
 
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_F1F12Key"), KeyHelper.EnumerateKeys(i => string.Format("F{0}", i), 1, 12), 3));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_AZKey"), KeyHelper.EnumerateKeys(i => ((char)('A' + i - 1)).ToString(), 1, 26), 4));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_09Key"), KeyHelper.EnumerateKeys(i => (i - 1).ToString(), 1, 10), 3));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_SymbolKey"), new[]
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_F1F12Key"), KeyHelper.EnumerateKeys(i => string.Format("F{0}", i), 1, 12), 3));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_AZKey"), KeyHelper.EnumerateKeys(i => ((char)('A' + i - 1)).ToString(), 1, 26), 4));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_09Key"), KeyHelper.EnumerateKeys(i => (i - 1).ToString(), 1, 10), 3));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_SymbolKey"), new[]
             {
                 Tuple.Create("-", "OemMinus"),
                 Tuple.Create("=", "Oemplus"),
@@ -60,14 +61,14 @@ namespace AutoMouseKeyboard
                 Tuple.Create("\\", "OemPipe"),
                 Tuple.Create("`", "Oemtilde")
             }, 3));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_NumKey"), CreateNumPadKeys(), 3));
-            menuAddKey.DropDownItems.Add(CreateKeySection(LanguageManager.GetString("Menu_OtherKey"), CreateOtherKeys(), 3));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_NumKey"), CreateNumPadKeys(), 3));
+            ctxAddKey.Items.Add(CreateKeySection(LanguageManager.GetString("Menu_OtherKey"), CreateOtherKeys(), 3));
 
             foreach (var option in ActionStep.MouseOptions)
             {
                 var item = new ToolStripMenuItem(option.Label) { Tag = option.Kind };
                 item.Click += MouseMenuItem_Click;
-                menuAddMouse.DropDownItems.Add(item);
+                ctxAddMouse.Items.Add(item);
             }
         }
 
@@ -138,10 +139,7 @@ namespace AutoMouseKeyboard
                 {
                     var step = CreateKeyboardStep(token);
                     AddAction(step);
-                    if (menuAddKey.DropDown != null)
-                    {
-                        menuAddKey.DropDown.Close();
-                    }
+                    ctxAddKey.Close();
                 };
 
                 if (menu != null)
@@ -182,18 +180,6 @@ namespace AutoMouseKeyboard
             Add(Keys.OemPipe, nameof(Keys.OemPipe));
 
             return map;
-        }
-
-        private void KeyMenuItem_Click(object? sender, EventArgs e)
-        {
-            var menuItem = sender as ToolStripMenuItem;
-            if (menuItem == null || !(menuItem.Tag is string key))
-            {
-                return;
-            }
-
-            var step = CreateKeyboardStep(key);
-            AddAction(step);
         }
 
         private void MouseMenuItem_Click(object? sender, EventArgs e)
@@ -302,6 +288,28 @@ namespace AutoMouseKeyboard
 
                 row.Cells[colIndex.Name].Value = (i + 1).ToString();
             }
+        }
+
+        private void gridActions_CellPainting(object? sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // colGetPosition is a shared button column: non-mouse rows have no
+            // button action, but the column still paints an empty button chrome.
+            // Paint just the cell surface instead so the cell looks empty.
+            if (e.ColumnIndex < 0 || e.RowIndex < 0 || e.RowIndex >= _actions.Count ||
+                gridActions.Columns[e.ColumnIndex].Name != "colGetPosition")
+            {
+                return;
+            }
+
+            var step = _actions[e.RowIndex];
+            if (step != null && step.Type == ActionKind.Mouse)
+            {
+                return;
+            }
+
+            e.Paint(e.CellBounds, DataGridViewPaintParts.Background |
+                DataGridViewPaintParts.Border | DataGridViewPaintParts.SelectionBackground);
+            e.Handled = true;
         }
 
         private void gridActions_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
@@ -626,11 +634,11 @@ namespace AutoMouseKeyboard
             {
                 if (_editingColumnName == "colCount")
                 {
-                    currentStep.Repeat = Math.Max(1, intValue);
+                    currentStep.Repeat = Math.Min(100000, Math.Max(1, intValue));
                 }
                 else if (_editingColumnName == "colDelay")
                 {
-                    currentStep.Delay = Math.Max(0, intValue);
+                    currentStep.Delay = Math.Min(600000, Math.Max(0, intValue));
                 }
             }
 
@@ -645,11 +653,11 @@ namespace AutoMouseKeyboard
                 {
                     if (_editingColumnName == "colCount")
                     {
-                        step.Repeat = Math.Max(1, intValue);
+                        step.Repeat = Math.Min(100000, Math.Max(1, intValue));
                     }
                     else if (_editingColumnName == "colDelay")
                     {
-                        step.Delay = Math.Max(0, intValue);
+                        step.Delay = Math.Min(600000, Math.Max(0, intValue));
                     }
                 }
             }

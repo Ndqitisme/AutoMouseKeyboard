@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -59,13 +59,13 @@
     <value>AutoMouseKeyboard</value>
   </data>
   <data name="MainForm_ConfigList" xml:space="preserve">
-    <value>設定リス�?/value>
+    <value>構成リスト</value>
   </data>
   <data name="MainForm_ActionDetails" xml:space="preserve">
     <value>アクションリスト</value>
   </data>
   <data name="MainForm_ConfigName" xml:space="preserve">
-    <value>設定�?/value>
+    <value>構成名</value>
   </data>
   <data name="MainForm_New" xml:space="preserve">
     <value>新規</value>
@@ -83,13 +83,13 @@
     <value>について</value>
   </data>
   <data name="MainForm_Import" xml:space="preserve">
-    <value>インポー�?/value>
+    <value>インポート</value>
   </data>
   <data name="MainForm_Export" xml:space="preserve">
     <value>エクスポート</value>
   </data>
   <data name="MainForm_AddKey" xml:space="preserve">
-    <value>キーを追�?/value>
+    <value>キーを追加</value>
   </data>
   <data name="MainForm_AddMouse" xml:space="preserve">
     <value>マウスを追加</value>
@@ -107,22 +107,22 @@
     <value>停止</value>
   </data>
   <data name="MainForm_DefaultConfigName" xml:space="preserve">
-    <value>新しい設�?/value>
+    <value>新しい構成</value>
   </data>
   <data name="MainForm_ImportConfig" xml:space="preserve">
     <value>設定をインポート</value>
   </data>
   <data name="MainForm_ExportConfig" xml:space="preserve">
-    <value>設定をエクスポー�?/value>
+    <value>構成をエクスポート</value>
   </data>
   <data name="MainForm_Status" xml:space="preserve">
-    <value>ステータ�? {0}</value>
+    <value>ステータス: {0}</value>
   </data>
   <data name="MainForm_LoopCount" xml:space="preserve">
     <value>繰り返し回数</value>
   </data>
   <data name="MainForm_GlobalDelay" xml:space="preserve">
-    <value>全体遅延（ミリ秒�?/value>
+    <value>グローバル遅延 (ms)</value>
   </data>
   <data name="MainForm_ColIndex" xml:space="preserve">
     <value>番号</value>
@@ -140,7 +140,7 @@
     <value>遅延</value>
   </data>
   <data name="MainForm_ColSetPosition" xml:space="preserve">
-    <value>座標を設�?/value>
+    <value>位置を設定</value>
   </data>
   <data name="SettingForm_Title" xml:space="preserve">
     <value>設定</value>
@@ -149,46 +149,52 @@
     <value>インターフェース:</value>
   </data>
   <data name="SettingForm_Language" xml:space="preserve">
-    <value>言�?</value>
+    <value>言語:</value>
   </data>
   <data name="SettingForm_Light" xml:space="preserve">
-    <value>明る�?/value>
+    <value>ライト</value>
   </data>
   <data name="SettingForm_Dark" xml:space="preserve">
     <value>暗い</value>
   </data>
   <data name="SettingForm_Cyan" xml:space="preserve">
-    <value>シア�?/value>
+    <value>シアン</value>
   </data>
   <data name="SettingForm_Pink" xml:space="preserve">
-    <value>ピン�?/value>
+    <value>ピンク</value>
   </data>
   <data name="SettingForm_Green" xml:space="preserve">
-    <value>�?/value>
+    <value>緑</value>
   </data>
   <data name="SettingForm_Red" xml:space="preserve">
-    <value>�?/value>
+    <value>赤</value>
   </data>
   <data name="SettingForm_Orange" xml:space="preserve">
     <value>オレンジ</value>
   </data>
   <data name="SettingForm_Yellow" xml:space="preserve">
-    <value>�?/value>
+    <value>黄</value>
   </data>
   <data name="SettingForm_Blue" xml:space="preserve">
-    <value>�?/value>
+    <value>青</value>
   </data>
   <data name="SettingForm_Indigo" xml:space="preserve">
-    <value>インディ�?/value>
+    <value>インディゴ</value>
   </data>
   <data name="SettingForm_Violet" xml:space="preserve">
-    <value>�?/value>
+    <value>紫</value>
   </data>
   <data name="SettingForm_OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="SettingForm_Note" xml:space="preserve">
-    <value>その他の設定は今後のアップデートで提供されます�?/value>
+    <value>今後のアップデートでさらに設定が追加される予定です。</value>
+  </data>
+  <data name="SettingForm_AppearanceGroup" xml:space="preserve">
+    <value>外観</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>動作</value>
   </data>
   <data name="AboutForm_Title" xml:space="preserve">
     <value>について</value>
@@ -197,22 +203,22 @@
     <value>AutoMouseKeyboard</value>
   </data>
   <data name="AboutForm_Version" xml:space="preserve">
-    <value>バージョ�? 1.0.0</value>
+    <value>バージョン: 1.0.0</value>
   </data>
   <data name="AboutForm_Author" xml:space="preserve">
-    <value>作�? NDQITVN</value>
+    <value>作者: NDQITVN</value>
   </data>
   <data name="AboutForm_Description" xml:space="preserve">
-    <value>マウスクリックとキーボード入力の自動化ツール�?/value>
+    <value>マウスクリックとキーボード入力の自動化ツール。</value>
   </data>
   <data name="AboutForm_DonateTitle" xml:space="preserve">
-    <value>作者に寄付したい場�?</value>
+    <value>作者に寄付をご希望の場合:</value>
   </data>
   <data name="AboutForm_DonateInfo" xml:space="preserve">
-    <value>銀�? {0}&#x0D;&#x0A;口座番号: {1}&#x0D;&#x0A;口座名義: {2}&#x0D;&#x0A;&#x0D;&#x0A;または横のQRコードをスキャンして迅速に送金してください�?/value>
+    <value>銀行: {0}&#x0D;&#x0A;口座番号: {1}&#x0D;&#x0A;口座名義: {2}&#x0D;&#x0A;&#x0D;&#x0A;または横のQRコードをスキャンして迅速に送金してください。</value>
   </data>
   <data name="KeyActionForm_Title" xml:space="preserve">
-    <value>キーを追�?/value>
+    <value>キーを追加</value>
   </data>
   <data name="KeyActionForm_Key" xml:space="preserve">
     <value>キー:</value>
@@ -233,22 +239,22 @@
     <value>回数</value>
   </data>
   <data name="KeyActionForm_Interval" xml:space="preserve">
-    <value>遅延（ミリ秒�?/value>
+    <value>間隔 (ms)</value>
   </data>
   <data name="KeyActionForm_IntervalHint" xml:space="preserve">
-    <value>�?�?= 1000ミリ秒）</value>
+    <value>(1秒 = 1000 ms)</value>
   </data>
   <data name="KeyActionForm_OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="KeyActionForm_Cancel" xml:space="preserve">
-    <value>キャンセ�?/value>
+    <value>キャンセル</value>
   </data>
   <data name="MouseActionForm_Title" xml:space="preserve">
-    <value>マウスアクションを追�?/value>
+    <value>マウスアクションを追加</value>
   </data>
   <data name="MouseActionForm_Action" xml:space="preserve">
-    <value>クリックタイ�?</value>
+    <value>クリックの種類:</value>
   </data>
   <data name="MouseActionForm_Modifiers" xml:space="preserve">
     <value>キーを押したまま:</value>
@@ -266,37 +272,37 @@
     <value>座標 X,Y</value>
   </data>
   <data name="MouseActionForm_SetPosition" xml:space="preserve">
-    <value>座標を設�?/value>
+    <value>位置を設定</value>
   </data>
   <data name="MouseActionForm_Count" xml:space="preserve">
     <value>回数</value>
   </data>
   <data name="MouseActionForm_Interval" xml:space="preserve">
-    <value>遅延（ミリ秒�?/value>
+    <value>間隔 (ms)</value>
   </data>
   <data name="MouseActionForm_IntervalHint" xml:space="preserve">
-    <value>�?�?= 1000ミリ秒）</value>
+    <value>(1秒 = 1000 ms)</value>
   </data>
   <data name="MouseActionForm_OK" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="MouseActionForm_Cancel" xml:space="preserve">
-    <value>キャンセ�?/value>
+    <value>キャンセル</value>
   </data>
   <data name="Status_Ready" xml:space="preserve">
     <value>準備完了</value>
   </data>
   <data name="Status_ConfigMoved" xml:space="preserve">
-    <value>設定を移動しまし�? {0}</value>
+    <value>構成を移動しました: {0}</value>
   </data>
   <data name="Status_ConfigLoaded" xml:space="preserve">
     <value>設定を読み込みました: {0}</value>
   </data>
   <data name="Status_CreatingNew" xml:space="preserve">
-    <value>新しい設定を作成�?..</value>
+    <value>新しい構成を作成しています...</value>
   </data>
   <data name="Status_ConfigSaved" xml:space="preserve">
-    <value>設定を保存しまし�?/value>
+    <value>構成を保存しました</value>
   </data>
   <data name="Status_ConfigCopied" xml:space="preserve">
     <value>設定をコピーしました: {0}</value>
@@ -305,16 +311,16 @@
     <value>新しい設定を作成しました: {0}</value>
   </data>
   <data name="Status_ConfigDeleted" xml:space="preserve">
-    <value>設定を削除しまし�?/value>
+    <value>構成を削除しました</value>
   </data>
   <data name="Status_Running" xml:space="preserve">
-    <value>実行�?..</value>
+    <value>実行中...</value>
   </data>
   <data name="Status_Stopped" xml:space="preserve">
     <value>停止しました</value>
   </data>
   <data name="Status_Completed" xml:space="preserve">
-    <value>アクションシーケンスが完了しまし�?/value>
+    <value>アクションシーケンスが完了しました</value>
   </data>
   <data name="Status_EscPressed" xml:space="preserve">
     <value>ESCが検出されました。自動操作を停止しました</value>
@@ -326,16 +332,16 @@
     <value>設定をインポートしました: {0}</value>
   </data>
   <data name="Status_ConfigExported" xml:space="preserve">
-    <value>設定をエクスポートしまし�?/value>
+    <value>構成をエクスポートしました</value>
   </data>
   <data name="Msg_DuplicateConfigName" xml:space="preserve">
-    <value>設定�?{0}"は既に存在します。別の名前を選択してください�?/value>
+    <value>構成名 "{0}" は既に存在します。別の名前を選択してください。</value>
   </data>
   <data name="Msg_SaveSuccess" xml:space="preserve">
-    <value>設定の保存に成功しました�?/value>
+    <value>構成が正常に保存されました。</value>
   </data>
   <data name="Msg_SaveFailed" xml:space="preserve">
-    <value>保存できませ�?/value>
+    <value>保存できません</value>
   </data>
   <data name="Msg_PasteFailed" xml:space="preserve">
     <value>設定を貼り付けできません</value>
@@ -343,17 +349,20 @@
   <data name="Msg_ConfirmDelete" xml:space="preserve">
     <value>設定"{0}"を削除しますか？</value>
   </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>選択した {0} 個の設定を削除しますか？</value>
+  </data>
   <data name="Msg_CapturePosition" xml:space="preserve">
-    <value>OKを押してから、目的の位置でマウスをクリックして座標を取得してください�?/value>
+    <value>OKを押してから、座標を取得したい位置でマウスをクリックしてください。</value>
   </data>
   <data name="Msg_CapturePositionTitle" xml:space="preserve">
-    <value>位置座標を更�?/value>
+    <value>位置を更新</value>
   </data>
   <data name="Msg_CaptureFailed" xml:space="preserve">
     <value>座標を取得できません</value>
   </data>
   <data name="Msg_RunFailed" xml:space="preserve">
-    <value>実行できませ�?/value>
+    <value>実行できません</value>
   </data>
   <data name="Msg_RunError" xml:space="preserve">
     <value>実行中にエラーが発生しました</value>
@@ -362,7 +371,7 @@
     <value>インポートに失敗しました</value>
   </data>
   <data name="Msg_ExportFailed" xml:space="preserve">
-    <value>エクスポートできませ�?/value>
+    <value>エクスポートできません</value>
   </data>
   <data name="Msg_Success" xml:space="preserve">
     <value>成功</value>
@@ -371,13 +380,13 @@
     <value>確認</value>
   </data>
   <data name="Msg_ConfigNameRequired" xml:space="preserve">
-    <value>設定名を空にすることはできません�?/value>
+    <value>構成名は空にできません。</value>
   </data>
   <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
-    <value>設定には少なくと�?つのアクションが必要です�?/value>
+    <value>構成には少なくとも1つのアクションが必要です。</value>
   </data>
   <data name="Msg_ActionMissingKey" xml:space="preserve">
-    <value>アクショ�?#{0} にキーがありません�?/value>
+    <value>アクション #{0} にキーがありません。</value>
   </data>
   <data name="Menu_F1F12Key" xml:space="preserve">
     <value>F1-F12キー</value>
@@ -392,7 +401,7 @@
     <value>特殊文字キー</value>
   </data>
   <data name="Menu_NumKey" xml:space="preserve">
-    <value>右側の数字キ�?/value>
+    <value>Num キー</value>
   </data>
   <data name="Menu_OtherKey" xml:space="preserve">
     <value>その他のキー</value>
@@ -449,16 +458,16 @@
     <value>Page Down</value>
   </data>
   <data name="KeyName_Up" xml:space="preserve">
-    <value>�?/value>
+    <value>Up</value>
   </data>
   <data name="KeyName_Down" xml:space="preserve">
-    <value>�?/value>
+    <value>Down</value>
   </data>
   <data name="KeyName_Left" xml:space="preserve">
-    <value>�?/value>
+    <value>Left</value>
   </data>
   <data name="KeyName_Right" xml:space="preserve">
-    <value>�?/value>
+    <value>Right</value>
   </data>
   <data name="KeyName_NumLock" xml:space="preserve">
     <value>Num Lock</value>
@@ -539,7 +548,7 @@
     <value>Application</value>
   </data>
   <data name="Msg_TelexWarning" xml:space="preserve">
-    <value>キーを追加する際のエラーを修正するには、「Telex入力法」を一時的に無効にしてください�?/value>
+    <value>キー追加時のエラーを修正するため、「Telex Input Method」を一時的に無効にしてください。</value>
   </data>
   <data name="Msg_TelexWarningTitle" xml:space="preserve">
     <value>通知</value>
@@ -551,40 +560,33 @@
     <value>終了</value>
   </data>
   <data name="Tray_RunningInBackground" xml:space="preserve">
-    <value>アプリは通知領域で実行中です�?/value>
+    <value>アプリはシステムトレイで実行中です。</value>
   </data>
   <data name="Tray_Tooltip" xml:space="preserve">
-    <value>AutoMouseKeyboard（実行中�?/value>
+    <value>AutoMouseKeyboard (実行中)</value>
   </data>
   <data name="SettingForm_RunOnStartup" xml:space="preserve">
     <value>Windows 起動時に自動起動する</value>
   </data>
   <data name="SettingForm_HideOnComplete" xml:space="preserve">
-    <value>完了/ESC 後もウィンドウを表示しな�?/value>
+    <value>アクション完了後もウィンドウを非表示にする</value>
   </data>
   <data name="MainForm_SelectExportFolder" xml:space="preserve">
-    <value>設定をエクスポートするフォルダを選�?/value>
+    <value>構成をエクスポートするフォルダーを選択</value>
   </data>
   <data name="Status_MultiConfigExported" xml:space="preserve">
-    <value>{0}件の設定をエクスポートしまし�?/value>
+    <value>{0} 個の構成をエクスポートしました</value>
   </data>
   <data name="Status_MultiConfigImported" xml:space="preserve">
     <value>{0}件の設定をインポートしました</value>
   </data>
   <data name="Msg_MultiExportSuccess" xml:space="preserve">
-    <value>{0}件の設定を正常にエクスポートしました�?/value>
+    <value>{0} 個の構成を正常にエクスポートしました。</value>
   </data>
   <data name="Msg_MultiImportSuccess" xml:space="preserve">
-    <value>{0}件の設定を正常にインポートしました�?/value>
+    <value>{0} 個の構成を正常にインポートしました。</value>
   </data>
   <data name="Msg_NoConfigSelected" xml:space="preserve">
-    <value>エクスポートする設定�?つ以上選択してください�?/value>
-  </data>
-  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
-    <value>選択した {0} 個の設定を削除しますか？</value>
-  </data>
-  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
-    <value>動作</value>
+    <value>エクスポートする構成を少なくとも1つ選択してください。</value>
   </data>
 </root>
-

@@ -1,28 +1,41 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
+using AutoMouseKeyboard.UI;
+using AutoMouseKeyboard.UI.Controls;
+using AutoMouseKeyboard.Utilities;
 
 namespace AutoMouseKeyboard
 {
     partial class KeyActionForm
 {
     private IContainer components = null;
-    private ComboBox cboKey = null;
+    private TableLayoutPanel rootLayout = null;
+    private TableLayoutPanel fieldsLayout = null;
     private Label lblKey = null;
-    private CheckBox chkCtrl = null;
-    private CheckBox chkAlt = null;
-    private CheckBox chkShift = null;
+    private ModernSelect cboKey = null;
     private Label lblModifiers = null;
+    private FlowLayoutPanel modifiersFlow = null;
+    private ModernCheckBox chkCtrl = null;
+    private ModernCheckBox chkAlt = null;
+    private ModernCheckBox chkShift = null;
     private Label lblCount = null;
-    private NumericUpDown numCount = null;
+    private ModernNumericUpDown numCount = null;
     private Label lblInterval = null;
-    private NumericUpDown numInterval = null;
+    private FlowLayoutPanel intervalFlow = null;
+    private ModernNumericUpDown numInterval = null;
     private Label lblIntervalHint = null;
-    private Button btnOk = null;
-    private Button btnCancel = null;
+    private FlowLayoutPanel buttonsFlow = null;
+    private ModernButton btnOk = null;
+    private ModernButton btnCancel = null;
 
+    /// <summary>
+    ///  Clean up any resources being used.
+    /// </summary>
     protected override void Dispose(bool disposing)
     {
-        if (disposing && (components != null))
+        if (disposing && components != null)
         {
             components.Dispose();
         }
@@ -32,210 +45,273 @@ namespace AutoMouseKeyboard
 
     private void InitializeComponent()
     {
-            this.cboKey = new System.Windows.Forms.ComboBox();
-            this.lblKey = new System.Windows.Forms.Label();
-            this.chkCtrl = new System.Windows.Forms.CheckBox();
-            this.chkAlt = new System.Windows.Forms.CheckBox();
-            this.chkShift = new System.Windows.Forms.CheckBox();
-            this.lblModifiers = new System.Windows.Forms.Label();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.numCount = new System.Windows.Forms.NumericUpDown();
-            this.lblInterval = new System.Windows.Forms.Label();
-            this.numInterval = new System.Windows.Forms.NumericUpDown();
-            this.lblIntervalHint = new System.Windows.Forms.Label();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numInterval)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // cboKey
-            // 
-            this.cboKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboKey.FormattingEnabled = true;
-            this.cboKey.Location = new System.Drawing.Point(120, 16);
-            this.cboKey.Name = "cboKey";
-            this.cboKey.Size = new System.Drawing.Size(189, 21);
-            this.cboKey.TabIndex = 0;
-            // 
-            // lblKey
-            // 
-            this.lblKey.AutoSize = true;
-            this.lblKey.Location = new System.Drawing.Point(17, 18);
-            this.lblKey.Name = "lblKey";
-            this.lblKey.Size = new System.Drawing.Size(28, 13);
-            this.lblKey.TabIndex = 1;
-            this.lblKey.Text = "Key:";
-            // 
-            // chkCtrl
-            // 
-            this.chkCtrl.AutoSize = true;
-            this.chkCtrl.Location = new System.Drawing.Point(120, 50);
-            this.chkCtrl.Name = "chkCtrl";
-            this.chkCtrl.Size = new System.Drawing.Size(41, 17);
-            this.chkCtrl.TabIndex = 2;
-            this.chkCtrl.Text = "Ctrl";
-            this.chkCtrl.UseVisualStyleBackColor = true;
-            // 
-            // chkAlt
-            // 
-            this.chkAlt.AutoSize = true;
-            this.chkAlt.Location = new System.Drawing.Point(171, 50);
-            this.chkAlt.Name = "chkAlt";
-            this.chkAlt.Size = new System.Drawing.Size(38, 17);
-            this.chkAlt.TabIndex = 3;
-            this.chkAlt.Text = "Alt";
-            this.chkAlt.UseVisualStyleBackColor = true;
-            // 
-            // chkShift
-            // 
-            this.chkShift.AutoSize = true;
-            this.chkShift.Location = new System.Drawing.Point(223, 50);
-            this.chkShift.Name = "chkShift";
-            this.chkShift.Size = new System.Drawing.Size(47, 17);
-            this.chkShift.TabIndex = 4;
-            this.chkShift.Text = "Shift";
-            this.chkShift.UseVisualStyleBackColor = true;
-            // 
-            // lblModifiers
-            // 
-            this.lblModifiers.AutoSize = true;
-            this.lblModifiers.Location = new System.Drawing.Point(17, 51);
-            this.lblModifiers.Name = "lblModifiers";
-            this.lblModifiers.Size = new System.Drawing.Size(76, 13);
-            this.lblModifiers.TabIndex = 5;
-            this.lblModifiers.Text = "Giữ kèm phím:";
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Location = new System.Drawing.Point(17, 84);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(35, 13);
-            this.lblCount.TabIndex = 10;
-            this.lblCount.Text = "Count";
-            // 
-            // numCount
-            // 
-            this.numCount.Location = new System.Drawing.Point(120, 82);
-            this.numCount.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numCount.Name = "numCount";
-            this.numCount.Size = new System.Drawing.Size(103, 20);
-            this.numCount.TabIndex = 8;
-            this.numCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // lblInterval
-            // 
-            this.lblInterval.AutoSize = true;
-            this.lblInterval.Location = new System.Drawing.Point(17, 118);
-            this.lblInterval.Name = "lblInterval";
-            this.lblInterval.Size = new System.Drawing.Size(64, 13);
-            this.lblInterval.TabIndex = 12;
-            this.lblInterval.Text = "Interval (ms)";
-            // 
-            // numInterval
-            // 
-            this.numInterval.Increment = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numInterval.Location = new System.Drawing.Point(120, 116);
-            this.numInterval.Maximum = new decimal(new int[] {
-            600000,
-            0,
-            0,
-            0});
-            this.numInterval.Name = "numInterval";
-            this.numInterval.Size = new System.Drawing.Size(103, 20);
-            this.numInterval.TabIndex = 9;
-            this.numInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numInterval.Value = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            // 
-            // lblIntervalHint
-            // 
-            this.lblIntervalHint.AutoSize = true;
-            this.lblIntervalHint.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lblIntervalHint.Location = new System.Drawing.Point(229, 118);
-            this.lblIntervalHint.Name = "lblIntervalHint";
-            this.lblIntervalHint.Size = new System.Drawing.Size(116, 13);
-            this.lblIntervalHint.TabIndex = 14;
-            this.lblIntervalHint.Text = "(1 giây = 1000 mili giây)";
-            // 
-            // btnOk
-            // 
-            this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.Location = new System.Drawing.Point(194, 173);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(73, 28);
-            this.btnOk.TabIndex = 10;
-            this.btnOk.Text = "OK";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(272, 173);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(73, 28);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // KeyActionForm
-            // 
-            this.AcceptButton = this.btnOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(363, 217);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.lblIntervalHint);
-            this.Controls.Add(this.numInterval);
-            this.Controls.Add(this.lblInterval);
-            this.Controls.Add(this.numCount);
-            this.Controls.Add(this.lblCount);
-            this.Controls.Add(this.lblModifiers);
-            this.Controls.Add(this.chkShift);
-            this.Controls.Add(this.chkAlt);
-            this.Controls.Add(this.chkCtrl);
-            this.Controls.Add(this.lblKey);
-            this.Controls.Add(this.cboKey);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "KeyActionForm";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Add Key";
-            ((System.ComponentModel.ISupportInitialize)(this.numCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numInterval)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+        components = new Container();
+        rootLayout = new TableLayoutPanel();
+        fieldsLayout = new TableLayoutPanel();
+        lblKey = new Label();
+        cboKey = new ModernSelect();
+        lblModifiers = new Label();
+        modifiersFlow = new FlowLayoutPanel();
+        chkCtrl = new ModernCheckBox();
+        chkAlt = new ModernCheckBox();
+        chkShift = new ModernCheckBox();
+        lblCount = new Label();
+        numCount = new ModernNumericUpDown();
+        lblInterval = new Label();
+        intervalFlow = new FlowLayoutPanel();
+        numInterval = new ModernNumericUpDown();
+        lblIntervalHint = new Label();
+        buttonsFlow = new FlowLayoutPanel();
+        btnOk = new ModernButton();
+        btnCancel = new ModernButton();
+        rootLayout.SuspendLayout();
+        fieldsLayout.SuspendLayout();
+        modifiersFlow.SuspendLayout();
+        intervalFlow.SuspendLayout();
+        buttonsFlow.SuspendLayout();
+        SuspendLayout();
+        //
+        // rootLayout
+        //
+        rootLayout.ColumnCount = 1;
+        rootLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        rootLayout.Controls.Add(fieldsLayout, 0, 0);
+        rootLayout.Controls.Add(buttonsFlow, 0, 1);
+        rootLayout.Dock = DockStyle.Fill;
+        rootLayout.Location = new Point(0, 0);
+        rootLayout.Name = "rootLayout";
+        rootLayout.Padding = new Padding(12);
+        rootLayout.RowCount = 2;
+        rootLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        rootLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+        rootLayout.TabIndex = 0;
+        //
+        // fieldsLayout
+        //
+        fieldsLayout.AutoSize = true;
+        fieldsLayout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        fieldsLayout.BackColor = Color.Transparent;
+        fieldsLayout.ColumnCount = 2;
+        fieldsLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+        fieldsLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        fieldsLayout.Controls.Add(lblKey, 0, 0);
+        fieldsLayout.Controls.Add(cboKey, 1, 0);
+        fieldsLayout.Controls.Add(lblModifiers, 0, 1);
+        fieldsLayout.Controls.Add(modifiersFlow, 1, 1);
+        fieldsLayout.Controls.Add(lblCount, 0, 2);
+        fieldsLayout.Controls.Add(numCount, 1, 2);
+        fieldsLayout.Controls.Add(lblInterval, 0, 3);
+        fieldsLayout.Controls.Add(intervalFlow, 1, 3);
+        fieldsLayout.Dock = DockStyle.Fill;
+        fieldsLayout.Margin = new Padding(0);
+        fieldsLayout.Name = "fieldsLayout";
+        fieldsLayout.RowCount = 4;
+        fieldsLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        fieldsLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        fieldsLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        fieldsLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        fieldsLayout.TabIndex = 0;
+        //
+        // lblKey
+        //
+        lblKey.Anchor = AnchorStyles.Left;
+        lblKey.AutoSize = true;
+        lblKey.BackColor = Color.Transparent;
+        lblKey.Margin = new Padding(0, 0, 8, 0);
+        lblKey.Name = "lblKey";
+        lblKey.TabIndex = 0;
+        lblKey.Text = "Key:";
+        //
+        // cboKey
+        //
+        cboKey.Dock = DockStyle.Fill;
+        cboKey.Margin = new Padding(0, 0, 0, 6);
+        cboKey.Name = "cboKey";
+        cboKey.Size = new Size(220, 28);
+        cboKey.TabIndex = 0;
+        //
+        // lblModifiers
+        //
+        lblModifiers.Anchor = AnchorStyles.Left;
+        lblModifiers.AutoSize = true;
+        lblModifiers.BackColor = Color.Transparent;
+        lblModifiers.Margin = new Padding(0, 0, 8, 0);
+        lblModifiers.Name = "lblModifiers";
+        lblModifiers.TabIndex = 1;
+        lblModifiers.Text = "Giữ kèm phím:";
+        //
+        // modifiersFlow
+        //
+        modifiersFlow.AutoSize = true;
+        modifiersFlow.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        modifiersFlow.BackColor = Color.Transparent;
+        modifiersFlow.Controls.Add(chkCtrl);
+        modifiersFlow.Controls.Add(chkAlt);
+        modifiersFlow.Controls.Add(chkShift);
+        modifiersFlow.Dock = DockStyle.Fill;
+        modifiersFlow.FlowDirection = FlowDirection.LeftToRight;
+        modifiersFlow.Margin = new Padding(0, 0, 0, 6);
+        modifiersFlow.Name = "modifiersFlow";
+        modifiersFlow.TabIndex = 1;
+        modifiersFlow.WrapContents = false;
+        //
+        // chkCtrl
+        //
+        chkCtrl.Anchor = AnchorStyles.None;
+        chkCtrl.AutoSize = true;
+        chkCtrl.Margin = new Padding(0, 0, 12, 0);
+        chkCtrl.Name = "chkCtrl";
+        chkCtrl.TabIndex = 1;
+        chkCtrl.Text = "Ctrl";
+        //
+        // chkAlt
+        //
+        chkAlt.Anchor = AnchorStyles.None;
+        chkAlt.AutoSize = true;
+        chkAlt.Margin = new Padding(0, 0, 12, 0);
+        chkAlt.Name = "chkAlt";
+        chkAlt.TabIndex = 2;
+        chkAlt.Text = "Alt";
+        //
+        // chkShift
+        //
+        chkShift.Anchor = AnchorStyles.None;
+        chkShift.AutoSize = true;
+        chkShift.Margin = new Padding(0);
+        chkShift.Name = "chkShift";
+        chkShift.TabIndex = 3;
+        chkShift.Text = "Shift";
+        //
+        // lblCount
+        //
+        lblCount.Anchor = AnchorStyles.Left;
+        lblCount.AutoSize = true;
+        lblCount.BackColor = Color.Transparent;
+        lblCount.Margin = new Padding(0, 0, 8, 0);
+        lblCount.Name = "lblCount";
+        lblCount.TabIndex = 2;
+        lblCount.Text = "Count";
+        //
+        // numCount
+        //
+        numCount.Margin = new Padding(0, 0, 0, 6);
+        numCount.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
+        numCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+        numCount.Name = "numCount";
+        numCount.Size = new Size(110, 30);
+        numCount.TabIndex = 4;
+        numCount.TextAlign = HorizontalAlignment.Center;
+        numCount.Value = new decimal(new int[] { 1, 0, 0, 0 });
+        //
+        // lblInterval
+        //
+        lblInterval.Anchor = AnchorStyles.Left;
+        lblInterval.AutoSize = true;
+        lblInterval.BackColor = Color.Transparent;
+        lblInterval.Margin = new Padding(0, 0, 8, 0);
+        lblInterval.Name = "lblInterval";
+        lblInterval.TabIndex = 3;
+        lblInterval.Text = "Interval (ms)";
+        //
+        // intervalFlow
+        //
+        intervalFlow.AutoSize = true;
+        intervalFlow.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        intervalFlow.BackColor = Color.Transparent;
+        intervalFlow.Controls.Add(numInterval);
+        intervalFlow.Controls.Add(lblIntervalHint);
+        intervalFlow.Dock = DockStyle.Fill;
+        intervalFlow.FlowDirection = FlowDirection.LeftToRight;
+        intervalFlow.Margin = new Padding(0);
+        intervalFlow.Name = "intervalFlow";
+        intervalFlow.TabIndex = 2;
+        intervalFlow.WrapContents = false;
+        //
+        // numInterval
+        //
+        numInterval.Increment = new decimal(new int[] { 50, 0, 0, 0 });
+        numInterval.Margin = new Padding(0, 0, 8, 0);
+        numInterval.Maximum = new decimal(new int[] { 600000, 0, 0, 0 });
+        numInterval.Name = "numInterval";
+        numInterval.Size = new Size(110, 30);
+        numInterval.TabIndex = 5;
+        numInterval.TextAlign = HorizontalAlignment.Center;
+        numInterval.Value = new decimal(new int[] { 300, 0, 0, 0 });
+        //
+        // lblIntervalHint
+        //
+        lblIntervalHint.Anchor = AnchorStyles.None;
+        lblIntervalHint.AutoSize = true;
+        lblIntervalHint.BackColor = Color.Transparent;
+        lblIntervalHint.ForeColor = ThemeManager.Palette.TextMuted;
+        lblIntervalHint.Margin = new Padding(0);
+        lblIntervalHint.Name = "lblIntervalHint";
+        lblIntervalHint.TabIndex = 4;
+        lblIntervalHint.Tag = ThemeManager.MutedTextTag;
+        lblIntervalHint.Text = "(1 giây = 1000 mili giây)";
+        //
+        // buttonsFlow
+        //
+        buttonsFlow.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+        buttonsFlow.AutoSize = true;
+        buttonsFlow.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+        buttonsFlow.BackColor = Color.Transparent;
+        buttonsFlow.Controls.Add(btnOk);
+        buttonsFlow.Controls.Add(btnCancel);
+        buttonsFlow.FlowDirection = FlowDirection.LeftToRight;
+        buttonsFlow.Margin = new Padding(0, 8, 0, 0);
+        buttonsFlow.Name = "buttonsFlow";
+        buttonsFlow.TabIndex = 3;
+        buttonsFlow.WrapContents = false;
+        //
+        // btnOk
+        //
+        btnOk.Margin = new Padding(0, 0, 8, 0);
+        btnOk.Name = "btnOk";
+        btnOk.Size = new Size(96, 32);
+        btnOk.StyleKind = ButtonStyleKind.Primary;
+        btnOk.TabIndex = 6;
+        btnOk.Text = "OK";
+        btnOk.Click += btnOk_Click;
+        //
+        // btnCancel
+        //
+        btnCancel.DialogResult = DialogResult.Cancel;
+        btnCancel.Margin = new Padding(0);
+        btnCancel.Name = "btnCancel";
+        btnCancel.Size = new Size(96, 32);
+        btnCancel.TabIndex = 7;
+        btnCancel.Text = "Cancel";
+        //
+        // KeyActionForm
+        //
+        AcceptButton = btnOk;
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        CancelButton = btnCancel;
+        ClientSize = new Size(420, 240);
+        Controls.Add(rootLayout);
+        Font = new Font("Segoe UI", 9F);
+        FormBorderStyle = FormBorderStyle.FixedDialog;
+        MaximizeBox = false;
+        MinimizeBox = false;
+        Name = "KeyActionForm";
+        ShowIcon = false;
+        ShowInTaskbar = false;
+        StartPosition = FormStartPosition.CenterParent;
+        Text = "Add Key";
+        modifiersFlow.ResumeLayout(false);
+        modifiersFlow.PerformLayout();
+        intervalFlow.ResumeLayout(false);
+        intervalFlow.PerformLayout();
+        buttonsFlow.ResumeLayout(false);
+        buttonsFlow.PerformLayout();
+        fieldsLayout.ResumeLayout(false);
+        fieldsLayout.PerformLayout();
+        rootLayout.ResumeLayout(false);
+        rootLayout.PerformLayout();
+        ResumeLayout(false);
+        PerformLayout();
     }
     }
 }
-

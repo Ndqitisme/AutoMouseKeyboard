@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -119,10 +119,10 @@
     <value>Trạng thái: {0}</value>
   </data>
   <data name="MainForm_LoopCount" xml:space="preserve">
-    <value>S�?lần lặp lại</value>
+    <value>Số lần lặp</value>
   </data>
   <data name="MainForm_GlobalDelay" xml:space="preserve">
-    <value>Đ�?tr�?chung (ms)</value>
+    <value>Độ trễ toàn cục (ms)</value>
   </data>
   <data name="MainForm_ColIndex" xml:space="preserve">
     <value>STT</value>
@@ -131,16 +131,16 @@
     <value>Phím</value>
   </data>
   <data name="MainForm_ColCharacters" xml:space="preserve">
-    <value>Ký t�?/value>
+    <value>Ký tự</value>
   </data>
   <data name="MainForm_ColCount" xml:space="preserve">
-    <value>S�?lần thực hiện</value>
+    <value>Số lần</value>
   </data>
   <data name="MainForm_ColDelay" xml:space="preserve">
-    <value>Đ�?Tr�?/value>
+    <value>Độ trễ</value>
   </data>
   <data name="MainForm_ColSetPosition" xml:space="preserve">
-    <value>Đặt tọa đ�?/value>
+    <value>Đặt vị trí</value>
   </data>
   <data name="SettingForm_Title" xml:space="preserve">
     <value>Cài đặt</value>
@@ -149,7 +149,7 @@
     <value>Giao diện:</value>
   </data>
   <data name="SettingForm_Language" xml:space="preserve">
-    <value>Ngôn ng�?</value>
+    <value>Ngôn ngữ:</value>
   </data>
   <data name="SettingForm_Light" xml:space="preserve">
     <value>Sáng</value>
@@ -167,7 +167,7 @@
     <value>Xanh lá</value>
   </data>
   <data name="SettingForm_Red" xml:space="preserve">
-    <value>Đ�?/value>
+    <value>Đỏ</value>
   </data>
   <data name="SettingForm_Orange" xml:space="preserve">
     <value>Cam</value>
@@ -188,7 +188,7 @@
     <value>OK</value>
   </data>
   <data name="SettingForm_Note" xml:space="preserve">
-    <value>Nhiều cài đặt khác s�?có trong các bản cập nhật sau.</value>
+    <value>Nhiều cài đặt khác sẽ có trong các bản cập nhật sau.</value>
   </data>
   <data name="SettingForm_AppearanceGroup" xml:space="preserve">
     <value>Giao diện</value>
@@ -206,16 +206,16 @@
     <value>Phiên bản: 1.0.0</value>
   </data>
   <data name="AboutForm_Author" xml:space="preserve">
-    <value>Tác gi�? NDQITVN</value>
+    <value>Tác giả: NDQITVN</value>
   </data>
   <data name="AboutForm_Description" xml:space="preserve">
-    <value>Công c�?t�?động hóa cho click chuột và nhập phím.</value>
+    <value>Công cụ tự động hóa nhấp chuột và nhập bàn phím.</value>
   </data>
   <data name="AboutForm_DonateTitle" xml:space="preserve">
-    <value>Ủng h�?tác gi�?</value>
+    <value>Nếu bạn muốn ủng hộ tác giả:</value>
   </data>
   <data name="AboutForm_DonateInfo" xml:space="preserve">
-    <value>Ngân hàng: {0}&#x0D;&#x0A;S�?tài khoản: {1}&#x0D;&#x0A;Ch�?tài khoản: {2}&#x0D;&#x0A;&#x0D;&#x0A;Hoặc quét mã QR bên cạnh đ�?chuyển khoản nhanh.</value>
+    <value>Ngân hàng: {0}&#x0D;&#x0A;Số tài khoản: {1}&#x0D;&#x0A;Chủ tài khoản: {2}&#x0D;&#x0A;&#x0D;&#x0A;Hoặc quét mã QR bên cạnh để chuyển khoản nhanh.</value>
   </data>
   <data name="KeyActionForm_Title" xml:space="preserve">
     <value>Thêm phím</value>
@@ -224,7 +224,7 @@
     <value>Phím:</value>
   </data>
   <data name="KeyActionForm_Modifiers" xml:space="preserve">
-    <value>Gi�?kèm phím:</value>
+    <value>Phím giữ:</value>
   </data>
   <data name="KeyActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -236,10 +236,10 @@
     <value>Shift</value>
   </data>
   <data name="KeyActionForm_Count" xml:space="preserve">
-    <value>S�?lần</value>
+    <value>Số lần</value>
   </data>
   <data name="KeyActionForm_Interval" xml:space="preserve">
-    <value>Đ�?Tr�?(ms)</value>
+    <value>Khoảng cách (ms)</value>
   </data>
   <data name="KeyActionForm_IntervalHint" xml:space="preserve">
     <value>(1 giây = 1000 mili giây)</value>
@@ -257,7 +257,7 @@
     <value>Loại click:</value>
   </data>
   <data name="MouseActionForm_Modifiers" xml:space="preserve">
-    <value>Gi�?kèm phím:</value>
+    <value>Phím giữ:</value>
   </data>
   <data name="MouseActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -269,16 +269,16 @@
     <value>Shift</value>
   </data>
   <data name="MouseActionForm_Position" xml:space="preserve">
-    <value>Tọa đ�?X,Y</value>
+    <value>Tọa độ X,Y</value>
   </data>
   <data name="MouseActionForm_SetPosition" xml:space="preserve">
-    <value>Đặt tọa đ�?/value>
+    <value>Đặt vị trí</value>
   </data>
   <data name="MouseActionForm_Count" xml:space="preserve">
-    <value>S�?lần</value>
+    <value>Số lần</value>
   </data>
   <data name="MouseActionForm_Interval" xml:space="preserve">
-    <value>Đ�?Tr�?(ms)</value>
+    <value>Khoảng cách (ms)</value>
   </data>
   <data name="MouseActionForm_IntervalHint" xml:space="preserve">
     <value>(1 giây = 1000 mili giây)</value>
@@ -323,7 +323,7 @@
     <value>Chuỗi hành động đã hoàn tất</value>
   </data>
   <data name="Status_EscPressed" xml:space="preserve">
-    <value>Phát hiện nhấn ESC, đã dừng t�?động thao tác</value>
+    <value>Đã nhấn ESC, dừng tự động hóa</value>
   </data>
   <data name="Status_Error" xml:space="preserve">
     <value>Có lỗi khi chạy</value>
@@ -341,10 +341,10 @@
     <value>Lưu cấu hình thành công.</value>
   </data>
   <data name="Msg_SaveFailed" xml:space="preserve">
-    <value>Không th�?lưu</value>
+    <value>Không thể lưu</value>
   </data>
   <data name="Msg_PasteFailed" xml:space="preserve">
-    <value>Không th�?dán cấu hình</value>
+    <value>Không thể dán cấu hình</value>
   </data>
   <data name="Msg_ConfirmDelete" xml:space="preserve">
     <value>Xóa cấu hình "{0}"?</value>
@@ -353,16 +353,16 @@
     <value>Xóa {0} cấu hình đã chọn?</value>
   </data>
   <data name="Msg_CapturePosition" xml:space="preserve">
-    <value>Nhấn OK rồi click chuột vào v�?trí mong muốn đ�?lấy tọa đ�?</value>
+    <value>Nhấn OK rồi nhấp chuột tại vị trí mong muốn để lấy tọa độ.</value>
   </data>
   <data name="Msg_CapturePositionTitle" xml:space="preserve">
-    <value>Cập Nhật Tọa Đ�?V�?Trí</value>
+    <value>Cập nhật vị trí</value>
   </data>
   <data name="Msg_CaptureFailed" xml:space="preserve">
-    <value>Không th�?lấy tọa đ�?/value>
+    <value>Không thể lấy tọa độ</value>
   </data>
   <data name="Msg_RunFailed" xml:space="preserve">
-    <value>Không th�?chạy</value>
+    <value>Không thể chạy</value>
   </data>
   <data name="Msg_RunError" xml:space="preserve">
     <value>Lỗi khi chạy</value>
@@ -371,7 +371,7 @@
     <value>Import thất bại</value>
   </data>
   <data name="Msg_ExportFailed" xml:space="preserve">
-    <value>Không th�?export</value>
+    <value>Không thể xuất</value>
   </data>
   <data name="Msg_Success" xml:space="preserve">
     <value>Thành công</value>
@@ -380,7 +380,7 @@
     <value>Xác nhận</value>
   </data>
   <data name="Msg_ConfigNameRequired" xml:space="preserve">
-    <value>Tên cấu hình không được đ�?trống.</value>
+    <value>Tên cấu hình không được để trống.</value>
   </data>
   <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
     <value>Cấu hình phải có ít nhất 1 hành động.</value>
@@ -398,10 +398,10 @@
     <value>Phím 0-9</value>
   </data>
   <data name="Menu_SymbolKey" xml:space="preserve">
-    <value>Phím ký t�?đặc biệt</value>
+    <value>Phím ký hiệu</value>
   </data>
   <data name="Menu_NumKey" xml:space="preserve">
-    <value>Phím s�?bên phải</value>
+    <value>Phím Num</value>
   </data>
   <data name="Menu_OtherKey" xml:space="preserve">
     <value>Phím khác</value>
@@ -548,19 +548,19 @@
     <value>Application</value>
   </data>
   <data name="Msg_TelexWarning" xml:space="preserve">
-    <value>Vui lòng tạm tắt "B�?Gõ Telex" đ�?khắc phục tình trạng lỗi khi thêm phím.</value>
+    <value>Vui lòng tạm tắt "Telex Input Method" để khắc phục lỗi khi thêm phím.</value>
   </data>
   <data name="Msg_TelexWarningTitle" xml:space="preserve">
     <value>Thông báo</value>
   </data>
   <data name="Tray_OpenApp" xml:space="preserve">
-    <value>M�?giao diện phần mềm</value>
+    <value>Mở ứng dụng</value>
   </data>
   <data name="Tray_ExitApp" xml:space="preserve">
     <value>Thoát ứng dụng</value>
   </data>
   <data name="Tray_RunningInBackground" xml:space="preserve">
-    <value>Ứng dụng đang chạy ngầm tại khay h�?thống.</value>
+    <value>Ứng dụng vẫn đang chạy trong khay hệ thống.</value>
   </data>
   <data name="Tray_Tooltip" xml:space="preserve">
     <value>AutoMouseKeyboard (đang chạy)</value>
@@ -569,10 +569,10 @@
     <value>Khởi động cùng Windows</value>
   </data>
   <data name="SettingForm_HideOnComplete" xml:space="preserve">
-    <value>Không hiện lại cửa s�?khi hoàn thành/nhấn ESC</value>
+    <value>Giữ cửa sổ ẩn sau khi hoàn thành hành động</value>
   </data>
   <data name="MainForm_SelectExportFolder" xml:space="preserve">
-    <value>Chọn thư mục đ�?xuất cấu hình</value>
+    <value>Chọn thư mục để xuất cấu hình</value>
   </data>
   <data name="Status_MultiConfigExported" xml:space="preserve">
     <value>Đã xuất {0} cấu hình</value>
@@ -587,6 +587,6 @@
     <value>Nhập thành công {0} cấu hình.</value>
   </data>
   <data name="Msg_NoConfigSelected" xml:space="preserve">
-    <value>Vui lòng chọn ít nhất một cấu hình đ�?xuất.</value>
+    <value>Vui lòng chọn ít nhất một cấu hình để xuất.</value>
   </data>
 </root>

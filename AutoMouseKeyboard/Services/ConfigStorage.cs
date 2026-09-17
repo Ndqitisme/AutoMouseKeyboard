@@ -17,6 +17,38 @@ namespace AutoMouseKeyboard.Services
         var baseFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "AutoMouseKeyboard");
         _configFolder = Path.Combine(baseFolder, "configs");
         Directory.CreateDirectory(_configFolder);
+        MigrateLegacyConfigs();
+    }
+
+    /// <summary>
+    /// One-time bring-forward of configs saved by the previous app folder
+    /// (Roaming\AutoClickerByNDQ). Copies only files that don't already exist —
+    /// never overwrites anything the user created in the new folder.
+    /// </summary>
+    private void MigrateLegacyConfigs()
+    {
+        try
+        {
+            var legacyFolder = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                "AutoClickerByNDQ", "configs");
+            if (!Directory.Exists(legacyFolder))
+            {
+                return;
+            }
+
+            foreach (var file in Directory.EnumerateFiles(legacyFolder, "*.json"))
+            {
+                var destination = Path.Combine(_configFolder, Path.GetFileName(file));
+                if (!File.Exists(destination))
+                {
+                    File.Copy(file, destination);
+                }
+            }
+        }
+        catch
+        {
+        }
     }
 
     public IReadOnlyList<ActionConfig> LoadAll()

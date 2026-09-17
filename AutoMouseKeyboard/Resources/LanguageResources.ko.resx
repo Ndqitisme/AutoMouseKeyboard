@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -68,10 +68,10 @@
     <value>구성 이름</value>
   </data>
   <data name="MainForm_New" xml:space="preserve">
-    <value>새로 만들�?/value>
+    <value>새로 만들기</value>
   </data>
   <data name="MainForm_Save" xml:space="preserve">
-    <value>저�?/value>
+    <value>저장</value>
   </data>
   <data name="MainForm_Delete" xml:space="preserve">
     <value>삭제</value>
@@ -83,22 +83,22 @@
     <value>정보</value>
   </data>
   <data name="MainForm_Import" xml:space="preserve">
-    <value>가져오�?/value>
+    <value>가져오기</value>
   </data>
   <data name="MainForm_Export" xml:space="preserve">
     <value>내보내기</value>
   </data>
   <data name="MainForm_AddKey" xml:space="preserve">
-    <value>�?추가</value>
+    <value>키 추가</value>
   </data>
   <data name="MainForm_AddMouse" xml:space="preserve">
-    <value>마우�?추가</value>
+    <value>마우스 추가</value>
   </data>
   <data name="MainForm_MoveUp" xml:space="preserve">
     <value>위로</value>
   </data>
   <data name="MainForm_MoveDown" xml:space="preserve">
-    <value>아래�?/value>
+    <value>아래로 이동</value>
   </data>
   <data name="MainForm_Start" xml:space="preserve">
     <value>시작</value>
@@ -107,10 +107,10 @@
     <value>중지</value>
   </data>
   <data name="MainForm_DefaultConfigName" xml:space="preserve">
-    <value>�?구성</value>
+    <value>새 구성</value>
   </data>
   <data name="MainForm_ImportConfig" xml:space="preserve">
-    <value>구성 가져오�?/value>
+    <value>구성 가져오기</value>
   </data>
   <data name="MainForm_ExportConfig" xml:space="preserve">
     <value>구성 내보내기</value>
@@ -122,13 +122,13 @@
     <value>반복 횟수</value>
   </data>
   <data name="MainForm_GlobalDelay" xml:space="preserve">
-    <value>전체 지�?시간 (ms)</value>
+    <value>전역 지연 (ms)</value>
   </data>
   <data name="MainForm_ColIndex" xml:space="preserve">
     <value>번호</value>
   </data>
   <data name="MainForm_ColKeys" xml:space="preserve">
-    <value>�?/value>
+    <value>키</value>
   </data>
   <data name="MainForm_ColCharacters" xml:space="preserve">
     <value>문자</value>
@@ -137,7 +137,7 @@
     <value>실행 횟수</value>
   </data>
   <data name="MainForm_ColDelay" xml:space="preserve">
-    <value>지�?/value>
+    <value>지연</value>
   </data>
   <data name="MainForm_ColSetPosition" xml:space="preserve">
     <value>좌표 설정</value>
@@ -146,7 +146,7 @@
     <value>설정</value>
   </data>
   <data name="SettingForm_Theme" xml:space="preserve">
-    <value>인터페이�?</value>
+    <value>인터페이스:</value>
   </data>
   <data name="SettingForm_Language" xml:space="preserve">
     <value>언어:</value>
@@ -155,7 +155,7 @@
     <value>밝은</value>
   </data>
   <data name="SettingForm_Dark" xml:space="preserve">
-    <value>어두�?/value>
+    <value>어둡게</value>
   </data>
   <data name="SettingForm_Cyan" xml:space="preserve">
     <value>시안</value>
@@ -167,28 +167,34 @@
     <value>녹색</value>
   </data>
   <data name="SettingForm_Red" xml:space="preserve">
-    <value>빨간�?/value>
+    <value>빨강</value>
   </data>
   <data name="SettingForm_Orange" xml:space="preserve">
-    <value>주황�?/value>
+    <value>주황</value>
   </data>
   <data name="SettingForm_Yellow" xml:space="preserve">
-    <value>노란�?/value>
+    <value>노랑</value>
   </data>
   <data name="SettingForm_Blue" xml:space="preserve">
-    <value>파란�?/value>
+    <value>파랑</value>
   </data>
   <data name="SettingForm_Indigo" xml:space="preserve">
     <value>남색</value>
   </data>
   <data name="SettingForm_Violet" xml:space="preserve">
-    <value>보라�?/value>
+    <value>보라</value>
   </data>
   <data name="SettingForm_OK" xml:space="preserve">
     <value>확인</value>
   </data>
   <data name="SettingForm_Note" xml:space="preserve">
-    <value>추가 설정은 향후 업데이트에서 제공�?예정입니�?</value>
+    <value>향후 업데이트에서 더 많은 설정을 사용할 수 있습니다.</value>
+  </data>
+  <data name="SettingForm_AppearanceGroup" xml:space="preserve">
+    <value>모양</value>
+  </data>
+  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
+    <value>동작</value>
   </data>
   <data name="AboutForm_Title" xml:space="preserve">
     <value>정보</value>
@@ -200,25 +206,25 @@
     <value>버전: 1.0.0</value>
   </data>
   <data name="AboutForm_Author" xml:space="preserve">
-    <value>작성�? NDQITVN</value>
+    <value>작성자: NDQITVN</value>
   </data>
   <data name="AboutForm_Description" xml:space="preserve">
-    <value>마우�?클릭 �?키보�?입력 자동�?도구.</value>
+    <value>마우스 클릭과 키보드 입력을 위한 자동화 도구입니다.</value>
   </data>
   <data name="AboutForm_DonateTitle" xml:space="preserve">
-    <value>작성자에�?기부하고 싶으시다�?</value>
+    <value>작성자에게 기부하고 싶으시다면:</value>
   </data>
   <data name="AboutForm_DonateInfo" xml:space="preserve">
-    <value>은�? {0}&#x0D;&#x0A;계좌번호: {1}&#x0D;&#x0A;계좌 소유�? {2}&#x0D;&#x0A;&#x0D;&#x0A;또는 옆의 QR 코드�?스캔하여 빠른 송금�?하세�?</value>
+    <value>은행: {0}&#x0D;&#x0A;계좌번호: {1}&#x0D;&#x0A;계좌 소유주: {2}&#x0D;&#x0A;&#x0D;&#x0A;또는 옆의 QR 코드를 스캔하여 빠른 송금을 하세요.</value>
   </data>
   <data name="KeyActionForm_Title" xml:space="preserve">
-    <value>�?추가</value>
+    <value>키 추가</value>
   </data>
   <data name="KeyActionForm_Key" xml:space="preserve">
-    <value>�?</value>
+    <value>키:</value>
   </data>
   <data name="KeyActionForm_Modifiers" xml:space="preserve">
-    <value>누른 채로 유지�?�?</value>
+    <value>누르고 있을 키:</value>
   </data>
   <data name="KeyActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -233,10 +239,10 @@
     <value>횟수</value>
   </data>
   <data name="KeyActionForm_Interval" xml:space="preserve">
-    <value>지�?시간 (ms)</value>
+    <value>간격 (ms)</value>
   </data>
   <data name="KeyActionForm_IntervalHint" xml:space="preserve">
-    <value>(1�?= 1000밀리초)</value>
+    <value>(1초 = 1000 ms)</value>
   </data>
   <data name="KeyActionForm_OK" xml:space="preserve">
     <value>확인</value>
@@ -245,13 +251,13 @@
     <value>취소</value>
   </data>
   <data name="MouseActionForm_Title" xml:space="preserve">
-    <value>마우�?작업 추가</value>
+    <value>마우스 동작 추가</value>
   </data>
   <data name="MouseActionForm_Action" xml:space="preserve">
     <value>클릭 유형:</value>
   </data>
   <data name="MouseActionForm_Modifiers" xml:space="preserve">
-    <value>누른 채로 유지�?�?</value>
+    <value>누르고 있을 키:</value>
   </data>
   <data name="MouseActionForm_Ctrl" xml:space="preserve">
     <value>Ctrl</value>
@@ -272,10 +278,10 @@
     <value>횟수</value>
   </data>
   <data name="MouseActionForm_Interval" xml:space="preserve">
-    <value>지�?시간 (ms)</value>
+    <value>간격 (ms)</value>
   </data>
   <data name="MouseActionForm_IntervalHint" xml:space="preserve">
-    <value>(1�?= 1000밀리초)</value>
+    <value>(1초 = 1000 ms)</value>
   </data>
   <data name="MouseActionForm_OK" xml:space="preserve">
     <value>확인</value>
@@ -287,82 +293,85 @@
     <value>준비됨</value>
   </data>
   <data name="Status_ConfigMoved" xml:space="preserve">
-    <value>구성 이동�? {0}</value>
+    <value>구성이 이동되었습니다: {0}</value>
   </data>
   <data name="Status_ConfigLoaded" xml:space="preserve">
-    <value>구성 로드�? {0}</value>
+    <value>구성이 로드되었습니다: {0}</value>
   </data>
   <data name="Status_CreatingNew" xml:space="preserve">
-    <value>�?구성 생성 �?..</value>
+    <value>새 구성을 만드는 중...</value>
   </data>
   <data name="Status_ConfigSaved" xml:space="preserve">
     <value>구성 저장됨</value>
   </data>
   <data name="Status_ConfigCopied" xml:space="preserve">
-    <value>구성 복사�? {0}</value>
+    <value>구성이 복사되었습니다: {0}</value>
   </data>
   <data name="Status_ConfigCreated" xml:space="preserve">
-    <value>�?구성 생성�? {0}</value>
+    <value>새 구성이 생성되었습니다: {0}</value>
   </data>
   <data name="Status_ConfigDeleted" xml:space="preserve">
-    <value>구성 삭제�?/value>
+    <value>구성이 삭제되었습니다</value>
   </data>
   <data name="Status_Running" xml:space="preserve">
-    <value>실행 �?..</value>
+    <value>실행 중...</value>
   </data>
   <data name="Status_Stopped" xml:space="preserve">
-    <value>중지�?/value>
+    <value>중지됨</value>
   </data>
   <data name="Status_Completed" xml:space="preserve">
-    <value>작업 시퀀�?완료</value>
+    <value>동작 시퀀스가 완료되었습니다</value>
   </data>
   <data name="Status_EscPressed" xml:space="preserve">
-    <value>ESC 감지�? 자동 작업 중지�?/value>
+    <value>ESC가 눌려 자동화가 중지되었습니다</value>
   </data>
   <data name="Status_Error" xml:space="preserve">
-    <value>실행 �?오류 발생</value>
+    <value>오류가 발생했습니다</value>
   </data>
   <data name="Status_ConfigImported" xml:space="preserve">
     <value>구성 가져옴: {0}</value>
   </data>
   <data name="Status_ConfigExported" xml:space="preserve">
-    <value>구성 내보�?/value>
+    <value>구성을 보냈습니다</value>
   </data>
   <data name="Msg_DuplicateConfigName" xml:space="preserve">
-    <value>구성 이름 "{0}"�?가) 이미 존재합니�? 다른 이름�?선택하세�?</value>
+    <value>구성 이름 "{0}"이(가) 이미 존재합니다. 다른 이름을 선택하세요.</value>
   </data>
   <data name="Msg_SaveSuccess" xml:space="preserve">
-    <value>구성 저�?성공.</value>
+    <value>구성이 성공적으로 저장되었습니다.</value>
   </data>
   <data name="Msg_SaveFailed" xml:space="preserve">
-    <value>저장할 �?없습니다</value>
+    <value>저장할 수 없습니다</value>
   </data>
   <data name="Msg_PasteFailed" xml:space="preserve">
-    <value>구성�?붙여넣을 �?없습니다</value>
+    <value>구성을 붙여넣을 수 없습니다</value>
   </data>
   <data name="Msg_ConfirmDelete" xml:space="preserve">
-    <value>구성 "{0}"�?�? 삭제하시겠습니까?</value>
+    <value>구성 "{0}"을(를) 삭제하시겠습니까?</value>
+  </data>
+  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
+    <value>선택한 구성 {0}개를 삭제하시겠습니까?</value>
   </data>
   <data name="Msg_CapturePosition" xml:space="preserve">
-    <value>확인�?누른 다음 원하�?위치에서 마우스를 클릭하여 좌표�?가져오세요.</value>
+    <value>확인을 누른 다음 좌표를 얻을 위치에서 마우스를 클릭하세요.</value>
   </data>
   <data name="Msg_CapturePositionTitle" xml:space="preserve">
     <value>위치 좌표 업데이트</value>
   </data>
   <data name="Msg_CaptureFailed" xml:space="preserve">
-    <value>좌표�?가져올 �?없습니다</value>
+    <value>좌표를 가져올 수 없습니다</value>
   </data>
   <data name="Msg_RunFailed" xml:space="preserve">
-    <value>실행�?�?없습니다</value>
+    <value>실행할 수 없습니다</value>
   </data>
   <data name="Msg_RunError" xml:space="preserve">
-    <value>실행 �?오류 발생</value>
+    <value>실행 중 오류 발생</value>
   </data>
   <data name="Msg_ImportFailed" xml:space="preserve">
-    <value>가져오�?실패</value>
+    <value>가져오기 실패</value>
   </data>
   <data name="Msg_ExportFailed" xml:space="preserve">
-    <value>내보�?�?없습니다</value>
+    <value>보낼 수 없습니다</value>
   </data>
   <data name="Msg_Success" xml:space="preserve">
     <value>성공</value>
@@ -371,49 +380,49 @@
     <value>확인</value>
   </data>
   <data name="Msg_ConfigNameRequired" xml:space="preserve">
-    <value>구성 이름은 비워�?�?없습니다.</value>
+    <value>구성 이름은 비워 둘 수 없습니다.</value>
   </data>
   <data name="Msg_ConfigMustHaveActions" xml:space="preserve">
-    <value>구성에는 최소 1개의 작업�?있어�?합니�?</value>
+    <value>구성에는 최소 1개의 동작이 있어야 합니다.</value>
   </data>
   <data name="Msg_ActionMissingKey" xml:space="preserve">
-    <value>작업 #{0}�?키가 없습니다.</value>
+    <value>동작 #{0}에 키가 없습니다.</value>
   </data>
   <data name="Menu_F1F12Key" xml:space="preserve">
-    <value>F1-F12 �?/value>
+    <value>F1-F12 키</value>
   </data>
   <data name="Menu_AZKey" xml:space="preserve">
-    <value>A-Z �?/value>
+    <value>A-Z 키</value>
   </data>
   <data name="Menu_09Key" xml:space="preserve">
-    <value>0-9 �?/value>
+    <value>0-9 키</value>
   </data>
   <data name="Menu_SymbolKey" xml:space="preserve">
-    <value>특수 문자 �?/value>
+    <value>기호 키</value>
   </data>
   <data name="Menu_NumKey" xml:space="preserve">
-    <value>오른�?숫자 �?/value>
+    <value>Num 키</value>
   </data>
   <data name="Menu_OtherKey" xml:space="preserve">
-    <value>기타 �?/value>
+    <value>기타 키</value>
   </data>
   <data name="MouseAction_LeftClick" xml:space="preserve">
-    <value>마우�?왼쪽 클릭</value>
+    <value>마우스 왼쪽 버튼 클릭</value>
   </data>
   <data name="MouseAction_LeftDouble" xml:space="preserve">
-    <value>마우�?왼쪽 더블 클릭</value>
+    <value>마우스 왼쪽 버튼 더블 클릭</value>
   </data>
   <data name="MouseAction_RightClick" xml:space="preserve">
-    <value>마우�?오른�?클릭</value>
+    <value>마우스 오른쪽 버튼 클릭</value>
   </data>
   <data name="MouseAction_RightDouble" xml:space="preserve">
-    <value>마우�?오른�?더블 클릭</value>
+    <value>마우스 오른쪽 버튼 더블 클릭</value>
   </data>
   <data name="MouseAction_MiddleClick" xml:space="preserve">
-    <value>마우�?가운데 클릭</value>
+    <value>마우스 가운데 버튼 클릭</value>
   </data>
   <data name="MouseAction_MiddleDouble" xml:space="preserve">
-    <value>마우�?가운데 더블 클릭</value>
+    <value>마우스 가운데 버튼 더블 클릭</value>
   </data>
   <data name="KeyName_Enter" xml:space="preserve">
     <value>Enter</value>
@@ -449,7 +458,7 @@
     <value>Page Down</value>
   </data>
   <data name="KeyName_Up" xml:space="preserve">
-    <value>�?/value>
+    <value>Up</value>
   </data>
   <data name="KeyName_Down" xml:space="preserve">
     <value>아래</value>
@@ -458,7 +467,7 @@
     <value>왼쪽</value>
   </data>
   <data name="KeyName_Right" xml:space="preserve">
-    <value>오른�?/value>
+    <value>Right</value>
   </data>
   <data name="KeyName_NumLock" xml:space="preserve">
     <value>Num Lock</value>
@@ -539,51 +548,45 @@
     <value>Application</value>
   </data>
   <data name="Msg_TelexWarning" xml:space="preserve">
-    <value>키를 추가�?�?오류�?수정하려�?"Telex 입력 방법"�?일시적으�?비활성화하세�?</value>
+    <value>키 추가 시 오류를 수정하려면 "Telex Input Method"를 일시적으로 비활성화하세요.</value>
   </data>
   <data name="Msg_TelexWarningTitle" xml:space="preserve">
     <value>알림</value>
   </data>
   <data name="Tray_OpenApp" xml:space="preserve">
-    <value>�?열기</value>
+    <value>애플리케이션 열기</value>
   </data>
   <data name="Tray_ExitApp" xml:space="preserve">
     <value>종료</value>
   </data>
   <data name="Tray_RunningInBackground" xml:space="preserve">
-    <value>앱이 시스�?트레이에�?계속 실행 중입니다.</value>
+    <value>앱이 시스템 트레이에서 계속 실행 중입니다.</value>
   </data>
   <data name="Tray_Tooltip" xml:space="preserve">
-    <value>AutoMouseKeyboard (실행 �?</value>
+    <value>AutoMouseKeyboard (실행 중)</value>
   </data>
   <data name="SettingForm_RunOnStartup" xml:space="preserve">
-    <value>Windows 시작 �?자동 실행</value>
+    <value>Windows 시작 시 실행</value>
   </data>
   <data name="SettingForm_HideOnComplete" xml:space="preserve">
-    <value>완료/ESC 후에�?창을 표시하지 않음</value>
+    <value>동작 완료 후 창을 숨긴 상태로 유지</value>
   </data>
   <data name="MainForm_SelectExportFolder" xml:space="preserve">
-    <value>구성�?내보�?폴더 선택</value>
+    <value>구성을 보낼 폴더 선택</value>
   </data>
   <data name="Status_MultiConfigExported" xml:space="preserve">
-    <value>{0}�?구성�?내보냈습니다</value>
+    <value>구성 {0}개를 보냈습니다</value>
   </data>
   <data name="Status_MultiConfigImported" xml:space="preserve">
-    <value>{0}�?구성�?가져왔습니�?/value>
+    <value>구성 {0}개를 가져왔습니다</value>
   </data>
   <data name="Msg_MultiExportSuccess" xml:space="preserve">
-    <value>{0}�?구성�?성공적으�?내보냈습니다.</value>
+    <value>구성 {0}개를 성공적으로 보냈습니다.</value>
   </data>
   <data name="Msg_MultiImportSuccess" xml:space="preserve">
-    <value>{0}�?구성�?성공적으�?가져왔습니�?</value>
+    <value>구성 {0}개를 성공적으로 가져왔습니다.</value>
   </data>
   <data name="Msg_NoConfigSelected" xml:space="preserve">
-    <value>내보�?구성�?하나 이상 선택하세�?</value>
-  </data>
-  <data name="Msg_ConfirmDeleteMultiple" xml:space="preserve">
-    <value>선택�?{0}개의 구성�?삭제하시겠습니까?</value>
-  </data>
-  <data name="SettingForm_BehaviorGroup" xml:space="preserve">
-    <value>동작</value>
+    <value>보낼 구성을 하나 이상 선택하세요.</value>
   </data>
 </root>
